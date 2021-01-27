@@ -87,6 +87,9 @@
     <EmbeddedResource Include="FormMemoryGame.resx">
       <DependentUpon>FormMemoryGame.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChess.resx">
+      <DependentUpon>FormChess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemoryGame_GamePlay.resx">
       <DependentUpon>MemoryGame_GamePlay.cs</DependentUpon>
     </EmbeddedResource>
