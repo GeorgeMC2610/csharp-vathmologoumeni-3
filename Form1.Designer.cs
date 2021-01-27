@@ -1,7 +1,7 @@
 ﻿
 namespace csharp_vathmologoumeni_3
 {
-    partial class Form1
+    partial class FormMainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,15 @@ namespace csharp_vathmologoumeni_3
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 623);
-            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1394, 627);
+            this.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "FormMainMenu";
+            this.Text = "Κύριο Μενού";
             this.ResumeLayout(false);
 
         }
