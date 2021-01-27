@@ -16,5 +16,18 @@ namespace csharp_vathmologoumeni_3
         {
             InitializeComponent();
         }
+
+        private void AnyButtonClicked(object sender, EventArgs e)
+        {
+            Button pressed = (Button)sender;
+
+            switch (pressed.Name)
+            {
+                case "buttonExit":
+                    new FormMainMenu().Show();
+                    Close();
+                    break;
+            }
+        }
     }
 }
