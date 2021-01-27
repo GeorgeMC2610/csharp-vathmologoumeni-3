@@ -24,7 +24,7 @@ namespace csharp_vathmologoumeni_3
             switch (pressed.Name)
             {
                 case "buttonExit":
-                    new FormMainMenu().Show();
+                    Application.OpenForms[0].Show();
                     Close();
                     break;
             }

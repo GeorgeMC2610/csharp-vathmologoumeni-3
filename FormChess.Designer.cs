@@ -38,6 +38,10 @@ namespace csharp_vathmologoumeni_3
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxPlayer2Nickname = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkBoxTimers = new System.Windows.Forms.CheckBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.labelTimers = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -122,12 +126,63 @@ namespace csharp_vathmologoumeni_3
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(458, 425);
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(458, 444);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(282, 64);
             this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Play!";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxTimers
+            // 
+            this.checkBoxTimers.AutoSize = true;
+            this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTimers.Location = new System.Drawing.Point(824, 197);
+            this.checkBoxTimers.Name = "checkBoxTimers";
+            this.checkBoxTimers.Size = new System.Drawing.Size(133, 21);
+            this.checkBoxTimers.TabIndex = 9;
+            this.checkBoxTimers.Text = "Include Timers";
+            this.checkBoxTimers.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(824, 305);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(130, 26);
+            this.numericUpDown1.TabIndex = 10;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // labelTimers
+            // 
+            this.labelTimers.AutoSize = true;
+            this.labelTimers.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimers.Location = new System.Drawing.Point(820, 283);
+            this.labelTimers.Name = "labelTimers";
+            this.labelTimers.Size = new System.Drawing.Size(167, 19);
+            this.labelTimers.TabIndex = 11;
+            this.labelTimers.Text = "Time for each player";
             // 
             // FormChess
             // 
@@ -135,6 +190,9 @@ namespace csharp_vathmologoumeni_3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1251, 631);
+            this.Controls.Add(this.labelTimers);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.checkBoxTimers);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPlayer2Nickname);
@@ -150,6 +208,7 @@ namespace csharp_vathmologoumeni_3
             this.Name = "FormChess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChess";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +225,8 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxPlayer2Nickname;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBoxTimers;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label labelTimers;
     }
 }
