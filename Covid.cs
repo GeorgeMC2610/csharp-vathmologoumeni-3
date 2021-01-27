@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace csharp_vathmologoumeni_3
 {
     public partial class Covid : Form
     {
+        Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
+
         public Covid()
         {
             InitializeComponent();
@@ -19,15 +22,35 @@ namespace csharp_vathmologoumeni_3
 
         private void Covid_Load(object sender, EventArgs e)
         {
-            DateTime date_now = DateTime.Now; //get current date time
-            String now = date_now.ToString(); //convert to string
 
-            if (now.Contains("μμ")) //replace greek chars with english chars
-                now = now.Replace("μμ", "pm");
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (email_regex.IsMatch(textBox5.Text))
+                pictureBox1.Visible = false;
             else
-                now = now.Replace("πμ", "am");
+                pictureBox1.Visible = true;
+        }
 
-            textBox6.Text = now; //set textbox text to current time
+        private void pictureBox1_Click(object sender, EventArgs e) //function for all the pictureboxes
+        {
+            switch (((PictureBox)sender).Name)
+            {
+                //case "pictureBox1":
+
+
+            }
+
+
+        }
+
+        private void maskedTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (maskedTextBox2.MaskFull && (Int32.Parse(maskedTextBox2.Text.Substring(0,2)) > 23 || Int32.Parse(maskedTextBox2.Text.Substring(3, 2)) > 59) || !maskedTextBox2.MaskFull)
+                pictureBox4.Visible = true;
+            else
+                pictureBox4.Visible = false;
         }
     }
 }
