@@ -70,6 +70,12 @@
     <Compile Include="FormMemoryGame.Designer.cs">
       <DependentUpon>FormMemoryGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemoryGame_GamePlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoryGame_GamePlay.Designer.cs">
+      <DependentUpon>MemoryGame_GamePlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Covid.resx">
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMemoryGame.resx">
       <DependentUpon>FormMemoryGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoryGame_GamePlay.resx">
+      <DependentUpon>MemoryGame_GamePlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="unipi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Memory_Game.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

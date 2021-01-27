@@ -63,6 +63,16 @@ namespace csharp_vathmologoumeni_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Memory_Game {
+            get {
+                object obj = ResourceManager.GetObject("Memory_Game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unipi {
             get {
                 object obj = ResourceManager.GetObject("unipi", resourceCulture);
