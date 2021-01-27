@@ -16,5 +16,11 @@ namespace csharp_vathmologoumeni_3
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormMainMenu().Show();
+        }
     }
 }
