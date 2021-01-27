@@ -78,13 +78,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="FormChess.resx">
-      <DependentUpon>FormChess.cs</DependentUpon>
-=======
     <EmbeddedResource Include="FormMemoryGame.resx">
       <DependentUpon>FormMemoryGame.cs</DependentUpon>
->>>>>>> 4399ed6eae54d3c82eedf5304cc6dd4baa169259
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChess.resx">
+      <DependentUpon>FormChess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
