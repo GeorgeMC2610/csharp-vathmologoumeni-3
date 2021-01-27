@@ -158,6 +158,8 @@ namespace csharp_vathmologoumeni_3
             // 
             this.checkBoxTimers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBoxTimers.AutoSize = true;
+            this.checkBoxTimers.Checked = true;
+            this.checkBoxTimers.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTimers.Location = new System.Drawing.Point(745, 195);
             this.checkBoxTimers.Name = "checkBoxTimers";

@@ -43,6 +43,10 @@ namespace csharp_vathmologoumeni_3
                 case "TextBox":
                     EnableOrDisablePlayButton(!textBoxPlayer1Nickname.Text.Equals("") && !textBoxPlayer2Nickname.Text.Equals(""));
                     break;
+
+                case "CheckBox":
+                    numericUpDownMinutes.Enabled = checkBoxTimers.Checked;
+                    break;
             }
         }
 
@@ -50,6 +54,7 @@ namespace csharp_vathmologoumeni_3
         {
             //as soon as the form loads, disable the play button.
             EnableOrDisablePlayButton(false);
+            checkBoxTimers.CheckState = CheckState.Unchecked;
         }
 
         private void EnableOrDisablePlayButton(bool handling)
