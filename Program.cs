@@ -16,7 +16,7 @@ namespace csharp_vathmologoumeni_3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMainMenu());
+            Application.Run(new Covid());
         }
     }
 }
