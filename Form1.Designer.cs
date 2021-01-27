@@ -34,6 +34,10 @@ namespace csharp_vathmologoumeni_3
             this.labelHorizontalLine = new System.Windows.Forms.Label();
             this.pictureBoxUnipi = new System.Windows.Forms.PictureBox();
             this.labelStudents = new System.Windows.Forms.Label();
+            this.buttonSkakiera = new System.Windows.Forms.Button();
+            this.buttonMemoryGame = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,11 +94,61 @@ namespace csharp_vathmologoumeni_3
             this.labelStudents.Text = "Π19032 - Nikos Georgiadis\r\nΠ19085 - Lefteris Lambrakos\r\nΠ19204 - Giorgos Seimenis" +
     "";
             // 
+            // buttonSkakiera
+            // 
+            this.buttonSkakiera.AutoSize = true;
+            this.buttonSkakiera.Location = new System.Drawing.Point(497, 338);
+            this.buttonSkakiera.Name = "buttonSkakiera";
+            this.buttonSkakiera.Size = new System.Drawing.Size(307, 73);
+            this.buttonSkakiera.TabIndex = 5;
+            this.buttonSkakiera.Text = "ΣΚΑΚΙΕΡΑ";
+            this.buttonSkakiera.UseVisualStyleBackColor = true;
+            this.buttonSkakiera.Click += new System.EventHandler(this.buttonSkakiera_Click);
+            // 
+            // buttonMemoryGame
+            // 
+            this.buttonMemoryGame.AutoSize = true;
+            this.buttonMemoryGame.Location = new System.Drawing.Point(497, 244);
+            this.buttonMemoryGame.Name = "buttonMemoryGame";
+            this.buttonMemoryGame.Size = new System.Drawing.Size(307, 73);
+            this.buttonMemoryGame.TabIndex = 6;
+            this.buttonMemoryGame.Text = "ΠΑΙΧΝΙΔΙ ΜΝΗΜΗΣ";
+            this.buttonMemoryGame.UseVisualStyleBackColor = true;
+            this.buttonMemoryGame.Click += new System.EventHandler(this.buttonMemoryGame_Click);
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(497, 435);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(307, 73);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "ΚΟΒΙΝΤ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(355, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(585, 50);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Αυτά τα κουμπιά θα τροποποιηθούν αργότερα. Για την ώρα\r\nθα καθοδηγούμαστε με αυτά" +
+    ".\r\n";
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1333, 613);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonMemoryGame);
+            this.Controls.Add(this.buttonSkakiera);
             this.Controls.Add(this.labelStudents);
             this.Controls.Add(this.pictureBoxUnipi);
             this.Controls.Add(this.labelHorizontalLine);
@@ -104,6 +158,7 @@ namespace csharp_vathmologoumeni_3
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Κύριο Μενού";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).EndInit();
             this.ResumeLayout(false);
@@ -118,6 +173,10 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Label labelHorizontalLine;
         private System.Windows.Forms.PictureBox pictureBoxUnipi;
         private System.Windows.Forms.Label labelStudents;
+        private System.Windows.Forms.Button buttonSkakiera;
+        private System.Windows.Forms.Button buttonMemoryGame;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

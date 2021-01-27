@@ -16,5 +16,23 @@ namespace csharp_vathmologoumeni_3
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Covid().Show();
+        }
+
+        private void buttonSkakiera_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormChess().Show();
+        }
+
+        private void buttonMemoryGame_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new FormMemoryGame().Show();
+        }
     }
 }
