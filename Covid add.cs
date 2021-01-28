@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.OleDb;
 
 namespace csharp_vathmologoumeni_3
 {
     public partial class Covid_Insert : Form
     {
+        String connection_str;
+        OleDbConnection connection;
+
         Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
         Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z]*$");
-        Regex address_regex = new Regex(@"^[a-zA-Z][ a-zA-Z]*\d*$");
+        Regex address_regex = new Regex(@"[^A-Za-z \d]+");
+
         public Covid_Insert()
         {
             InitializeComponent();
@@ -23,6 +28,11 @@ namespace csharp_vathmologoumeni_3
 
         private void Covid_Load(object sender, EventArgs e)
         {
+            connection_str = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = Covid_cases.mdb;";
+            connection = new OleDbConnection(connection_str); //connect to database
+
+            button1.BackColor = Color.DarkGray;
+            
             DateTime date = DateTime.Now;
             String datetime = date.ToShortTimeString();
 
@@ -81,7 +91,7 @@ namespace csharp_vathmologoumeni_3
                     break;
 
                 case("textBox3"):
-                    if (address_regex.IsMatch(textBox3.Text))
+                    if (!textBox3.Text.Equals("") && !textBox3.Text.StartsWith(" ") && !textBox3.Text.Contains("  ") && !address_regex.IsMatch(textBox3.Text))
                         pictureBox5.Visible = false;
                     else
                         pictureBox5.Visible = true;
@@ -108,6 +118,20 @@ namespace csharp_vathmologoumeni_3
                         pictureBox6.Visible = false;
                     break;
             }
+
+            foreach (Control c in Controls)
+            {
+                if(c.GetType() == typeof(PictureBox) && c.Visible == true && !c.Name.Equals("pictureBox7"))
+                {
+                    button1.Enabled = false;
+                    button1.BackColor = Color.DarkGray;
+                    return;
+                }
+
+            }
+
+            button1.Enabled = true;
+            button1.BackColor = Color.PaleGreen;
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -118,6 +142,41 @@ namespace csharp_vathmologoumeni_3
         private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.OpenForms[1].Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand comand = new OleDbCommand("Insert into Covid_cases(Full_name,Email,Underlying_diseases,Date_of_record,Time_of_record,Phone_number,Home_address,Gender,Age) values(@fn,@email,@ud,@dor,@tor,@pn,@ha,@gender,@age)",connection);
+            
+            comand.Parameters.AddWithValue("@fn", textBox1.Text);
+            comand.Parameters.AddWithValue("@email", textBox2.Text);
+
+            String[] lines = richTextBox1.Lines;
+            StringBuilder diseases = new StringBuilder("");
+
+            if (lines.Length != 0)
+            {
+                foreach (String line in lines)
+                {
+                    diseases.Append(line);
+                    diseases.Append(", ");
+                }
+                diseases.Remove(diseases.Length - 2, 2);
+            }
+            else
+                diseases.Append("none");
+            
+            comand.Parameters.AddWithValue("@ud", diseases.ToString());
+            comand.Parameters.AddWithValue("@dor", dateTimePicker1.Text);
+            comand.Parameters.AddWithValue("@tor", maskedTextBox2.Text);
+            comand.Parameters.AddWithValue("@pn", maskedTextBox1.Text);
+            comand.Parameters.AddWithValue("@ha", textBox3.Text);
+            comand.Parameters.AddWithValue("@gender", comboBox1.Text);
+            comand.Parameters.AddWithValue("@age", numericUpDown1.Text);
+            comand.ExecuteNonQuery();
+            connection.Close();
+
         }
     }
 }
