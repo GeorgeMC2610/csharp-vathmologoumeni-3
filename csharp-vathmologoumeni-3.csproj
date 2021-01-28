@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chessboard.cs" />
     <Compile Include="Choose covid db option.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Memory_Game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\chess_board.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
