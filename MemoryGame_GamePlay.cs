@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace csharp_vathmologoumeni_3
 {
-    public partial class FormMemoryGame : Form
+    public partial class MemoryGame_GamePlay : Form
     {
-        public FormMemoryGame()
+        public MemoryGame_GamePlay()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.OpenForms[0].Show();
-            Close();
         }
     }
 }
