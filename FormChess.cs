@@ -73,6 +73,10 @@ namespace csharp_vathmologoumeni_3
             checkBoxTimers.Location         = new Point(buttonStartGame.Location.X + buttonStartGame.Size.Width - checkBoxTimers.Size.Width, checkBoxTimers.Location.Y);
             labelTimers.Location            = new Point(checkBoxTimers.Location.X, labelTimers.Location.Y);
             numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
+
+            panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height - panelChessBoard.Height - menuStrip1.Height);
+
+            panelChessBoard.Visible = false;
         }
 
         private void EnableOrDisablePlayButton(bool handling)

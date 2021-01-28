@@ -89,6 +89,7 @@
     <Compile Include="Modify covid.Designer.cs">
       <DependentUpon>Modify covid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pawn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Choose covid db option.resx">
