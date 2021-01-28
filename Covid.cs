@@ -16,7 +16,6 @@ namespace csharp_vathmologoumeni_3
         Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
         Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z]*$");
         Regex address_regex = new Regex(@"^[a-zA-Z][ a-zA-Z]*\d*$");
-
         public Covid()
         {
             InitializeComponent();
@@ -24,7 +23,21 @@ namespace csharp_vathmologoumeni_3
 
         private void Covid_Load(object sender, EventArgs e)
         {
+            DateTime date = DateTime.Now;
+            String datetime = date.ToShortTimeString();
 
+            if (datetime[1].Equals(':'))            
+                datetime = datetime.Insert(0, "0");
+            
+            if (datetime.EndsWith("μμ") || datetime.EndsWith("pm"))
+            {
+                String modified_time = (Int32.Parse(datetime.Substring(0, 2)) + 12).ToString();
+                datetime = datetime.Replace(datetime.Substring(0, 2), modified_time);                             
+            }
+
+            datetime = datetime.Substring(0, 5);
+
+            maskedTextBox2.Text = datetime;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) //function for all the pictureboxes
@@ -47,11 +60,6 @@ namespace csharp_vathmologoumeni_3
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please choose a gender");
-        }
-
-        private void maskedTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void Covid_TextChanged(object sender, EventArgs e)

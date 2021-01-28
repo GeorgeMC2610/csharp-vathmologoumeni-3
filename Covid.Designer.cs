@@ -267,11 +267,10 @@
             this.maskedTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox2.Location = new System.Drawing.Point(344, 376);
-            this.maskedTextBox2.Mask = "90:00";
+            this.maskedTextBox2.Mask = "00:00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(226, 33);
             this.maskedTextBox2.TabIndex = 34;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
             this.maskedTextBox2.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // richTextBox1
