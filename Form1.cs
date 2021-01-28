@@ -20,7 +20,7 @@ namespace csharp_vathmologoumeni_3
         private void button1_Click(object sender, EventArgs e)
         {
             Hide();
-            new Covid().Show();
+            new Choose_covid_db_option().Show();
         }
 
         private void buttonSkakiera_Click(object sender, EventArgs e)

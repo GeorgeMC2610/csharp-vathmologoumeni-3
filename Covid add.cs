@@ -11,12 +11,12 @@ using System.Text.RegularExpressions;
 
 namespace csharp_vathmologoumeni_3
 {
-    public partial class Covid : Form
+    public partial class Covid_Insert : Form
     {
         Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
         Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z]*$");
         Regex address_regex = new Regex(@"^[a-zA-Z][ a-zA-Z]*\d*$");
-        public Covid()
+        public Covid_Insert()
         {
             InitializeComponent();
         }
@@ -108,6 +108,16 @@ namespace csharp_vathmologoumeni_3
                         pictureBox6.Visible = false;
                     break;
             }
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms[1].Show();
         }
     }
 }
