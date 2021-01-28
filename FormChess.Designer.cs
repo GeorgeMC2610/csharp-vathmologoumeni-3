@@ -144,6 +144,8 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonStartGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonStartGame.BackColor = System.Drawing.Color.Green;
+            this.buttonStartGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStartGame.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartGame.ForeColor = System.Drawing.Color.White;
             this.buttonStartGame.Location = new System.Drawing.Point(0, 796);

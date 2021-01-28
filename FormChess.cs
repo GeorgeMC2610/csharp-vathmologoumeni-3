@@ -25,7 +25,13 @@ namespace csharp_vathmologoumeni_3
 
             switch (pressed.Name)
             {
+                //when the player exits, show the form that was already shown before. NOTE: There will be a popup message if the game has started.
                 case "buttonExit":
+                    DialogResult coninueGame = (GameStarted) ? MessageBox.Show("All progress will be discarded. Are you sure you want to exit?", "Exit Chess", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) : DialogResult.OK;
+
+                    if (coninueGame == DialogResult.Cancel)
+                        return;
+
                     Application.OpenForms[0].Show();
                     Close();
                     break;
