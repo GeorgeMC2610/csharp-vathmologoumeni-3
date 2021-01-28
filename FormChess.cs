@@ -29,6 +29,10 @@ namespace csharp_vathmologoumeni_3
                     Application.OpenForms[0].Show();
                     Close();
                     break;
+
+                case "buttonStartGame":
+                    GameStarted = true;
+                    break;
             }
         }
 
@@ -43,7 +47,7 @@ namespace csharp_vathmologoumeni_3
                 case "TextBox":
                     EnableOrDisablePlayButton(!textBoxPlayer1Nickname.Text.Equals("") && !textBoxPlayer2Nickname.Text.Equals(""));
                     break;
-
+                //if it was a check box, it will lock or unlock the numericupdown accoordingly.
                 case "CheckBox":
                     numericUpDownMinutes.Enabled = checkBoxTimers.Checked;
                     break;
@@ -54,7 +58,22 @@ namespace csharp_vathmologoumeni_3
         {
             //as soon as the form loads, disable the play button.
             EnableOrDisablePlayButton(false);
-            checkBoxTimers.CheckState = CheckState.Unchecked;
+            checkBoxTimers.CheckState = CheckState.Checked;
+
+            //and then set the pre-login controls to be at their proper location
+            labelTitle.Location             = new Point(Width / 2 - labelTitle.Width / 2, labelTitle.Location.Y);
+            labelSubtitle.Location          = new Point(Width / 2 - labelSubtitle.Width / 2, labelSubtitle.Location.Y);
+            buttonStartGame.Location        = new Point(Width / 2 - buttonStartGame.Width / 2, buttonStartGame.Location.Y);
+
+            textBoxPlayer1Nickname.Location = new Point(buttonStartGame.Location.X, textBoxPlayer1Nickname.Location.Y);
+            textBoxPlayer2Nickname.Location = new Point(buttonStartGame.Location.X, textBoxPlayer2Nickname.Location.Y);
+            labelFirstNickname.Location     = new Point(textBoxPlayer1Nickname.Location.X, labelFirstNickname.Location.Y);
+            labelSecondNickname.Location    = new Point(textBoxPlayer2Nickname.Location.X, labelSecondNickname.Location.Y);
+
+            checkBoxTimers.Location         = new Point(buttonStartGame.Location.X + buttonStartGame.Size.Width - checkBoxTimers.Size.Width, checkBoxTimers.Location.Y);
+            labelTimers.Location            = new Point(checkBoxTimers.Location.X, labelTimers.Location.Y);
+            numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
+
         }
 
         private void EnableOrDisablePlayButton(bool handling)

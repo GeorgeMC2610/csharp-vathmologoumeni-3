@@ -34,7 +34,7 @@ namespace csharp_vathmologoumeni_3
             this.textBoxPlayer1Nickname = new System.Windows.Forms.TextBox();
             this.labelFirstNickname = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelSubtitle = new System.Windows.Forms.Label();
             this.labelSecondNickname = new System.Windows.Forms.Label();
             this.textBoxPlayer2Nickname = new System.Windows.Forms.TextBox();
             this.buttonStartGame = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.Font = new System.Drawing.Font("Helvetica Rounded", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1106, 27);
+            this.buttonExit.Location = new System.Drawing.Point(1239, 27);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(133, 35);
             this.buttonExit.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace csharp_vathmologoumeni_3
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1251, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1384, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +71,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.textBoxPlayer1Nickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxPlayer1Nickname.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlayer1Nickname.Location = new System.Drawing.Point(365, 190);
+            this.textBoxPlayer1Nickname.Location = new System.Drawing.Point(6, 190);
             this.textBoxPlayer1Nickname.MaxLength = 45;
             this.textBoxPlayer1Nickname.Name = "textBoxPlayer1Nickname";
             this.textBoxPlayer1Nickname.Size = new System.Drawing.Size(282, 30);
@@ -84,7 +84,7 @@ namespace csharp_vathmologoumeni_3
             this.labelFirstNickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelFirstNickname.AutoSize = true;
             this.labelFirstNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstNickname.Location = new System.Drawing.Point(361, 168);
+            this.labelFirstNickname.Location = new System.Drawing.Point(0, 168);
             this.labelFirstNickname.Name = "labelFirstNickname";
             this.labelFirstNickname.Size = new System.Drawing.Size(167, 19);
             this.labelFirstNickname.TabIndex = 3;
@@ -96,31 +96,31 @@ namespace csharp_vathmologoumeni_3
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(359, 30);
+            this.labelTitle.Location = new System.Drawing.Point(0, 30);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(519, 32);
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Tag = "PreLogin";
             this.labelTitle.Text = "Welcome! Ready to play some Chess?";
             // 
-            // label1
+            // labelSubtitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(402, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 28);
-            this.label1.TabIndex = 5;
-            this.label1.Tag = "PreLogin";
-            this.label1.Text = "Type your nicknames in order to begin!";
+            this.labelSubtitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelSubtitle.AutoSize = true;
+            this.labelSubtitle.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubtitle.Location = new System.Drawing.Point(3, 73);
+            this.labelSubtitle.Name = "labelSubtitle";
+            this.labelSubtitle.Size = new System.Drawing.Size(422, 28);
+            this.labelSubtitle.TabIndex = 5;
+            this.labelSubtitle.Tag = "PreLogin";
+            this.labelSubtitle.Text = "Type your nicknames in order to begin!";
             // 
             // labelSecondNickname
             // 
             this.labelSecondNickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSecondNickname.AutoSize = true;
             this.labelSecondNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSecondNickname.Location = new System.Drawing.Point(361, 280);
+            this.labelSecondNickname.Location = new System.Drawing.Point(5, 280);
             this.labelSecondNickname.Name = "labelSecondNickname";
             this.labelSecondNickname.Size = new System.Drawing.Size(167, 19);
             this.labelSecondNickname.TabIndex = 7;
@@ -131,7 +131,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.textBoxPlayer2Nickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxPlayer2Nickname.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlayer2Nickname.Location = new System.Drawing.Point(365, 302);
+            this.textBoxPlayer2Nickname.Location = new System.Drawing.Point(6, 302);
             this.textBoxPlayer2Nickname.MaxLength = 45;
             this.textBoxPlayer2Nickname.Name = "textBoxPlayer2Nickname";
             this.textBoxPlayer2Nickname.Size = new System.Drawing.Size(282, 30);
@@ -141,11 +141,11 @@ namespace csharp_vathmologoumeni_3
             // 
             // buttonStartGame
             // 
-            this.buttonStartGame.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonStartGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonStartGame.BackColor = System.Drawing.Color.Green;
             this.buttonStartGame.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartGame.ForeColor = System.Drawing.Color.White;
-            this.buttonStartGame.Location = new System.Drawing.Point(365, 566);
+            this.buttonStartGame.Location = new System.Drawing.Point(0, 646);
             this.buttonStartGame.Name = "buttonStartGame";
             this.buttonStartGame.Size = new System.Drawing.Size(513, 53);
             this.buttonStartGame.TabIndex = 8;
@@ -161,7 +161,7 @@ namespace csharp_vathmologoumeni_3
             this.checkBoxTimers.Checked = true;
             this.checkBoxTimers.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTimers.Location = new System.Drawing.Point(745, 195);
+            this.checkBoxTimers.Location = new System.Drawing.Point(16, 195);
             this.checkBoxTimers.Name = "checkBoxTimers";
             this.checkBoxTimers.Size = new System.Drawing.Size(133, 21);
             this.checkBoxTimers.TabIndex = 9;
@@ -178,7 +178,7 @@ namespace csharp_vathmologoumeni_3
             0,
             0,
             0});
-            this.numericUpDownMinutes.Location = new System.Drawing.Point(745, 305);
+            this.numericUpDownMinutes.Location = new System.Drawing.Point(10, 305);
             this.numericUpDownMinutes.Maximum = new decimal(new int[] {
             120,
             0,
@@ -205,26 +205,26 @@ namespace csharp_vathmologoumeni_3
             this.labelTimers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTimers.AutoSize = true;
             this.labelTimers.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimers.Location = new System.Drawing.Point(741, 283);
+            this.labelTimers.Location = new System.Drawing.Point(7, 283);
             this.labelTimers.Name = "labelTimers";
-            this.labelTimers.Size = new System.Drawing.Size(167, 19);
+            this.labelTimers.Size = new System.Drawing.Size(262, 19);
             this.labelTimers.TabIndex = 11;
             this.labelTimers.Tag = "PreLogin";
-            this.labelTimers.Text = "Time for each player";
+            this.labelTimers.Text = "Time for each player (in minutes)";
             // 
             // FormChess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1251, 631);
+            this.ClientSize = new System.Drawing.Size(1384, 711);
             this.Controls.Add(this.labelTimers);
             this.Controls.Add(this.numericUpDownMinutes);
             this.Controls.Add(this.checkBoxTimers);
             this.Controls.Add(this.buttonStartGame);
             this.Controls.Add(this.labelSecondNickname);
             this.Controls.Add(this.textBoxPlayer2Nickname);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelSubtitle);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelFirstNickname);
             this.Controls.Add(this.textBoxPlayer1Nickname);
@@ -250,7 +250,7 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.TextBox textBoxPlayer1Nickname;
         private System.Windows.Forms.Label labelFirstNickname;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSubtitle;
         private System.Windows.Forms.Label labelSecondNickname;
         private System.Windows.Forms.TextBox textBoxPlayer2Nickname;
         private System.Windows.Forms.Button buttonStartGame;
