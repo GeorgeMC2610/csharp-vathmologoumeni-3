@@ -141,6 +141,7 @@
             // comboBox1
             // 
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -150,7 +151,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 34);
             this.comboBox1.TabIndex = 14;
-            this.comboBox1.Text = "Choose";
             this.comboBox1.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // label3

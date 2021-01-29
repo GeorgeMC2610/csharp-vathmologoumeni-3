@@ -28,10 +28,10 @@ namespace csharp_vathmologoumeni_3
 
         private void Covid_Load(object sender, EventArgs e)
         {
+            button1.BackColor = Color.DarkGray;
+
             connection_str = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = Covid_cases.mdb;";
             connection = new OleDbConnection(connection_str); //connect to database
-
-            button1.BackColor = Color.DarkGray;
             
             DateTime date = DateTime.Now;
             String datetime = date.ToShortTimeString();
@@ -112,10 +112,7 @@ namespace csharp_vathmologoumeni_3
                     break;
 
                 case("comboBox1"):
-                    if(comboBox1.Text.Equals("Choose"))
-                        pictureBox6.Visible = true;
-                    else
-                        pictureBox6.Visible = false;
+                    pictureBox6.Visible = false;
                     break;
             }
 

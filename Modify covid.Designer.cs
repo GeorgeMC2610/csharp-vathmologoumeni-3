@@ -46,14 +46,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox7
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(4, 512);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 524);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 515);
+            this.label1.Location = new System.Drawing.Point(44, 527);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 22);
             this.label1.TabIndex = 45;
@@ -82,6 +84,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -93,7 +96,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 33);
             this.comboBox1.TabIndex = 48;
-            this.comboBox1.Text = "Full_name";
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // label3
@@ -108,7 +110,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(538, 204);
+            this.textBox1.Location = new System.Drawing.Point(541, 197);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(203, 35);
             this.textBox1.TabIndex = 50;
@@ -123,6 +125,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(141, 171);
             this.richTextBox1.TabIndex = 51;
             this.richTextBox1.Text = "";
+            this.richTextBox1.WordWrap = false;
             // 
             // richTextBox2
             // 
@@ -133,6 +136,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(196, 171);
             this.richTextBox2.TabIndex = 52;
             this.richTextBox2.Text = "";
+            this.richTextBox2.WordWrap = false;
             // 
             // richTextBox3
             // 
@@ -143,6 +147,7 @@
             this.richTextBox3.Size = new System.Drawing.Size(222, 171);
             this.richTextBox3.TabIndex = 53;
             this.richTextBox3.Text = "";
+            this.richTextBox3.WordWrap = false;
             // 
             // richTextBox5
             // 
@@ -153,6 +158,7 @@
             this.richTextBox5.Size = new System.Drawing.Size(67, 171);
             this.richTextBox5.TabIndex = 54;
             this.richTextBox5.Text = "";
+            this.richTextBox5.WordWrap = false;
             // 
             // richTextBox6
             // 
@@ -163,6 +169,7 @@
             this.richTextBox6.Size = new System.Drawing.Size(114, 171);
             this.richTextBox6.TabIndex = 55;
             this.richTextBox6.Text = "";
+            this.richTextBox6.WordWrap = false;
             // 
             // richTextBox4
             // 
@@ -173,6 +180,7 @@
             this.richTextBox4.Size = new System.Drawing.Size(96, 171);
             this.richTextBox4.TabIndex = 56;
             this.richTextBox4.Text = "";
+            this.richTextBox4.WordWrap = false;
             // 
             // richTextBox7
             // 
@@ -183,6 +191,7 @@
             this.richTextBox7.Size = new System.Drawing.Size(241, 171);
             this.richTextBox7.TabIndex = 57;
             this.richTextBox7.Text = "";
+            this.richTextBox7.WordWrap = false;
             // 
             // richTextBox8
             // 
@@ -193,13 +202,15 @@
             this.richTextBox8.Size = new System.Drawing.Size(76, 171);
             this.richTextBox8.TabIndex = 58;
             this.richTextBox8.Text = "";
+            this.richTextBox8.WordWrap = false;
             // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(41, 231);
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(12, 267);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 48);
+            this.button1.Size = new System.Drawing.Size(126, 40);
             this.button1.TabIndex = 59;
             this.button1.Text = "Modify";
             this.button1.UseVisualStyleBackColor = true;
@@ -207,12 +218,14 @@
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(235, 231);
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(983, 267);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 48);
+            this.button2.Size = new System.Drawing.Size(158, 40);
             this.button2.TabIndex = 60;
-            this.button2.Text = "Delete";
+            this.button2.Text = "Delete row";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox9
             // 
@@ -223,12 +236,37 @@
             this.richTextBox9.Size = new System.Drawing.Size(54, 171);
             this.richTextBox9.TabIndex = 61;
             this.richTextBox9.Text = "";
+            this.richTextBox9.WordWrap = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(1147, 267);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 38);
+            this.numericUpDown1.TabIndex = 62;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // Modify_covid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 546);
+            this.ClientSize = new System.Drawing.Size(1274, 564);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.richTextBox9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -253,6 +291,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Modify_covid_FormClosed);
             this.Load += new System.EventHandler(this.Modify_covid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +316,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
