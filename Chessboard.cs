@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace csharp_vathmologoumeni_3
 {
-    class Chessboard
+    static class Chessboard
     {
+        public static int[] ValidLocations;
         
     }
 }

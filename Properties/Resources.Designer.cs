@@ -83,6 +83,16 @@ namespace csharp_vathmologoumeni_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rook_black {
+            get {
+                object obj = ResourceManager.GetObject("rook_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unipi {
             get {
                 object obj = ResourceManager.GetObject("unipi", resourceCulture);
