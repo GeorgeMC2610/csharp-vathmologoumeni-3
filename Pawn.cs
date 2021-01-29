@@ -31,12 +31,12 @@ namespace csharp_vathmologoumeni_3
             this.Texture = Texture;
         }
 
-        public void Move(int dx, int dy)
+        public void Move(int blockXCount, int blockYCount)
         {
-            dx += this.Location.X;
-            dy += this.Location.Y;
+            if (blockXCount > 7 || blockYCount > 7)
+                return;
 
-            this.Location = new Point(dx, dy);
+            this.Location = new Point(this.Location.X + 94 * blockXCount, this.Location.Y + 94 * blockYCount);
         }
     }
 }

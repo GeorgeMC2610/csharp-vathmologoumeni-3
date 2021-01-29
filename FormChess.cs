@@ -86,7 +86,7 @@ namespace csharp_vathmologoumeni_3
             panelChessBoard.Visible = false;
 
             Pawn BlackRook = new Pawn("Rook", pictureBoxBlackRook);
-            BlackRook.Move(0, 94 * 4);
+            BlackRook.Move(0, 7);
         }
 
         private void EnableOrDisablePlayButton(bool handling)
