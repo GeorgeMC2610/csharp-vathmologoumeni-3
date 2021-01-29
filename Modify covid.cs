@@ -102,6 +102,15 @@ namespace csharp_vathmologoumeni_3
                 numericUpDown1.Maximum -= 1;
             }    
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please make your changes in the column elements bellow. Click ");
+            foreach (Control c in Controls)
+            {
+                if (c.GetType() == typeof(RichTextBox))
+                { }
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -149,6 +158,6 @@ namespace csharp_vathmologoumeni_3
                 }
                     
             }          
-        }
+        }     
     }
 }
