@@ -139,11 +139,6 @@ namespace csharp_vathmologoumeni_3
             Close();
         }
 
-        private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.OpenForms[1].Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -177,6 +172,12 @@ namespace csharp_vathmologoumeni_3
             comand.ExecuteNonQuery();
             connection.Close();
 
+            MessageBox.Show("Report has been successfully added!");
+        }
+
+        private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms[1].Show();
         }
     }
 }

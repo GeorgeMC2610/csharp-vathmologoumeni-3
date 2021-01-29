@@ -28,6 +28,13 @@ namespace csharp_vathmologoumeni_3
             Covid_Insert cov = new Covid_Insert();
             cov.Show();
         }
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Modify_covid mc = new Modify_covid();
+            mc.Show();
+        }
         private void Choose_covid_db_option_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.OpenForms[0].Show();

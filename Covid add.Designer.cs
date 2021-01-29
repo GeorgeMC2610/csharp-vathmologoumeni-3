@@ -410,7 +410,7 @@
             this.Font = new System.Drawing.Font("Microsoft PhagsPa", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Covid_Insert";
-            this.Text = "Full";
+            this.Text = "Add covid case report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Covid_Insert_FormClosed);
             this.Load += new System.EventHandler(this.Covid_Load);
             this.TextChanged += new System.EventHandler(this.Covid_TextChanged);
