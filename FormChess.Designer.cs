@@ -42,7 +42,10 @@ namespace csharp_vathmologoumeni_3
             this.numericUpDownMinutes = new System.Windows.Forms.NumericUpDown();
             this.labelTimers = new System.Windows.Forms.Label();
             this.panelChessBoard = new System.Windows.Forms.Panel();
+            this.pictureBoxBlackRook = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
+            this.panelChessBoard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -145,7 +148,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonStartGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonStartGame.BackColor = System.Drawing.Color.Green;
             this.buttonStartGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartGame.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartGame.ForeColor = System.Drawing.Color.White;
             this.buttonStartGame.Location = new System.Drawing.Point(0, 796);
@@ -222,11 +225,23 @@ namespace csharp_vathmologoumeni_3
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChessBoard.BackgroundImage = global::csharp_vathmologoumeni_3.Properties.Resources.chess_board;
             this.panelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackRook);
             this.panelChessBoard.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelChessBoard.Location = new System.Drawing.Point(294, 27);
             this.panelChessBoard.Name = "panelChessBoard";
             this.panelChessBoard.Size = new System.Drawing.Size(780, 780);
             this.panelChessBoard.TabIndex = 12;
+            // 
+            // pictureBoxBlackRook
+            // 
+            this.pictureBoxBlackRook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackRook.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackRook.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
+            this.pictureBoxBlackRook.Location = new System.Drawing.Point(14, 14);
+            this.pictureBoxBlackRook.Name = "pictureBoxBlackRook";
+            this.pictureBoxBlackRook.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackRook.TabIndex = 0;
+            this.pictureBoxBlackRook.TabStop = false;
             // 
             // FormChess
             // 
@@ -256,6 +271,8 @@ namespace csharp_vathmologoumeni_3
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormChess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).EndInit();
+            this.panelChessBoard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +293,6 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.NumericUpDown numericUpDownMinutes;
         private System.Windows.Forms.Label labelTimers;
         private System.Windows.Forms.Panel panelChessBoard;
+        private System.Windows.Forms.PictureBox pictureBoxBlackRook;
     }
 }

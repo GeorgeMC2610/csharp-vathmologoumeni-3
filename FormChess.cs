@@ -38,6 +38,7 @@ namespace csharp_vathmologoumeni_3
 
                 case "buttonStartGame":
                     GameStarted = true;
+                    EnableOrDisableGame(!GameStarted);
                     break;
             }
         }
@@ -83,6 +84,9 @@ namespace csharp_vathmologoumeni_3
             panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height - panelChessBoard.Height - menuStrip1.Height);
 
             panelChessBoard.Visible = false;
+
+            Pawn BlackRook = new Pawn("Rook", pictureBoxBlackRook);
+            BlackRook.Move(0, 7);
         }
 
         private void EnableOrDisablePlayButton(bool handling)
@@ -93,6 +97,40 @@ namespace csharp_vathmologoumeni_3
             buttonStartGame.Enabled   = handling;
             buttonStartGame.ForeColor = foreColor;
             buttonStartGame.BackColor = backColor;
+
+            labelTitle.Location             = new Point(Width / 2 - labelTitle.Width / 2, labelTitle.Location.Y);
+            labelSubtitle.Location          = new Point(Width / 2 - labelSubtitle.Width / 2, labelSubtitle.Location.Y);
+            buttonStartGame.Location        = new Point(Width / 2 - buttonStartGame.Width / 2, buttonStartGame.Location.Y);
+
+            textBoxPlayer1Nickname.Location = new Point(buttonStartGame.Location.X, textBoxPlayer1Nickname.Location.Y);
+            textBoxPlayer2Nickname.Location = new Point(buttonStartGame.Location.X, textBoxPlayer2Nickname.Location.Y);
+            labelFirstNickname.Location     = new Point(textBoxPlayer1Nickname.Location.X, labelFirstNickname.Location.Y);
+            labelSecondNickname.Location    = new Point(textBoxPlayer2Nickname.Location.X, labelSecondNickname.Location.Y);
+
+            checkBoxTimers.Location         = new Point(buttonStartGame.Location.X + buttonStartGame.Size.Width - checkBoxTimers.Size.Width, checkBoxTimers.Location.Y);
+            labelTimers.Location            = new Point(checkBoxTimers.Location.X, labelTimers.Location.Y);
+            numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
+
+            panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height - panelChessBoard.Height - menuStrip1.Height);
+        }
+
+        private void EnableOrDisableGame(bool handling)
+        {
+            foreach (Control c in Controls)
+                if (c.Tag != null)
+                    c.Visible = handling;
+                else
+                    c.Visible = !handling;
+                    
+
+            if (handling)
+            {
+
+            }
+            else
+            {
+                
+            }
         }
     }
 }
