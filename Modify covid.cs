@@ -174,6 +174,22 @@ namespace csharp_vathmologoumeni_3
             Application.OpenForms[1].Show();
         }
 
-        
+        private void aboutModificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("After a search for cases(refer in 'About search' option), select the desired row from the search results in the numericupdown control.\n\n" +
+            "Press the 'Modify' button in order for the app to transfer you in the report modification form.\n\nThere, you will be requested to modify the selected report values.","About modification");
+        }
+
+        private void aboutDeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("After a search for cases(refer in 'About search' option), select the desired row from the search results in the numericupdown control.\n\n" +
+            "Press the 'Delete' button and then, choose 'yes' in the confirmation message, in order for the app to delete the selected row from the database.", "About deletion");
+        }
+
+        private void aboutSearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Select in the top combobox, the category you want to search cases by.\nThen, write what you want to look about in the middle textbox.\n\n" +
+            "If the application find any row from database that contains what you are looking for, the whole row is beeing added as a result in the bottom richtextboxes.", "About search");
+        }
     }
 }

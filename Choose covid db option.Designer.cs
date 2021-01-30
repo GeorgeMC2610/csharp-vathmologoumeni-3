@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Choose_covid_db_option));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCovidCaseReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchAndModifyCovidCaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutTheApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +44,7 @@
             this.label1.BackColor = System.Drawing.Color.Bisque;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(0, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(21, 0, 21, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(805, 43);
@@ -52,100 +52,87 @@
             this.label1.Text = "Welcome employee!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(0, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(805, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Please choose an action";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(87, 198);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 67);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Add covid case report";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(485, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 67);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Search and modify covid case reports";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(265, 320);
+            this.button3.Location = new System.Drawing.Point(275, 335);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(229, 67);
+            this.button3.Size = new System.Drawing.Size(253, 66);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Covid case reports database website";
+            this.button3.Text = "Visit covid case reports website";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // menuStrip1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 430);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 22);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Back to application menu";
+            this.menuStrip1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.databaseToolStripMenuItem,
+            this.aboutTheApplicationToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(805, 27);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // pictureBox1
+            // databaseToolStripMenuItem
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 427);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCovidCaseReportToolStripMenuItem,
+            this.searchAndModifyCovidCaseToolStripMenuItem});
+            this.databaseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(83, 23);
+            this.databaseToolStripMenuItem.Text = "Database";
+            // 
+            // addCovidCaseReportToolStripMenuItem
+            // 
+            this.addCovidCaseReportToolStripMenuItem.Name = "addCovidCaseReportToolStripMenuItem";
+            this.addCovidCaseReportToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.addCovidCaseReportToolStripMenuItem.Text = "Add a covid case report";
+            this.addCovidCaseReportToolStripMenuItem.Click += new System.EventHandler(this.addCovidCaseReportToolStripMenuItem_Click);
+            // 
+            // searchAndModifyCovidCaseToolStripMenuItem
+            // 
+            this.searchAndModifyCovidCaseToolStripMenuItem.Name = "searchAndModifyCovidCaseToolStripMenuItem";
+            this.searchAndModifyCovidCaseToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.searchAndModifyCovidCaseToolStripMenuItem.Text = "Search and modify a covid case report ";
+            this.searchAndModifyCovidCaseToolStripMenuItem.Click += new System.EventHandler(this.searchAndModifyCovidCaseToolStripMenuItem_Click);
+            // 
+            // aboutTheApplicationToolStripMenuItem
+            // 
+            this.aboutTheApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.aboutTheApplicationToolStripMenuItem.Name = "aboutTheApplicationToolStripMenuItem";
+            this.aboutTheApplicationToolStripMenuItem.Size = new System.Drawing.Size(166, 23);
+            this.aboutTheApplicationToolStripMenuItem.Text = "About the application";
+            this.aboutTheApplicationToolStripMenuItem.Click += new System.EventHandler(this.aboutTheApplicationToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // Choose_covid_db_option
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 464);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Choose_covid_db_option";
             this.Text = "Covid case reports application";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Choose_covid_db_option_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,11 +141,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCovidCaseReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchAndModifyCovidCaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutTheApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
     }
 }

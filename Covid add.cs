@@ -21,7 +21,7 @@ namespace csharp_vathmologoumeni_3
         String previous_name,old_email;
 
         Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
-        Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z]*$");
+        Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z.]*$");
         Regex address_regex = new Regex(@"[^A-Za-z,. \d]+");
 
         public Covid_Insert()
@@ -171,7 +171,7 @@ namespace csharp_vathmologoumeni_3
             switch (((Control)sender).Name)
             {
                 case("textBox1"):
-                    if (fullname_regex.IsMatch(textBox1.Text))
+                    if (fullname_regex.IsMatch(textBox1.Text) && !textBox1.Text.Contains("  "))
                         pictureBox1.Visible = false;
                     else
                         pictureBox1.Visible = true;
@@ -253,6 +253,14 @@ namespace csharp_vathmologoumeni_3
             databaseFunction(insert); //if insert = true we are doing insertion else modification
           
             connection.Close();
+        }
+
+        private void aboutValuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Acceptable formats for each value:\n\nFullname: Only letters,comas and fullstops with space between them(double space is not accepted)\n\n" +
+            "Email: xxx@yyy.yyy where x = letters or numbers and y = letters\n\nUnderlying diseases: No restrictions\n\nDate of record: Any selected date\n\n" +
+            "Time of record: A correct time format(hours are represented from 00-23)\n\nPhone number: Only numbers\n\nHome address: Only letters,comas,fullstops and numbers with space between them(double space is not accepted)\n\n" +
+            "Gender: Any selected gender\n\nAge: Any age between 1-100", "Acceptable formats");
         }
 
         private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)
