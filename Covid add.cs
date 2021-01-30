@@ -17,37 +17,131 @@ namespace csharp_vathmologoumeni_3
         String connection_str;
         OleDbConnection connection;
 
+        bool insert = true;
+        String previous_name,old_email;
+
         Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
         Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z]*$");
-        Regex address_regex = new Regex(@"[^A-Za-z \d]+");
+        Regex address_regex = new Regex(@"[^A-Za-z,. \d]+");
 
         public Covid_Insert()
         {
             InitializeComponent();
         }
 
+        public Covid_Insert(String[] values) //Constructor for report modification use
+        {
+            InitializeComponent();
+
+            previous_name = values[0];
+            old_email = values[1];
+
+            insert = false;
+
+            Text = "Modify covid case report";
+            label2.Text = "Please make your changes about the selected covid case";
+            label2.BackColor = Color.LightCoral;
+            button1.Text = "Modify covid case";
+            label1.Visible = pictureBox7.Visible = false;
+
+            textBox1.Text = values[0];
+            textBox2.Text = values[1];
+            
+            String text = values[2];
+            text = text.Replace(", ", "\n");
+            richTextBox1.AppendText(text);
+
+            dateTimePicker1.Text = values[3];
+            maskedTextBox2.Text = values[4];
+            maskedTextBox1.Text = values[5];
+            textBox3.Text = values[6];
+            comboBox1.Text = values[7];
+            numericUpDown1.Value = Int32.Parse(values[8]);
+        }
+
         private void Covid_Load(object sender, EventArgs e)
         {
-            button1.BackColor = Color.DarkGray;
-
             connection_str = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = Covid_cases.mdb;";
             connection = new OleDbConnection(connection_str); //connect to database
-            
-            DateTime date = DateTime.Now;
-            String datetime = date.ToShortTimeString();
 
-            if (datetime[1].Equals(':'))            
-                datetime = datetime.Insert(0, "0");
-            
-            if (datetime.EndsWith("μμ") || datetime.EndsWith("pm"))
+            if (insert)
             {
-                String modified_time = (Int32.Parse(datetime.Substring(0, 2)) + 12).ToString();
-                datetime = datetime.Replace(datetime.Substring(0, 2), modified_time);                             
+                button1.BackColor = Color.DarkGray;
+
+                DateTime date = DateTime.Now;
+                String datetime = date.ToShortTimeString();
+
+                if (datetime[1].Equals(':'))
+                    datetime = datetime.Insert(0, "0");
+
+                if (datetime.EndsWith("μμ") || datetime.EndsWith("pm"))
+                {
+                    String modified_time = (Int32.Parse(datetime.Substring(0, 2)) + 12).ToString();
+                    datetime = datetime.Replace(datetime.Substring(0, 2), modified_time);
+                }
+
+                datetime = datetime.Substring(0, 5);
+
+                maskedTextBox2.Text = datetime;
+            }
+            
+        }
+
+        private void databaseFunction(bool is_insertion)
+        {
+            OleDbCommand comand;
+
+            if (is_insertion)
+            {
+                comand = new OleDbCommand("Insert into Covid_cases(Full_name,Email,Underlying_diseases,Date_of_record," +
+                "Time_of_record,Phone_number,Home_address,Gender,Age) values(@fn,@email,@ud,@dor,@tor,@pn,@ha,@gender,@age)", connection);
+            }
+            else
+            {
+                comand = new OleDbCommand("Update Covid_cases set Full_name = @fn, Email = @email, Underlying_diseases=@ud, Date_of_record=@dor, " +
+                "Time_of_record=@tor, Phone_number=@pn, Home_address=@ha, Gender=@gender, Age=@age where Full_name = @oldfn", connection);
             }
 
-            datetime = datetime.Substring(0, 5);
+            comand.Parameters.AddWithValue("@fn", textBox1.Text);
+            comand.Parameters.AddWithValue("@email", textBox2.Text);
 
-            maskedTextBox2.Text = datetime;
+            String[] lines = richTextBox1.Lines;
+            StringBuilder diseases = new StringBuilder("");
+
+            if (lines.Length != 0)
+            {
+                foreach (String line in lines)
+                {
+                    diseases.Append(line);
+                    diseases.Append(", ");
+                }
+                diseases.Remove(diseases.Length - 2, 2);
+            }
+            else
+                diseases.Append("none");
+
+            comand.Parameters.AddWithValue("@ud", diseases.ToString());
+            comand.Parameters.AddWithValue("@dor", dateTimePicker1.Text);
+            comand.Parameters.AddWithValue("@tor", maskedTextBox2.Text);
+            comand.Parameters.AddWithValue("@pn", maskedTextBox1.Text);
+            comand.Parameters.AddWithValue("@ha", textBox3.Text);
+            comand.Parameters.AddWithValue("@gender", comboBox1.Text);
+            comand.Parameters.AddWithValue("@age", numericUpDown1.Text);
+
+            if (!is_insertion)
+            {
+                comand.Parameters.AddWithValue("@oldfn", previous_name);
+                previous_name = textBox1.Text;
+                old_email = textBox2.Text;
+
+                MessageBox.Show("Report has been successfully modified!", "Success");
+
+                ((Modify_covid)Application.OpenForms[2]).cleartxtbox();
+            }
+            else
+                MessageBox.Show("Report has been successfully added!", "Success");
+
+            comand.ExecuteNonQuery();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) //function for all the pictureboxes
@@ -139,42 +233,32 @@ namespace csharp_vathmologoumeni_3
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand comand = new OleDbCommand("Insert into Covid_cases(Full_name,Email,Underlying_diseases,Date_of_record,Time_of_record,Phone_number,Home_address,Gender,Age) values(@fn,@email,@ud,@dor,@tor,@pn,@ha,@gender,@age)",connection);
-            
-            comand.Parameters.AddWithValue("@fn", textBox1.Text);
-            comand.Parameters.AddWithValue("@email", textBox2.Text);
 
-            String[] lines = richTextBox1.Lines;
-            StringBuilder diseases = new StringBuilder("");
+            //check for email duplicate if we are doing insertion or modification but the old mail is different than the new one
 
-            if (lines.Length != 0)
+            if (insert || !insert && !old_email.Equals(textBox2.Text)) 
             {
-                foreach (String line in lines)
-                {
-                    diseases.Append(line);
-                    diseases.Append(", ");
-                }
-                diseases.Remove(diseases.Length - 2, 2);
-            }
-            else
-                diseases.Append("none");
-            
-            comand.Parameters.AddWithValue("@ud", diseases.ToString());
-            comand.Parameters.AddWithValue("@dor", dateTimePicker1.Text);
-            comand.Parameters.AddWithValue("@tor", maskedTextBox2.Text);
-            comand.Parameters.AddWithValue("@pn", maskedTextBox1.Text);
-            comand.Parameters.AddWithValue("@ha", textBox3.Text);
-            comand.Parameters.AddWithValue("@gender", comboBox1.Text);
-            comand.Parameters.AddWithValue("@age", numericUpDown1.Text);
-            comand.ExecuteNonQuery();
-            connection.Close();
+                OleDbCommand check_email = new OleDbCommand("Select Email from Covid_cases where Email=@email", connection);
+                check_email.Parameters.AddWithValue("@email", textBox2.Text);
+                OleDbDataReader reader = check_email.ExecuteReader();
 
-            MessageBox.Show("Report has been successfully added!");
+                if (reader.Read())
+                {
+                    MessageBox.Show("There is already a report with email: " + textBox2.Text, "Email already exists");
+                    connection.Close();
+                    return;
+                }
+            }
+
+            databaseFunction(insert); //if insert = true we are doing insertion else modification
+          
+            connection.Close();
         }
 
         private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.OpenForms[1].Show();
+            if (insert)
+                Application.OpenForms[1].Show();   
         }
     }
 }
