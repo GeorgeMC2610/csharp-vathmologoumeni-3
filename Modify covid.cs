@@ -26,6 +26,7 @@ namespace csharp_vathmologoumeni_3
         private void Modify_covid_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
+            button1.BackColor = button2.BackColor = Color.Silver;
 
             connection_str = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = Covid_cases.mdb;";
             connection = new OleDbConnection(connection_str); //connect to database
@@ -63,6 +64,7 @@ namespace csharp_vathmologoumeni_3
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             button1.Enabled = button2.Enabled = false;
+            button1.BackColor = button2.BackColor = Color.Silver;
             numericUpDown1.Maximum = 1;
 
             clearRichTextBoxes();
@@ -74,6 +76,8 @@ namespace csharp_vathmologoumeni_3
             if (row.HasRows)
             {
                 button1.Enabled = button2.Enabled = true;
+                button1.BackColor = Color.Bisque;
+                button2.BackColor = Color.LightCoral;
 
                 col = 0;
                 int id;
@@ -115,17 +119,17 @@ namespace csharp_vathmologoumeni_3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult choice = MessageBox.Show("Are you sure you want to delete row "+numericUpDown1.Value.ToString() + " from results?","Delete row",MessageBoxButtons.YesNo);
+            DialogResult choice = MessageBox.Show("Are you sure you want to delete row " + numericUpDown1.Value.ToString() + " from results?", "Delete row", MessageBoxButtons.YesNo);
 
-            if(choice == DialogResult.Yes)
+            if (choice == DialogResult.Yes)
             {
                 OleDbCommand delete = new OleDbCommand("Delete from Covid_cases where Email = @email", connection);
                 delete.Parameters.AddWithValue("@email", richTextBox2.Lines[(int)numericUpDown1.Value - 1]);
                 delete.ExecuteNonQuery();
 
-                String[] lines;               
+                String[] lines;
 
-                foreach(Control c in Controls)
+                foreach (Control c in Controls)
                 {
                     if (c.GetType() == typeof(RichTextBox))
                     {
@@ -136,7 +140,7 @@ namespace csharp_vathmologoumeni_3
 
                         ((RichTextBox)c).Clear();
 
-                        for (int i = 0; i<lines.Length-1; i++)
+                        for (int i = 0; i < lines.Length - 1; i++)
                         {
                             if (!lines[i].Equals(""))
                             {
@@ -148,9 +152,9 @@ namespace csharp_vathmologoumeni_3
                                 ((RichTextBox)c).AppendText("\n");
 
                                 col++;
-                            }               
+                            }
                         }
-                    }                        
+                    }
                 }
 
                 if (numericUpDown1.Maximum != 1)
@@ -158,9 +162,10 @@ namespace csharp_vathmologoumeni_3
                 else
                 {
                     button2.Enabled = button1.Enabled = false;
+                    button1.BackColor = button2.BackColor = Color.Silver;
                 }
-                    
-            }          
+
+            }
         }
 
         private void Modify_covid_FormClosed(object sender, FormClosedEventArgs e)
@@ -168,5 +173,7 @@ namespace csharp_vathmologoumeni_3
             connection.Close();
             Application.OpenForms[1].Show();
         }
+
+        
     }
 }
