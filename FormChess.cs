@@ -136,13 +136,14 @@ namespace csharp_vathmologoumeni_3
             }
         }
 
-        private void AnyButtonClicked(object sender, MouseEventArgs e)
+        private void PanelPress(object sender, MouseEventArgs e)
         {
-            Pawn  p = Chessboard.GetPawnByLocation(new Point(e.X, e.Y));
-            Point point = Chessboard.GetLocationByClick(new Point(e.X, e.Y));
+            if (!PawnClicked)
+                return;
 
-            Console.WriteLine(p.Name);
-            Console.WriteLine("(" + point.X.ToString() + ", " + point.Y.ToString() + ")");
+            PawnSelected.SetLocation(Chessboard.GetLocationByClick(e.Location));
+            PawnSelected.Texture.BackColor = Color.Transparent;
+            PawnClicked = false;
         }
 
         private void AnyPawnClicked(object sender, MouseEventArgs e)
