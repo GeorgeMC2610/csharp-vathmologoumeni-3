@@ -42,12 +42,14 @@ namespace csharp_vathmologoumeni_3
             this.numericUpDownMinutes = new System.Windows.Forms.NumericUpDown();
             this.labelTimers = new System.Windows.Forms.Label();
             this.panelChessBoard = new System.Windows.Forms.Panel();
-            this.pictureBoxBlackKnight = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBlackRook = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteKnight1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackKnight1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackRook1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -227,8 +229,9 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.BackgroundImage = global::csharp_vathmologoumeni_3.Properties.Resources.chess_board;
             this.panelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelChessBoard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelChessBoard.Controls.Add(this.pictureBoxBlackKnight);
-            this.panelChessBoard.Controls.Add(this.pictureBoxBlackRook);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteKnight1);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackKnight1);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackRook1);
             this.panelChessBoard.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelChessBoard.Location = new System.Drawing.Point(294, 27);
             this.panelChessBoard.Name = "panelChessBoard";
@@ -236,29 +239,41 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.TabIndex = 12;
             this.panelChessBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyButtonClicked);
             // 
-            // pictureBoxBlackKnight
+            // pictureBoxWhiteKnight1
             // 
-            this.pictureBoxBlackKnight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxBlackKnight.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxBlackKnight.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_black;
-            this.pictureBoxBlackKnight.Location = new System.Drawing.Point(108, 14);
-            this.pictureBoxBlackKnight.Name = "pictureBoxBlackKnight";
-            this.pictureBoxBlackKnight.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxBlackKnight.TabIndex = 1;
-            this.pictureBoxBlackKnight.TabStop = false;
-            this.pictureBoxBlackKnight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            this.pictureBoxWhiteKnight1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteKnight1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteKnight1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_white;
+            this.pictureBoxWhiteKnight1.Location = new System.Drawing.Point(108, 672);
+            this.pictureBoxWhiteKnight1.Name = "pictureBoxWhiteKnight1";
+            this.pictureBoxWhiteKnight1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteKnight1.TabIndex = 2;
+            this.pictureBoxWhiteKnight1.TabStop = false;
+            this.pictureBoxWhiteKnight1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
-            // pictureBoxBlackRook
+            // pictureBoxBlackKnight1
             // 
-            this.pictureBoxBlackRook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxBlackRook.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxBlackRook.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
-            this.pictureBoxBlackRook.Location = new System.Drawing.Point(14, 14);
-            this.pictureBoxBlackRook.Name = "pictureBoxBlackRook";
-            this.pictureBoxBlackRook.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxBlackRook.TabIndex = 0;
-            this.pictureBoxBlackRook.TabStop = false;
-            this.pictureBoxBlackRook.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            this.pictureBoxBlackKnight1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackKnight1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackKnight1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_black;
+            this.pictureBoxBlackKnight1.Location = new System.Drawing.Point(108, 14);
+            this.pictureBoxBlackKnight1.Name = "pictureBoxBlackKnight1";
+            this.pictureBoxBlackKnight1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackKnight1.TabIndex = 1;
+            this.pictureBoxBlackKnight1.TabStop = false;
+            this.pictureBoxBlackKnight1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackRook1
+            // 
+            this.pictureBoxBlackRook1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackRook1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackRook1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
+            this.pictureBoxBlackRook1.Location = new System.Drawing.Point(14, 14);
+            this.pictureBoxBlackRook1.Name = "pictureBoxBlackRook1";
+            this.pictureBoxBlackRook1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackRook1.TabIndex = 0;
+            this.pictureBoxBlackRook1.TabStop = false;
+            this.pictureBoxBlackRook1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
             // FormChess
             // 
@@ -289,8 +304,9 @@ namespace csharp_vathmologoumeni_3
             this.Load += new System.EventHandler(this.FormChess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).EndInit();
             this.panelChessBoard.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +327,8 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.NumericUpDown numericUpDownMinutes;
         private System.Windows.Forms.Label labelTimers;
         private System.Windows.Forms.Panel panelChessBoard;
-        private System.Windows.Forms.PictureBox pictureBoxBlackRook;
-        private System.Windows.Forms.PictureBox pictureBoxBlackKnight;
+        private System.Windows.Forms.PictureBox pictureBoxBlackRook1;
+        private System.Windows.Forms.PictureBox pictureBoxBlackKnight1;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteKnight1;
     }
 }

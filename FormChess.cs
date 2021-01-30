@@ -19,7 +19,7 @@ namespace csharp_vathmologoumeni_3
 
         bool GameStarted = false;
         bool PawnClicked = false;
-        Pawn PawnPressed;
+        Pawn PawnSelected;
 
         private void AnyButtonClicked(object sender, EventArgs e)
         {
@@ -92,13 +92,16 @@ namespace csharp_vathmologoumeni_3
             panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height / 2 - panelChessBoard.Height / 2);
             panelChessBoard.Visible = false;
 
-            Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook);
-            Pawn BlackKnight1 = new Pawn("Knight", false, pictureBoxBlackKnight);
+            Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook1);
+            Pawn BlackKnight1 = new Pawn("Knight", false, pictureBoxBlackKnight1);
+            Pawn WhiteKnight1 = new Pawn("Knight", true, pictureBoxWhiteKnight1);
 
             Chessboard.InitializeVariables();
 
             BlackRook1.SetLocation(0, 0);
             BlackKnight1.SetLocation(1, 0);
+
+            WhiteKnight1.SetLocation(1, 7);
 
             Console.WriteLine(BlackRook1.Location);
             Console.WriteLine(BlackKnight1.Location);
@@ -146,28 +149,25 @@ namespace csharp_vathmologoumeni_3
         {
             PictureBox pressed = (PictureBox)sender;
 
+            Pawn PawnPressed = (from pawn in Chessboard.ActivePawns where pawn.Texture.Equals(pressed) select pawn).ToArray()[0];
+
             if (!PawnClicked)
             {
                 PawnClicked = true;
-
-                pressed.BackColor = Color.Green;
-                PawnPressed = Chessboard.GetPawnByLocation(Chessboard.GetLocationByClick(pressed.Location));
+                PawnPressed.Texture.BackColor = Color.Green;
+                PawnSelected = PawnPressed;
                 Console.WriteLine(PawnPressed.Name);
+            }
+            else if (PawnPressed.IsWhite != PawnSelected.IsWhite)
+            {
+                PawnSelected.DisposePawn(PawnPressed);
+                PawnSelected.Texture.BackColor = Color.Transparent;
+                PawnClicked = false;
             }
             else
             {
+                PawnSelected.Texture.BackColor = Color.Transparent;
                 PawnClicked = false;
-
-                pressed.BackColor = Color.Transparent;
-                Pawn CurrentPawnPressed = Chessboard.GetPawnByLocation(Chessboard.GetLocationByClick(pressed.Location));
-
-                if (!CurrentPawnPressed.Equals(PawnPressed) && CurrentPawnPressed.IsWhite != PawnPressed.IsWhite)
-                {
-                    CurrentPawnPressed.SetLocation(PawnPressed.Location);
-                }
-
-                PawnPressed = Chessboard.GetPawnByLocation(Chessboard.GetLocationByClick(pressed.Location));
-                Console.WriteLine(PawnPressed.Name);
             }
         }
     }
