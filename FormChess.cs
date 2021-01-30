@@ -18,10 +18,11 @@ namespace csharp_vathmologoumeni_3
         }
 
         bool GameStarted = false;
+        bool SelectedPawn = false;
 
         private void AnyButtonClicked(object sender, EventArgs e)
         {
-            Button pressed = (Button)sender;
+            Control pressed = (Control)sender;
 
             switch (pressed.Name)
             {
@@ -39,6 +40,12 @@ namespace csharp_vathmologoumeni_3
                 case "buttonStartGame":
                     GameStarted = true;
                     EnableOrDisableGame(!GameStarted);
+                    break;
+
+                case "panelChessBoard":
+                    MouseEventArgs mouse = (MouseEventArgs)e;
+                    Console.WriteLine(mouse.X.ToString() + ", " + mouse.Y.ToString());
+
                     break;
             }
         }
@@ -81,12 +88,18 @@ namespace csharp_vathmologoumeni_3
             labelTimers.Location            = new Point(checkBoxTimers.Location.X, labelTimers.Location.Y);
             numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
 
-            panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height - panelChessBoard.Height - menuStrip1.Height);
-
+            panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height / 2 - panelChessBoard.Height / 2);
             panelChessBoard.Visible = false;
 
-            Pawn BlackRook = new Pawn("Rook", pictureBoxBlackRook);
-            BlackRook.Move(0, 7);
+            Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook);
+            Pawn BlackKnight1 = new Pawn("Knight", false, pictureBoxBlackKnight);
+
+            Chessboard.InitializeVariables();
+
+            BlackKnight1.SetLocation(1, 7);
+
+            Console.WriteLine(BlackRook1.Location);
+            Console.WriteLine(BlackKnight1.Location);
         }
 
         private void EnableOrDisablePlayButton(bool handling)
@@ -97,21 +110,6 @@ namespace csharp_vathmologoumeni_3
             buttonStartGame.Enabled   = handling;
             buttonStartGame.ForeColor = foreColor;
             buttonStartGame.BackColor = backColor;
-
-            labelTitle.Location             = new Point(Width / 2 - labelTitle.Width / 2, labelTitle.Location.Y);
-            labelSubtitle.Location          = new Point(Width / 2 - labelSubtitle.Width / 2, labelSubtitle.Location.Y);
-            buttonStartGame.Location        = new Point(Width / 2 - buttonStartGame.Width / 2, buttonStartGame.Location.Y);
-
-            textBoxPlayer1Nickname.Location = new Point(buttonStartGame.Location.X, textBoxPlayer1Nickname.Location.Y);
-            textBoxPlayer2Nickname.Location = new Point(buttonStartGame.Location.X, textBoxPlayer2Nickname.Location.Y);
-            labelFirstNickname.Location     = new Point(textBoxPlayer1Nickname.Location.X, labelFirstNickname.Location.Y);
-            labelSecondNickname.Location    = new Point(textBoxPlayer2Nickname.Location.X, labelSecondNickname.Location.Y);
-
-            checkBoxTimers.Location         = new Point(buttonStartGame.Location.X + buttonStartGame.Size.Width - checkBoxTimers.Size.Width, checkBoxTimers.Location.Y);
-            labelTimers.Location            = new Point(checkBoxTimers.Location.X, labelTimers.Location.Y);
-            numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
-
-            panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height - panelChessBoard.Height - menuStrip1.Height);
         }
 
         private void EnableOrDisableGame(bool handling)
@@ -131,6 +129,18 @@ namespace csharp_vathmologoumeni_3
             {
                 
             }
+        }
+
+        private void AnyButtonClicked(object sender, MouseEventArgs e)
+        {
+            Pawn p = Chessboard.GetPawnByLocation(new Point(e.X, e.Y));
+
+            Console.WriteLine(p.Name);
+        }
+
+        private void AnyPawnClicked(object sender, EventArgs e)
+        {
+            //if (!SelectedPawn)
         }
     }
 }

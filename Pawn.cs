@@ -24,11 +24,15 @@ namespace csharp_vathmologoumeni_3
                 Texture.Location = value;
             }
         }
+        public bool isWhite;
 
-        public Pawn(string Name, PictureBox Texture)
+        public Pawn(string Name, bool isWhite, PictureBox Texture)
         {
             this.Name    = Name;
             this.Texture = Texture;
+            this.isWhite = isWhite;
+
+            Chessboard.ActivePawns.Add(this);
         }
 
         public void Move(int blockXCount, int blockYCount)
@@ -38,5 +42,16 @@ namespace csharp_vathmologoumeni_3
 
             this.Location = new Point(this.Location.X + 94 * blockXCount, this.Location.Y + 94 * blockYCount);
         }
+
+        public void SetLocation(Point p)
+        {
+            this.Location = p;
+        }
+
+        public void SetLocation(int i, int j)
+        {
+            this.Location = new Point(Chessboard.ValidXLocations[i], Chessboard.ValidYLocations[j]);
+        }
+
     }
 }
