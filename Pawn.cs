@@ -53,5 +53,14 @@ namespace csharp_vathmologoumeni_3
             this.Location = p;
         }
 
+        public void DisposePawn(Pawn ToDispose)
+        {
+            ToDispose.Texture.Visible = false;
+            this.SetLocation(ToDispose.Location);
+            ToDispose.Texture.Location = new Point(1000, 1000);
+
+            Chessboard.ActivePawns.Remove(ToDispose);
+        }
+
     }
 }
