@@ -44,7 +44,6 @@
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,6 +55,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 524);
+            this.pictureBox7.Location = new System.Drawing.Point(12, 558);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -76,7 +77,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 527);
+            this.label1.Location = new System.Drawing.Point(53, 564);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 22);
             this.label1.TabIndex = 45;
@@ -85,11 +86,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(412, 43);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(446, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 31);
+            this.label2.Size = new System.Drawing.Size(220, 36);
             this.label2.TabIndex = 47;
-            this.label2.Text = "Search case by:";
+            this.label2.Text = "Search cases by:";
             // 
             // comboBox1
             // 
@@ -101,7 +103,7 @@
             "Email",
             "Gender",
             "Age"});
-            this.comboBox1.Location = new System.Drawing.Point(627, 46);
+            this.comboBox1.Location = new System.Drawing.Point(672, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 33);
             this.comboBox1.TabIndex = 48;
@@ -110,16 +112,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(380, 148);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(418, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(498, 31);
+            this.label3.Size = new System.Drawing.Size(435, 32);
             this.label3.TabIndex = 49;
             this.label3.Text = "Insert the Full_name to search cases for";
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(541, 197);
+            this.textBox1.Location = new System.Drawing.Point(530, 149);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(203, 35);
             this.textBox1.TabIndex = 50;
@@ -127,8 +131,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 335);
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(12, 381);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(141, 171);
@@ -138,8 +143,9 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(159, 335);
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(159, 381);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(196, 171);
@@ -149,8 +155,9 @@
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(361, 335);
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3.Location = new System.Drawing.Point(361, 381);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
             this.richTextBox3.Size = new System.Drawing.Size(222, 171);
@@ -160,8 +167,9 @@
             // 
             // richTextBox5
             // 
-            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox5.Location = new System.Drawing.Point(691, 335);
+            this.richTextBox5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox5.Location = new System.Drawing.Point(691, 381);
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.ReadOnly = true;
             this.richTextBox5.Size = new System.Drawing.Size(67, 171);
@@ -171,8 +179,9 @@
             // 
             // richTextBox6
             // 
-            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox6.Location = new System.Drawing.Point(764, 335);
+            this.richTextBox6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox6.Location = new System.Drawing.Point(764, 381);
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.ReadOnly = true;
             this.richTextBox6.Size = new System.Drawing.Size(114, 171);
@@ -182,8 +191,9 @@
             // 
             // richTextBox4
             // 
-            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(589, 335);
+            this.richTextBox4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox4.Location = new System.Drawing.Point(589, 381);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ReadOnly = true;
             this.richTextBox4.Size = new System.Drawing.Size(96, 171);
@@ -193,8 +203,9 @@
             // 
             // richTextBox7
             // 
-            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox7.Location = new System.Drawing.Point(884, 335);
+            this.richTextBox7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox7.Location = new System.Drawing.Point(884, 381);
             this.richTextBox7.Name = "richTextBox7";
             this.richTextBox7.ReadOnly = true;
             this.richTextBox7.Size = new System.Drawing.Size(241, 171);
@@ -204,8 +215,9 @@
             // 
             // richTextBox8
             // 
-            this.richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox8.Location = new System.Drawing.Point(1131, 335);
+            this.richTextBox8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox8.Location = new System.Drawing.Point(1131, 381);
             this.richTextBox8.Name = "richTextBox8";
             this.richTextBox8.ReadOnly = true;
             this.richTextBox8.Size = new System.Drawing.Size(76, 171);
@@ -215,32 +227,25 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Bisque;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(12, 248);
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(416, 254);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 40);
+            this.button1.Size = new System.Drawing.Size(126, 45);
             this.button1.TabIndex = 59;
             this.button1.Text = "Modify";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(983, 248);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 40);
-            this.button2.TabIndex = 60;
-            this.button2.Text = "Delete row";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox9
             // 
-            this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox9.Location = new System.Drawing.Point(1213, 335);
+            this.richTextBox9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox9.Location = new System.Drawing.Point(1213, 381);
             this.richTextBox9.Name = "richTextBox9";
             this.richTextBox9.ReadOnly = true;
             this.richTextBox9.Size = new System.Drawing.Size(54, 171);
@@ -250,8 +255,9 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(1147, 248);
+            this.numericUpDown1.Location = new System.Drawing.Point(576, 259);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1,
             0,
@@ -273,97 +279,142 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 301);
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(12, 349);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 31);
+            this.label4.Size = new System.Drawing.Size(141, 35);
             this.label4.TabIndex = 63;
             this.label4.Text = "Full name";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(221, 301);
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(159, 349);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 31);
+            this.label5.Size = new System.Drawing.Size(196, 35);
             this.label5.TabIndex = 64;
             this.label5.Text = "Email";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(369, 303);
+            this.label6.Location = new System.Drawing.Point(361, 349);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 26);
+            this.label6.Size = new System.Drawing.Size(222, 35);
             this.label6.TabIndex = 65;
             this.label6.Text = "Underlying diseases";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(592, 301);
+            this.label7.Location = new System.Drawing.Point(589, 349);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 31);
+            this.label7.Size = new System.Drawing.Size(96, 35);
             this.label7.TabIndex = 66;
             this.label7.Text = "D.O.R";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(692, 307);
+            this.label8.Location = new System.Drawing.Point(691, 349);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 25);
+            this.label8.Size = new System.Drawing.Size(67, 35);
             this.label8.TabIndex = 67;
             this.label8.Text = "T.O.R";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(760, 307);
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(764, 349);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 22);
+            this.label9.Size = new System.Drawing.Size(114, 35);
             this.label9.TabIndex = 68;
             this.label9.Text = "Phone number";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(911, 301);
+            this.label10.Location = new System.Drawing.Point(884, 349);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(190, 31);
+            this.label10.Size = new System.Drawing.Size(241, 35);
             this.label10.TabIndex = 69;
             this.label10.Text = "Home address";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1129, 307);
+            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1131, 349);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 25);
+            this.label11.Size = new System.Drawing.Size(76, 35);
             this.label11.TabIndex = 70;
             this.label11.Text = "Gender";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1212, 304);
+            this.label12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1213, 349);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 29);
+            this.label12.Size = new System.Drawing.Size(54, 35);
             this.label12.TabIndex = 71;
             this.label12.Text = "Age";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(410, 215);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(459, 32);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Select the row you want to modify/delete";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightCoral;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Enabled = false;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(733, 254);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 45);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Modify_covid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 564);
+            this.ClientSize = new System.Drawing.Size(1274, 598);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -375,7 +426,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.richTextBox9);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox8);
             this.Controls.Add(this.richTextBox7);
@@ -394,7 +444,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Modify_covid";
-            this.Text = "Search and modify covid case reports";
+            this.Text = "Modify covid case report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Modify_covid_FormClosed);
             this.Load += new System.EventHandler(this.Modify_covid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -421,7 +471,6 @@
         private System.Windows.Forms.RichTextBox richTextBox7;
         private System.Windows.Forms.RichTextBox richTextBox8;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
@@ -433,5 +482,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button2;
     }
 }
