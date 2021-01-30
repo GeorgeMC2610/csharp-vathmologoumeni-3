@@ -301,6 +301,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "MemoryGame_GamePlay";
             this.Text = "MemoryGame_GamePlay";
+            this.Load += new System.EventHandler(this.MemoryGame_GamePlay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

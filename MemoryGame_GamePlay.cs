@@ -12,9 +12,15 @@ namespace csharp_vathmologoumeni_3
 {
     public partial class MemoryGame_GamePlay : Form
     {
+        int random;
         public MemoryGame_GamePlay()
         {
             InitializeComponent();
+        }
+
+        private void MemoryGame_GamePlay_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

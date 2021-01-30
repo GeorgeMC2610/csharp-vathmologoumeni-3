@@ -36,11 +36,13 @@ namespace csharp_vathmologoumeni_3
             this.LeaderBoard = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Lets_Play = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Memory_Game_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.button1.ForeColor = System.Drawing.Color.Red;
@@ -71,7 +73,8 @@ namespace csharp_vathmologoumeni_3
             // 
             // Memory_Game_picture
             // 
-            this.Memory_Game_picture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.Memory_Game_picture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Memory_Game_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Memory_Game_picture.Image = global::csharp_vathmologoumeni_3.Properties.Resources.Memory_Game;
@@ -84,6 +87,7 @@ namespace csharp_vathmologoumeni_3
             // 
             // LeaderBoard
             // 
+            this.LeaderBoard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LeaderBoard.AutoSize = true;
             this.LeaderBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.LeaderBoard.Location = new System.Drawing.Point(500, 38);
@@ -112,11 +116,26 @@ namespace csharp_vathmologoumeni_3
             this.button3.Text = "Play Time";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // Lets_Play
+            // 
+            this.Lets_Play.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lets_Play.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Lets_Play.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lets_Play.ForeColor = System.Drawing.Color.Red;
+            this.Lets_Play.Location = new System.Drawing.Point(327, 12);
+            this.Lets_Play.Name = "Lets_Play";
+            this.Lets_Play.Size = new System.Drawing.Size(149, 51);
+            this.Lets_Play.TabIndex = 7;
+            this.Lets_Play.Text = "Lets Play!";
+            this.Lets_Play.UseVisualStyleBackColor = true;
+            this.Lets_Play.Click += new System.EventHandler(this.Lets_Play_Click);
+            // 
             // FormMemoryGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Lets_Play);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.LeaderBoard);
@@ -142,5 +161,6 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Label LeaderBoard;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Lets_Play;
     }
 }
