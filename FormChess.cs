@@ -18,7 +18,8 @@ namespace csharp_vathmologoumeni_3
         }
 
         bool GameStarted = false;
-        bool SelectedPawn = false;
+        bool PawnClicked = false;
+        Pawn PawnPressed;
 
         private void AnyButtonClicked(object sender, EventArgs e)
         {
@@ -96,7 +97,8 @@ namespace csharp_vathmologoumeni_3
 
             Chessboard.InitializeVariables();
 
-            BlackKnight1.SetLocation(1, 7);
+            BlackRook1.SetLocation(0, 0);
+            BlackKnight1.SetLocation(1, 0);
 
             Console.WriteLine(BlackRook1.Location);
             Console.WriteLine(BlackKnight1.Location);
@@ -133,14 +135,40 @@ namespace csharp_vathmologoumeni_3
 
         private void AnyButtonClicked(object sender, MouseEventArgs e)
         {
-            Pawn p = Chessboard.GetPawnByLocation(new Point(e.X, e.Y));
+            Pawn  p = Chessboard.GetPawnByLocation(new Point(e.X, e.Y));
+            Point point = Chessboard.GetLocationByClick(new Point(e.X, e.Y));
 
             Console.WriteLine(p.Name);
+            Console.WriteLine("(" + point.X.ToString() + ", " + point.Y.ToString() + ")");
         }
 
-        private void AnyPawnClicked(object sender, EventArgs e)
+        private void AnyPawnClicked(object sender, MouseEventArgs e)
         {
-            //if (!SelectedPawn)
+            PictureBox pressed = (PictureBox)sender;
+
+            if (!PawnClicked)
+            {
+                PawnClicked = true;
+
+                pressed.BackColor = Color.Green;
+                PawnPressed = Chessboard.GetPawnByLocation(Chessboard.GetLocationByClick(pressed.Location));
+                Console.WriteLine(PawnPressed.Name);
+            }
+            else
+            {
+                PawnClicked = false;
+
+                pressed.BackColor = Color.Transparent;
+                Pawn CurrentPawnPressed = Chessboard.GetPawnByLocation(Chessboard.GetLocationByClick(pressed.Location));
+
+                if (!CurrentPawnPressed.Equals(PawnPressed) && CurrentPawnPressed.IsWhite != PawnPressed.IsWhite)
+                {
+                    CurrentPawnPressed.SetLocation(PawnPressed.Location);
+                }
+
+                PawnPressed = Chessboard.GetPawnByLocation(Chessboard.GetLocationByClick(pressed.Location));
+                Console.WriteLine(PawnPressed.Name);
+            }
         }
     }
 }

@@ -241,24 +241,24 @@ namespace csharp_vathmologoumeni_3
             this.pictureBoxBlackKnight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackKnight.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxBlackKnight.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_black;
-            this.pictureBoxBlackKnight.Location = new System.Drawing.Point(107, 13);
+            this.pictureBoxBlackKnight.Location = new System.Drawing.Point(108, 14);
             this.pictureBoxBlackKnight.Name = "pictureBoxBlackKnight";
             this.pictureBoxBlackKnight.Size = new System.Drawing.Size(95, 95);
             this.pictureBoxBlackKnight.TabIndex = 1;
             this.pictureBoxBlackKnight.TabStop = false;
-            this.pictureBoxBlackKnight.Click += new System.EventHandler(this.AnyPawnClicked);
+            this.pictureBoxBlackKnight.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
             // pictureBoxBlackRook
             // 
             this.pictureBoxBlackRook.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackRook.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxBlackRook.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
-            this.pictureBoxBlackRook.Location = new System.Drawing.Point(13, 13);
+            this.pictureBoxBlackRook.Location = new System.Drawing.Point(14, 14);
             this.pictureBoxBlackRook.Name = "pictureBoxBlackRook";
             this.pictureBoxBlackRook.Size = new System.Drawing.Size(95, 95);
             this.pictureBoxBlackRook.TabIndex = 0;
             this.pictureBoxBlackRook.TabStop = false;
-            this.pictureBoxBlackRook.Click += new System.EventHandler(this.AnyPawnClicked);
+            this.pictureBoxBlackRook.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
             // FormChess
             // 
