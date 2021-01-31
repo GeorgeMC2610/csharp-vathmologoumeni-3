@@ -29,6 +29,7 @@ namespace csharp_vathmologoumeni_3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.textBoxPlayer1Nickname = new System.Windows.Forms.TextBox();
@@ -42,6 +43,13 @@ namespace csharp_vathmologoumeni_3
             this.numericUpDownMinutes = new System.Windows.Forms.NumericUpDown();
             this.labelTimers = new System.Windows.Forms.Label();
             this.panelChessBoard = new System.Windows.Forms.Panel();
+            this.pictureBoxWhitePawn4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhitePawn1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhiteKing = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhiteQueen = new System.Windows.Forms.PictureBox();
@@ -67,15 +75,17 @@ namespace csharp_vathmologoumeni_3
             this.pictureBoxWhiteKnight1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBlackKnight1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBlackRook1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn8 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn7 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn6 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn5 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWhitePawn4 = new System.Windows.Forms.PictureBox();
+            this.timerCountdown = new System.Windows.Forms.Timer(this.components);
+            this.labelPlayer1Timer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteQueen)).BeginInit();
@@ -101,13 +111,6 @@ namespace csharp_vathmologoumeni_3
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -325,6 +328,90 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.Size = new System.Drawing.Size(780, 780);
             this.panelChessBoard.TabIndex = 12;
             this.panelChessBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelPress);
+            // 
+            // pictureBoxWhitePawn4
+            // 
+            this.pictureBoxWhitePawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn4.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn4.Location = new System.Drawing.Point(296, 578);
+            this.pictureBoxWhitePawn4.Name = "pictureBoxWhitePawn4";
+            this.pictureBoxWhitePawn4.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn4.TabIndex = 31;
+            this.pictureBoxWhitePawn4.TabStop = false;
+            this.pictureBoxWhitePawn4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn5
+            // 
+            this.pictureBoxWhitePawn5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn5.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn5.Location = new System.Drawing.Point(390, 578);
+            this.pictureBoxWhitePawn5.Name = "pictureBoxWhitePawn5";
+            this.pictureBoxWhitePawn5.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn5.TabIndex = 30;
+            this.pictureBoxWhitePawn5.TabStop = false;
+            this.pictureBoxWhitePawn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn6
+            // 
+            this.pictureBoxWhitePawn6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn6.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn6.Location = new System.Drawing.Point(484, 578);
+            this.pictureBoxWhitePawn6.Name = "pictureBoxWhitePawn6";
+            this.pictureBoxWhitePawn6.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn6.TabIndex = 29;
+            this.pictureBoxWhitePawn6.TabStop = false;
+            this.pictureBoxWhitePawn6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn7
+            // 
+            this.pictureBoxWhitePawn7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn7.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn7.Location = new System.Drawing.Point(578, 578);
+            this.pictureBoxWhitePawn7.Name = "pictureBoxWhitePawn7";
+            this.pictureBoxWhitePawn7.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn7.TabIndex = 28;
+            this.pictureBoxWhitePawn7.TabStop = false;
+            this.pictureBoxWhitePawn7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn8
+            // 
+            this.pictureBoxWhitePawn8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn8.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn8.Location = new System.Drawing.Point(672, 578);
+            this.pictureBoxWhitePawn8.Name = "pictureBoxWhitePawn8";
+            this.pictureBoxWhitePawn8.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn8.TabIndex = 27;
+            this.pictureBoxWhitePawn8.TabStop = false;
+            this.pictureBoxWhitePawn8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn3
+            // 
+            this.pictureBoxWhitePawn3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn3.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn3.Location = new System.Drawing.Point(202, 578);
+            this.pictureBoxWhitePawn3.Name = "pictureBoxWhitePawn3";
+            this.pictureBoxWhitePawn3.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn3.TabIndex = 26;
+            this.pictureBoxWhitePawn3.TabStop = false;
+            this.pictureBoxWhitePawn3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn2
+            // 
+            this.pictureBoxWhitePawn2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn2.Location = new System.Drawing.Point(108, 578);
+            this.pictureBoxWhitePawn2.Name = "pictureBoxWhitePawn2";
+            this.pictureBoxWhitePawn2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn2.TabIndex = 25;
+            this.pictureBoxWhitePawn2.TabStop = false;
+            this.pictureBoxWhitePawn2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
             // pictureBoxWhitePawn1
             // 
@@ -626,89 +713,19 @@ namespace csharp_vathmologoumeni_3
             this.pictureBoxBlackRook1.TabStop = false;
             this.pictureBoxBlackRook1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
-            // pictureBoxWhitePawn2
+            // timerCountdown
             // 
-            this.pictureBoxWhitePawn2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn2.Location = new System.Drawing.Point(108, 578);
-            this.pictureBoxWhitePawn2.Name = "pictureBoxWhitePawn2";
-            this.pictureBoxWhitePawn2.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn2.TabIndex = 25;
-            this.pictureBoxWhitePawn2.TabStop = false;
-            this.pictureBoxWhitePawn2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            this.timerCountdown.Interval = 1000;
             // 
-            // pictureBoxWhitePawn3
+            // labelPlayer1Timer
             // 
-            this.pictureBoxWhitePawn3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn3.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn3.Location = new System.Drawing.Point(202, 578);
-            this.pictureBoxWhitePawn3.Name = "pictureBoxWhitePawn3";
-            this.pictureBoxWhitePawn3.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn3.TabIndex = 26;
-            this.pictureBoxWhitePawn3.TabStop = false;
-            this.pictureBoxWhitePawn3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
-            // 
-            // pictureBoxWhitePawn8
-            // 
-            this.pictureBoxWhitePawn8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn8.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn8.Location = new System.Drawing.Point(672, 578);
-            this.pictureBoxWhitePawn8.Name = "pictureBoxWhitePawn8";
-            this.pictureBoxWhitePawn8.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn8.TabIndex = 27;
-            this.pictureBoxWhitePawn8.TabStop = false;
-            this.pictureBoxWhitePawn8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
-            // 
-            // pictureBoxWhitePawn7
-            // 
-            this.pictureBoxWhitePawn7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn7.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn7.Location = new System.Drawing.Point(578, 578);
-            this.pictureBoxWhitePawn7.Name = "pictureBoxWhitePawn7";
-            this.pictureBoxWhitePawn7.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn7.TabIndex = 28;
-            this.pictureBoxWhitePawn7.TabStop = false;
-            this.pictureBoxWhitePawn7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
-            // 
-            // pictureBoxWhitePawn6
-            // 
-            this.pictureBoxWhitePawn6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn6.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn6.Location = new System.Drawing.Point(484, 578);
-            this.pictureBoxWhitePawn6.Name = "pictureBoxWhitePawn6";
-            this.pictureBoxWhitePawn6.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn6.TabIndex = 29;
-            this.pictureBoxWhitePawn6.TabStop = false;
-            this.pictureBoxWhitePawn6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
-            // 
-            // pictureBoxWhitePawn5
-            // 
-            this.pictureBoxWhitePawn5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn5.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn5.Location = new System.Drawing.Point(390, 578);
-            this.pictureBoxWhitePawn5.Name = "pictureBoxWhitePawn5";
-            this.pictureBoxWhitePawn5.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn5.TabIndex = 30;
-            this.pictureBoxWhitePawn5.TabStop = false;
-            this.pictureBoxWhitePawn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
-            // 
-            // pictureBoxWhitePawn4
-            // 
-            this.pictureBoxWhitePawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxWhitePawn4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxWhitePawn4.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
-            this.pictureBoxWhitePawn4.Location = new System.Drawing.Point(296, 578);
-            this.pictureBoxWhitePawn4.Name = "pictureBoxWhitePawn4";
-            this.pictureBoxWhitePawn4.Size = new System.Drawing.Size(95, 95);
-            this.pictureBoxWhitePawn4.TabIndex = 31;
-            this.pictureBoxWhitePawn4.TabStop = false;
-            this.pictureBoxWhitePawn4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            this.labelPlayer1Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPlayer1Timer.AutoSize = true;
+            this.labelPlayer1Timer.Location = new System.Drawing.Point(1274, 190);
+            this.labelPlayer1Timer.Name = "labelPlayer1Timer";
+            this.labelPlayer1Timer.Size = new System.Drawing.Size(53, 19);
+            this.labelPlayer1Timer.TabIndex = 13;
+            this.labelPlayer1Timer.Text = "label1";
             // 
             // FormChess
             // 
@@ -716,6 +733,7 @@ namespace csharp_vathmologoumeni_3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1384, 861);
+            this.Controls.Add(this.labelPlayer1Timer);
             this.Controls.Add(this.panelChessBoard);
             this.Controls.Add(this.labelTimers);
             this.Controls.Add(this.numericUpDownMinutes);
@@ -739,6 +757,13 @@ namespace csharp_vathmologoumeni_3
             this.Load += new System.EventHandler(this.FormChess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).EndInit();
             this.panelChessBoard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteQueen)).EndInit();
@@ -764,13 +789,6 @@ namespace csharp_vathmologoumeni_3
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -823,5 +841,7 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.PictureBox pictureBoxWhitePawn8;
         private System.Windows.Forms.PictureBox pictureBoxWhitePawn3;
         private System.Windows.Forms.PictureBox pictureBoxWhitePawn2;
+        private System.Windows.Forms.Timer timerCountdown;
+        private System.Windows.Forms.Label labelPlayer1Timer;
     }
 }

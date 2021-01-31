@@ -16,6 +16,9 @@ namespace csharp_vathmologoumeni_3
 
         public static List<Pawn> ActivePawns = new List<Pawn>();
 
+        /// <summary>
+        /// Initializes all variables associated with the <see cref="Chessboard"/> class.
+        /// </summary>
         public static void InitializeVariables()
         {
             for (int i = 0; i < 8; i++)
@@ -59,6 +62,11 @@ namespace csharp_vathmologoumeni_3
             return ActivePawns[pos];
         }
         
+        /// <summary>
+        /// Gets the coordinates of any point in the <see cref="Chessboard"/> (most likely the mouse's coordinates).
+        /// </summary>
+        /// <param name="clicked"></param>
+        /// <returns>The closest valid point of the <see cref="Chessboard.ValidClickPoints"/>.</returns>
         public static Point GetLocationByClick(Point clicked)
         {
             int i = 0;
@@ -78,6 +86,11 @@ namespace csharp_vathmologoumeni_3
             }
 
             return ValidPoints[pos];
+        }
+
+        public static void InverseAllPawns()
+        {
+
         }
     }
 }

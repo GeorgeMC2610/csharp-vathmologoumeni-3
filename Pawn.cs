@@ -53,6 +53,15 @@ namespace csharp_vathmologoumeni_3
             this.Location = p;
         }
 
+        /// <summary>
+        /// This method is called by any <see cref="Pawn"/> that destroys another <see cref="Pawn"/>.
+        /// <list type="bullet">
+        /// <item>The Pawn which called this method, moves to the destroyed Pawn's location</item>
+        /// <item>The destroyed Pawn's Texture goes Invisible.</item>
+        /// <item>The destroyed Pawn gets moved out from the <see cref="Chessboard"/>.</item>
+        /// </list>
+        /// </summary>
+        /// <param name="ToDispose"></param>
         public void DisposePawn(Pawn ToDispose)
         {
             ToDispose.Texture.Visible = false;

@@ -17,9 +17,13 @@ namespace csharp_vathmologoumeni_3
             InitializeComponent();
         }
 
+        bool Player1Turn = true;
         bool GameStarted = false;
         bool PawnClicked = false;
         Pawn PawnSelected;
+        int time_PLAYER1;
+        int time_PLAYER2;
+        int current_countdown;
 
         private void AnyButtonClicked(object sender, EventArgs e)
         {
@@ -92,6 +96,7 @@ namespace csharp_vathmologoumeni_3
             panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height / 2 - panelChessBoard.Height / 2);
             panelChessBoard.Visible = false;
 
+            //then initialize all pawns in the board.
             Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook1);
             Pawn BlackKnight1 = new Pawn("Knight", false, pictureBoxBlackKnight1);
             Pawn BlackBishop1 = new Pawn("Bishop", false, pictureBoxBlackBishop1);
@@ -200,6 +205,7 @@ namespace csharp_vathmologoumeni_3
             PawnSelected.SetLocation(Chessboard.GetLocationByClick(e.Location));
             PawnSelected.Texture.BackColor = Color.Transparent;
             PawnClicked = false;
+            Player1Turn = !Player1Turn;
         }
 
         private void AnyPawnClicked(object sender, MouseEventArgs e)
@@ -208,23 +214,32 @@ namespace csharp_vathmologoumeni_3
 
             Pawn PawnPressed = (from pawn in Chessboard.ActivePawns where pawn.Texture.Equals(pressed) select pawn).ToArray()[0];
 
-            if (!PawnClicked)
+            PawnSelected = (PawnSelected == null) ? PawnPressed : PawnSelected;
+
+            //if no pawns are selected the pawn pressed is the same as the players turn...
+            if (!PawnClicked && PawnPressed.IsWhite == Player1Turn)
             {
                 PawnClicked = true;
                 PawnPressed.Texture.BackColor = Color.Green;
                 PawnSelected = PawnPressed;
                 Console.WriteLine(PawnPressed.Name);
             }
+            //if the pawn selected is about to "eat" another pawn of a different colour
             else if (PawnPressed.IsWhite != PawnSelected.IsWhite)
             {
                 PawnSelected.DisposePawn(PawnPressed);
                 PawnSelected.Texture.BackColor = Color.Transparent;
                 PawnClicked = false;
+
+                Player1Turn = !Player1Turn;
+                PawnSelected = null;
             }
+            //if the player selects two pawns of the same colour.
             else
             {
                 PawnSelected.Texture.BackColor = Color.Transparent;
                 PawnClicked = false;
+                PawnSelected = null;
             }
         }
     }
