@@ -23,7 +23,6 @@ namespace csharp_vathmologoumeni_3
         Pawn PawnSelected;
         int time_PLAYER1;
         int time_PLAYER2;
-        int current_countdown;
 
         private void AnyButtonClicked(object sender, EventArgs e)
         {
@@ -44,7 +43,7 @@ namespace csharp_vathmologoumeni_3
 
                 case "buttonStartGame":
                     GameStarted = true;
-                    EnableOrDisableGame(!GameStarted);
+                    EnableGame();
                     break;
 
                 case "panelChessBoard":
@@ -94,7 +93,9 @@ namespace csharp_vathmologoumeni_3
             numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
 
             panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height / 2 - panelChessBoard.Height / 2);
+            
             panelChessBoard.Visible = false;
+            labelPlayer1Timer.Visible = labelPlayer2Timer.Visible = false;
 
             //then initialize all pawns in the board.
             Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook1);
@@ -166,13 +167,6 @@ namespace csharp_vathmologoumeni_3
             WhitePawn6.SetLocation(5, 6);
             WhitePawn7.SetLocation(6, 6);
             WhitePawn8.SetLocation(7, 6);
-
-            //set the minutes
-            if (numericUpDownMinutes.Enabled)
-            {
-                time_PLAYER1 = 60 * (int)numericUpDownMinutes.Value;
-                time_PLAYER2 = 60 * (int)numericUpDownMinutes.Value;
-            }
         }
 
         private void EnableOrDisablePlayButton(bool handling)
@@ -185,15 +179,36 @@ namespace csharp_vathmologoumeni_3
             buttonStartGame.BackColor = backColor;
         }
 
-        private void EnableOrDisableGame(bool handling)
+        private void EnableGame()
         {
+            //make all pre-login controls invisible
             foreach (Control c in Controls)
-                if (c.Tag != null)
-                    c.Visible = handling;
+                if (c.Tag != null && c.Tag.ToString().Equals("PreLogin"))
+                    c.Visible = false;
                 else
-                    c.Visible = !handling;
+                    c.Visible = true;
 
-            timerCountdown.Enabled = !handling;
+            //set the minutes
+            if (numericUpDownMinutes.Enabled)
+            {
+                time_PLAYER1 = 60 * (int)numericUpDownMinutes.Value;
+                time_PLAYER2 = 60 * (int)numericUpDownMinutes.Value;
+
+                timerCountdown.Enabled = true;
+            }
+        }
+
+        private void EndGame(string winner)
+        {
+            labelWinner.Visible = labelGameOver.Visible = true;
+            labelWinner.Text = winner + " won!";
+
+            labelGameOver.Location = new Point(panelChessBoard.Size.Width / 2 - labelGameOver.Size.Width / 2, labelGameOver.Location.Y);
+            labelWinner.Location   = new Point(panelChessBoard.Size.Width / 2 - labelWinner.Size.Width / 2, labelWinner.Location.Y);
+
+            Chessboard.ActivePawns.ForEach(p => p.Texture.Enabled = false);
+            timerCountdown.Enabled = false;
+            GameStarted = false;
         }
 
         private void PanelPress(object sender, MouseEventArgs e)
@@ -235,6 +250,10 @@ namespace csharp_vathmologoumeni_3
                 //Inverse the turn.
                 Player1Turn = !Player1Turn;
                 PawnSelected = null;
+
+                //If the disposed pawn was a king, end the game
+                if (PawnPressed.Name.Equals("King"))
+                    EndGame((PawnPressed.IsWhite) ? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text);
             }
             //if the player selects two pawns of the same colour.
             else
@@ -251,8 +270,14 @@ namespace csharp_vathmologoumeni_3
             time_PLAYER1 = (Player1Turn) ? time_PLAYER1 - 1 : time_PLAYER1;
             time_PLAYER2 = (Player1Turn) ? time_PLAYER2 : time_PLAYER2 - 1;
 
-            labelPlayer1Timer.Text = textBoxPlayer1Nickname.Text + "'s Time:" + TimeSpan.FromSeconds(time_PLAYER1);
-            labelPlayer2Timer.Text = textBoxPlayer2Nickname.Text + "'s Time:" + TimeSpan.FromSeconds(time_PLAYER2);
+            labelPlayer1Timer.Text = textBoxPlayer1Nickname.Text + "'s Time:" + Environment.NewLine + TimeSpan.FromSeconds(time_PLAYER1);
+            labelPlayer2Timer.Text = textBoxPlayer2Nickname.Text + "'s Time:" + Environment.NewLine + TimeSpan.FromSeconds(time_PLAYER2);
+
+            labelPlayer1Timer.Location = new Point(panelChessBoard.Size.Width + panelChessBoard.Location.X + 12, labelPlayer1Timer.Location.Y);
+            labelPlayer2Timer.Location = new Point(panelChessBoard.Location.X - labelPlayer2Timer.Size.Width - 12, labelPlayer2Timer.Location.Y);
+
+            if (time_PLAYER1 == 0 || time_PLAYER2 == 0)
+                EndGame((time_PLAYER1 == 0)? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text);
         }
     }
 }

@@ -43,6 +43,8 @@ namespace csharp_vathmologoumeni_3
             this.numericUpDownMinutes = new System.Windows.Forms.NumericUpDown();
             this.labelTimers = new System.Windows.Forms.Label();
             this.panelChessBoard = new System.Windows.Forms.Panel();
+            this.labelWinner = new System.Windows.Forms.Label();
+            this.labelGameOver = new System.Windows.Forms.Label();
             this.pictureBoxWhitePawn4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhitePawn5 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhitePawn6 = new System.Windows.Forms.PictureBox();
@@ -120,7 +122,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.Font = new System.Drawing.Font("Helvetica Rounded", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1239, 27);
+            this.buttonExit.Location = new System.Drawing.Point(1759, 27);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(133, 35);
             this.buttonExit.TabIndex = 0;
@@ -133,7 +135,7 @@ namespace csharp_vathmologoumeni_3
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1384, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -141,7 +143,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.textBoxPlayer1Nickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxPlayer1Nickname.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlayer1Nickname.Location = new System.Drawing.Point(6, 190);
+            this.textBoxPlayer1Nickname.Location = new System.Drawing.Point(266, 190);
             this.textBoxPlayer1Nickname.MaxLength = 45;
             this.textBoxPlayer1Nickname.Name = "textBoxPlayer1Nickname";
             this.textBoxPlayer1Nickname.Size = new System.Drawing.Size(282, 30);
@@ -154,7 +156,7 @@ namespace csharp_vathmologoumeni_3
             this.labelFirstNickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelFirstNickname.AutoSize = true;
             this.labelFirstNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstNickname.Location = new System.Drawing.Point(0, 168);
+            this.labelFirstNickname.Location = new System.Drawing.Point(260, 168);
             this.labelFirstNickname.Name = "labelFirstNickname";
             this.labelFirstNickname.Size = new System.Drawing.Size(167, 19);
             this.labelFirstNickname.TabIndex = 3;
@@ -166,7 +168,7 @@ namespace csharp_vathmologoumeni_3
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(0, 30);
+            this.labelTitle.Location = new System.Drawing.Point(260, 30);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(519, 32);
             this.labelTitle.TabIndex = 4;
@@ -178,7 +180,7 @@ namespace csharp_vathmologoumeni_3
             this.labelSubtitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSubtitle.AutoSize = true;
             this.labelSubtitle.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubtitle.Location = new System.Drawing.Point(3, 73);
+            this.labelSubtitle.Location = new System.Drawing.Point(263, 73);
             this.labelSubtitle.Name = "labelSubtitle";
             this.labelSubtitle.Size = new System.Drawing.Size(422, 28);
             this.labelSubtitle.TabIndex = 5;
@@ -190,7 +192,7 @@ namespace csharp_vathmologoumeni_3
             this.labelSecondNickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSecondNickname.AutoSize = true;
             this.labelSecondNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSecondNickname.Location = new System.Drawing.Point(5, 280);
+            this.labelSecondNickname.Location = new System.Drawing.Point(265, 280);
             this.labelSecondNickname.Name = "labelSecondNickname";
             this.labelSecondNickname.Size = new System.Drawing.Size(167, 19);
             this.labelSecondNickname.TabIndex = 7;
@@ -201,7 +203,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.textBoxPlayer2Nickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxPlayer2Nickname.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPlayer2Nickname.Location = new System.Drawing.Point(6, 302);
+            this.textBoxPlayer2Nickname.Location = new System.Drawing.Point(266, 302);
             this.textBoxPlayer2Nickname.MaxLength = 45;
             this.textBoxPlayer2Nickname.Name = "textBoxPlayer2Nickname";
             this.textBoxPlayer2Nickname.Size = new System.Drawing.Size(282, 30);
@@ -217,7 +219,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartGame.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartGame.ForeColor = System.Drawing.Color.White;
-            this.buttonStartGame.Location = new System.Drawing.Point(0, 796);
+            this.buttonStartGame.Location = new System.Drawing.Point(260, 976);
             this.buttonStartGame.Name = "buttonStartGame";
             this.buttonStartGame.Size = new System.Drawing.Size(513, 53);
             this.buttonStartGame.TabIndex = 8;
@@ -233,7 +235,7 @@ namespace csharp_vathmologoumeni_3
             this.checkBoxTimers.Checked = true;
             this.checkBoxTimers.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTimers.Location = new System.Drawing.Point(16, 195);
+            this.checkBoxTimers.Location = new System.Drawing.Point(276, 195);
             this.checkBoxTimers.Name = "checkBoxTimers";
             this.checkBoxTimers.Size = new System.Drawing.Size(133, 21);
             this.checkBoxTimers.TabIndex = 9;
@@ -250,7 +252,7 @@ namespace csharp_vathmologoumeni_3
             0,
             0,
             0});
-            this.numericUpDownMinutes.Location = new System.Drawing.Point(10, 305);
+            this.numericUpDownMinutes.Location = new System.Drawing.Point(270, 305);
             this.numericUpDownMinutes.Maximum = new decimal(new int[] {
             120,
             0,
@@ -277,7 +279,7 @@ namespace csharp_vathmologoumeni_3
             this.labelTimers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTimers.AutoSize = true;
             this.labelTimers.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimers.Location = new System.Drawing.Point(7, 283);
+            this.labelTimers.Location = new System.Drawing.Point(267, 283);
             this.labelTimers.Name = "labelTimers";
             this.labelTimers.Size = new System.Drawing.Size(262, 19);
             this.labelTimers.TabIndex = 11;
@@ -291,8 +293,10 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.BackgroundImage = global::csharp_vathmologoumeni_3.Properties.Resources.chess_board;
             this.panelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelChessBoard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelChessBoard.Controls.Add(this.labelWinner);
             this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn4);
             this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn5);
+            this.panelChessBoard.Controls.Add(this.labelGameOver);
             this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn6);
             this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn7);
             this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn8);
@@ -324,16 +328,43 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.Controls.Add(this.pictureBoxBlackKnight1);
             this.panelChessBoard.Controls.Add(this.pictureBoxBlackRook1);
             this.panelChessBoard.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelChessBoard.Location = new System.Drawing.Point(294, 27);
+            this.panelChessBoard.Location = new System.Drawing.Point(554, 117);
             this.panelChessBoard.Name = "panelChessBoard";
             this.panelChessBoard.Size = new System.Drawing.Size(780, 780);
             this.panelChessBoard.TabIndex = 12;
             this.panelChessBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelPress);
             // 
+            // labelWinner
+            // 
+            this.labelWinner.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelWinner.AutoSize = true;
+            this.labelWinner.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWinner.ForeColor = System.Drawing.Color.Green;
+            this.labelWinner.Location = new System.Drawing.Point(247, 310);
+            this.labelWinner.Name = "labelWinner";
+            this.labelWinner.Size = new System.Drawing.Size(251, 37);
+            this.labelWinner.TabIndex = 33;
+            this.labelWinner.Text = "(player) WON!";
+            this.labelWinner.Visible = false;
+            // 
+            // labelGameOver
+            // 
+            this.labelGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelGameOver.AutoSize = true;
+            this.labelGameOver.Font = new System.Drawing.Font("Helvetica Rounded", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGameOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelGameOver.Location = new System.Drawing.Point(246, 266);
+            this.labelGameOver.Name = "labelGameOver";
+            this.labelGameOver.Size = new System.Drawing.Size(262, 44);
+            this.labelGameOver.TabIndex = 32;
+            this.labelGameOver.Text = "GAME OVER!";
+            this.labelGameOver.Visible = false;
+            // 
             // pictureBoxWhitePawn4
             // 
             this.pictureBoxWhitePawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn4.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn4.Location = new System.Drawing.Point(296, 578);
             this.pictureBoxWhitePawn4.Name = "pictureBoxWhitePawn4";
@@ -346,6 +377,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn5.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn5.Location = new System.Drawing.Point(390, 578);
             this.pictureBoxWhitePawn5.Name = "pictureBoxWhitePawn5";
@@ -358,6 +390,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn6.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn6.Location = new System.Drawing.Point(484, 578);
             this.pictureBoxWhitePawn6.Name = "pictureBoxWhitePawn6";
@@ -370,6 +403,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn7.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn7.Location = new System.Drawing.Point(578, 578);
             this.pictureBoxWhitePawn7.Name = "pictureBoxWhitePawn7";
@@ -382,6 +416,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn8.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn8.Location = new System.Drawing.Point(672, 578);
             this.pictureBoxWhitePawn8.Name = "pictureBoxWhitePawn8";
@@ -394,6 +429,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn3.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn3.Location = new System.Drawing.Point(202, 578);
             this.pictureBoxWhitePawn3.Name = "pictureBoxWhitePawn3";
@@ -406,6 +442,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn2.Location = new System.Drawing.Point(108, 578);
             this.pictureBoxWhitePawn2.Name = "pictureBoxWhitePawn2";
@@ -418,6 +455,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhitePawn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhitePawn1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhitePawn1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
             this.pictureBoxWhitePawn1.Location = new System.Drawing.Point(14, 578);
             this.pictureBoxWhitePawn1.Name = "pictureBoxWhitePawn1";
@@ -430,6 +468,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteKing.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteKing.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteKing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteKing.Image = global::csharp_vathmologoumeni_3.Properties.Resources.king_white;
             this.pictureBoxWhiteKing.Location = new System.Drawing.Point(390, 672);
             this.pictureBoxWhiteKing.Name = "pictureBoxWhiteKing";
@@ -442,6 +481,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteQueen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteQueen.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteQueen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteQueen.Image = global::csharp_vathmologoumeni_3.Properties.Resources.queen_white;
             this.pictureBoxWhiteQueen.Location = new System.Drawing.Point(296, 672);
             this.pictureBoxWhiteQueen.Name = "pictureBoxWhiteQueen";
@@ -454,6 +494,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteBishop2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteBishop2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteBishop2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteBishop2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_white;
             this.pictureBoxWhiteBishop2.Location = new System.Drawing.Point(484, 672);
             this.pictureBoxWhiteBishop2.Name = "pictureBoxWhiteBishop2";
@@ -466,6 +507,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteBishop1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteBishop1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteBishop1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteBishop1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_white;
             this.pictureBoxWhiteBishop1.Location = new System.Drawing.Point(202, 672);
             this.pictureBoxWhiteBishop1.Name = "pictureBoxWhiteBishop1";
@@ -478,6 +520,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteRook2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteRook2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteRook2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteRook2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_white;
             this.pictureBoxWhiteRook2.Location = new System.Drawing.Point(672, 672);
             this.pictureBoxWhiteRook2.Name = "pictureBoxWhiteRook2";
@@ -490,6 +533,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteRook1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteRook1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteRook1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteRook1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_white;
             this.pictureBoxWhiteRook1.Location = new System.Drawing.Point(14, 672);
             this.pictureBoxWhiteRook1.Name = "pictureBoxWhiteRook1";
@@ -502,6 +546,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteKnight2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteKnight2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteKnight2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteKnight2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_white;
             this.pictureBoxWhiteKnight2.Location = new System.Drawing.Point(578, 672);
             this.pictureBoxWhiteKnight2.Name = "pictureBoxWhiteKnight2";
@@ -514,6 +559,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn8.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn8.Location = new System.Drawing.Point(672, 108);
             this.pictureBoxBlackPawn8.Name = "pictureBoxBlackPawn8";
@@ -526,6 +572,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn7.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn7.Location = new System.Drawing.Point(578, 108);
             this.pictureBoxBlackPawn7.Name = "pictureBoxBlackPawn7";
@@ -538,6 +585,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn6.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn6.Location = new System.Drawing.Point(484, 108);
             this.pictureBoxBlackPawn6.Name = "pictureBoxBlackPawn6";
@@ -550,6 +598,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn5.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn5.Location = new System.Drawing.Point(390, 108);
             this.pictureBoxBlackPawn5.Name = "pictureBoxBlackPawn5";
@@ -562,6 +611,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn4.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn4.Location = new System.Drawing.Point(296, 108);
             this.pictureBoxBlackPawn4.Name = "pictureBoxBlackPawn4";
@@ -574,6 +624,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn3.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn3.Location = new System.Drawing.Point(202, 108);
             this.pictureBoxBlackPawn3.Name = "pictureBoxBlackPawn3";
@@ -586,6 +637,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn2.Location = new System.Drawing.Point(108, 108);
             this.pictureBoxBlackPawn2.Name = "pictureBoxBlackPawn2";
@@ -598,6 +650,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackPawn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackPawn1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackPawn1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
             this.pictureBoxBlackPawn1.Location = new System.Drawing.Point(14, 108);
             this.pictureBoxBlackPawn1.Name = "pictureBoxBlackPawn1";
@@ -610,6 +663,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackQueen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackQueen.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackQueen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackQueen.Image = global::csharp_vathmologoumeni_3.Properties.Resources.queen_black;
             this.pictureBoxBlackQueen.Location = new System.Drawing.Point(296, 14);
             this.pictureBoxBlackQueen.Name = "pictureBoxBlackQueen";
@@ -622,6 +676,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackKing.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackKing.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackKing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackKing.Image = global::csharp_vathmologoumeni_3.Properties.Resources.king_black;
             this.pictureBoxBlackKing.Location = new System.Drawing.Point(390, 14);
             this.pictureBoxBlackKing.Name = "pictureBoxBlackKing";
@@ -634,6 +689,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackRook2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackRook2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackRook2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackRook2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
             this.pictureBoxBlackRook2.Location = new System.Drawing.Point(672, 14);
             this.pictureBoxBlackRook2.Name = "pictureBoxBlackRook2";
@@ -646,6 +702,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackKnight2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackKnight2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackKnight2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackKnight2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_black;
             this.pictureBoxBlackKnight2.Location = new System.Drawing.Point(578, 14);
             this.pictureBoxBlackKnight2.Name = "pictureBoxBlackKnight2";
@@ -658,6 +715,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackBishop2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackBishop2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackBishop2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackBishop2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_black;
             this.pictureBoxBlackBishop2.Location = new System.Drawing.Point(484, 14);
             this.pictureBoxBlackBishop2.Name = "pictureBoxBlackBishop2";
@@ -670,6 +728,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackBishop1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackBishop1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackBishop1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackBishop1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_black;
             this.pictureBoxBlackBishop1.Location = new System.Drawing.Point(202, 14);
             this.pictureBoxBlackBishop1.Name = "pictureBoxBlackBishop1";
@@ -682,6 +741,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxWhiteKnight1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxWhiteKnight1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteKnight1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWhiteKnight1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_white;
             this.pictureBoxWhiteKnight1.Location = new System.Drawing.Point(108, 672);
             this.pictureBoxWhiteKnight1.Name = "pictureBoxWhiteKnight1";
@@ -694,6 +754,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackKnight1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackKnight1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackKnight1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackKnight1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_black;
             this.pictureBoxBlackKnight1.Location = new System.Drawing.Point(108, 14);
             this.pictureBoxBlackKnight1.Name = "pictureBoxBlackKnight1";
@@ -706,6 +767,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.pictureBoxBlackRook1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxBlackRook1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackRook1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxBlackRook1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
             this.pictureBoxBlackRook1.Location = new System.Drawing.Point(14, 14);
             this.pictureBoxBlackRook1.Name = "pictureBoxBlackRook1";
@@ -721,30 +783,33 @@ namespace csharp_vathmologoumeni_3
             // 
             // labelPlayer1Timer
             // 
-            this.labelPlayer1Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPlayer1Timer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPlayer1Timer.AutoSize = true;
-            this.labelPlayer1Timer.Location = new System.Drawing.Point(1080, 606);
+            this.labelPlayer1Timer.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer1Timer.Location = new System.Drawing.Point(1340, 696);
             this.labelPlayer1Timer.Name = "labelPlayer1Timer";
-            this.labelPlayer1Timer.Size = new System.Drawing.Size(117, 19);
+            this.labelPlayer1Timer.Size = new System.Drawing.Size(0, 35);
             this.labelPlayer1Timer.TabIndex = 13;
-            this.labelPlayer1Timer.Text = "(player)\'s Time:";
+            this.labelPlayer1Timer.Tag = "PostLogin";
             // 
             // labelPlayer2Timer
             // 
-            this.labelPlayer2Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPlayer2Timer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPlayer2Timer.AutoSize = true;
-            this.labelPlayer2Timer.Location = new System.Drawing.Point(1080, 136);
+            this.labelPlayer2Timer.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer2Timer.Location = new System.Drawing.Point(335, 226);
             this.labelPlayer2Timer.Name = "labelPlayer2Timer";
-            this.labelPlayer2Timer.Size = new System.Drawing.Size(117, 19);
+            this.labelPlayer2Timer.Size = new System.Drawing.Size(0, 35);
             this.labelPlayer2Timer.TabIndex = 14;
-            this.labelPlayer2Timer.Text = "(player)\'s Time:";
+            this.labelPlayer2Timer.Tag = "PostLogin";
+            this.labelPlayer2Timer.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FormChess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1384, 861);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.labelPlayer2Timer);
             this.Controls.Add(this.labelPlayer1Timer);
             this.Controls.Add(this.panelChessBoard);
@@ -770,6 +835,7 @@ namespace csharp_vathmologoumeni_3
             this.Load += new System.EventHandler(this.FormChess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).EndInit();
             this.panelChessBoard.ResumeLayout(false);
+            this.panelChessBoard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).EndInit();
@@ -857,5 +923,7 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Timer timerCountdown;
         private System.Windows.Forms.Label labelPlayer1Timer;
         private System.Windows.Forms.Label labelPlayer2Timer;
+        private System.Windows.Forms.Label labelWinner;
+        private System.Windows.Forms.Label labelGameOver;
     }
 }
