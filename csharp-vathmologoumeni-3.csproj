@@ -158,5 +158,32 @@
   <ItemGroup>
     <None Include="Chess\knight_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\bishop_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\queen_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\king_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\pawn_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\rook_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\bishop_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\queen_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\king_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chess\white_pawn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

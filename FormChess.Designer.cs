@@ -42,14 +42,72 @@ namespace csharp_vathmologoumeni_3
             this.numericUpDownMinutes = new System.Windows.Forms.NumericUpDown();
             this.labelTimers = new System.Windows.Forms.Label();
             this.panelChessBoard = new System.Windows.Forms.Panel();
+            this.pictureBoxWhitePawn1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteKing = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteQueen = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteBishop2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteBishop1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteRook2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteRook1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhiteKnight2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackPawn1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackQueen = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackKing = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackRook2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackKnight2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackBishop2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBlackBishop1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhiteKnight1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBlackKnight1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBlackRook1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWhitePawn4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteQueen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteBishop2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteBishop1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteRook2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteRook1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackQueen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackBishop2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackBishop1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -229,6 +287,35 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.BackgroundImage = global::csharp_vathmologoumeni_3.Properties.Resources.chess_board;
             this.panelChessBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelChessBoard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn4);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn5);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn6);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn7);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn8);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn3);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhitePawn1);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteKing);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteQueen);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteBishop2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteBishop1);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteRook2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteRook1);
+            this.panelChessBoard.Controls.Add(this.pictureBoxWhiteKnight2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn8);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn7);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn6);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn5);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn4);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn3);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackPawn1);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackQueen);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackKing);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackRook2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackKnight2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackBishop2);
+            this.panelChessBoard.Controls.Add(this.pictureBoxBlackBishop1);
             this.panelChessBoard.Controls.Add(this.pictureBoxWhiteKnight1);
             this.panelChessBoard.Controls.Add(this.pictureBoxBlackKnight1);
             this.panelChessBoard.Controls.Add(this.pictureBoxBlackRook1);
@@ -238,6 +325,270 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.Size = new System.Drawing.Size(780, 780);
             this.panelChessBoard.TabIndex = 12;
             this.panelChessBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelPress);
+            // 
+            // pictureBoxWhitePawn1
+            // 
+            this.pictureBoxWhitePawn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn1.Location = new System.Drawing.Point(14, 578);
+            this.pictureBoxWhitePawn1.Name = "pictureBoxWhitePawn1";
+            this.pictureBoxWhitePawn1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn1.TabIndex = 24;
+            this.pictureBoxWhitePawn1.TabStop = false;
+            this.pictureBoxWhitePawn1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteKing
+            // 
+            this.pictureBoxWhiteKing.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteKing.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteKing.Image = global::csharp_vathmologoumeni_3.Properties.Resources.king_white;
+            this.pictureBoxWhiteKing.Location = new System.Drawing.Point(390, 672);
+            this.pictureBoxWhiteKing.Name = "pictureBoxWhiteKing";
+            this.pictureBoxWhiteKing.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteKing.TabIndex = 23;
+            this.pictureBoxWhiteKing.TabStop = false;
+            this.pictureBoxWhiteKing.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteQueen
+            // 
+            this.pictureBoxWhiteQueen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteQueen.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteQueen.Image = global::csharp_vathmologoumeni_3.Properties.Resources.queen_white;
+            this.pictureBoxWhiteQueen.Location = new System.Drawing.Point(296, 672);
+            this.pictureBoxWhiteQueen.Name = "pictureBoxWhiteQueen";
+            this.pictureBoxWhiteQueen.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteQueen.TabIndex = 22;
+            this.pictureBoxWhiteQueen.TabStop = false;
+            this.pictureBoxWhiteQueen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteBishop2
+            // 
+            this.pictureBoxWhiteBishop2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteBishop2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteBishop2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_white;
+            this.pictureBoxWhiteBishop2.Location = new System.Drawing.Point(484, 672);
+            this.pictureBoxWhiteBishop2.Name = "pictureBoxWhiteBishop2";
+            this.pictureBoxWhiteBishop2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteBishop2.TabIndex = 21;
+            this.pictureBoxWhiteBishop2.TabStop = false;
+            this.pictureBoxWhiteBishop2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteBishop1
+            // 
+            this.pictureBoxWhiteBishop1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteBishop1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteBishop1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_white;
+            this.pictureBoxWhiteBishop1.Location = new System.Drawing.Point(202, 672);
+            this.pictureBoxWhiteBishop1.Name = "pictureBoxWhiteBishop1";
+            this.pictureBoxWhiteBishop1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteBishop1.TabIndex = 20;
+            this.pictureBoxWhiteBishop1.TabStop = false;
+            this.pictureBoxWhiteBishop1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteRook2
+            // 
+            this.pictureBoxWhiteRook2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteRook2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteRook2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_white;
+            this.pictureBoxWhiteRook2.Location = new System.Drawing.Point(672, 672);
+            this.pictureBoxWhiteRook2.Name = "pictureBoxWhiteRook2";
+            this.pictureBoxWhiteRook2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteRook2.TabIndex = 19;
+            this.pictureBoxWhiteRook2.TabStop = false;
+            this.pictureBoxWhiteRook2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteRook1
+            // 
+            this.pictureBoxWhiteRook1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteRook1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteRook1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_white;
+            this.pictureBoxWhiteRook1.Location = new System.Drawing.Point(14, 672);
+            this.pictureBoxWhiteRook1.Name = "pictureBoxWhiteRook1";
+            this.pictureBoxWhiteRook1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteRook1.TabIndex = 18;
+            this.pictureBoxWhiteRook1.TabStop = false;
+            this.pictureBoxWhiteRook1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhiteKnight2
+            // 
+            this.pictureBoxWhiteKnight2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhiteKnight2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhiteKnight2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_white;
+            this.pictureBoxWhiteKnight2.Location = new System.Drawing.Point(578, 672);
+            this.pictureBoxWhiteKnight2.Name = "pictureBoxWhiteKnight2";
+            this.pictureBoxWhiteKnight2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhiteKnight2.TabIndex = 17;
+            this.pictureBoxWhiteKnight2.TabStop = false;
+            this.pictureBoxWhiteKnight2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn8
+            // 
+            this.pictureBoxBlackPawn8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn8.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn8.Location = new System.Drawing.Point(672, 108);
+            this.pictureBoxBlackPawn8.Name = "pictureBoxBlackPawn8";
+            this.pictureBoxBlackPawn8.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn8.TabIndex = 16;
+            this.pictureBoxBlackPawn8.TabStop = false;
+            this.pictureBoxBlackPawn8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn7
+            // 
+            this.pictureBoxBlackPawn7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn7.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn7.Location = new System.Drawing.Point(578, 108);
+            this.pictureBoxBlackPawn7.Name = "pictureBoxBlackPawn7";
+            this.pictureBoxBlackPawn7.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn7.TabIndex = 15;
+            this.pictureBoxBlackPawn7.TabStop = false;
+            this.pictureBoxBlackPawn7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn6
+            // 
+            this.pictureBoxBlackPawn6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn6.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn6.Location = new System.Drawing.Point(484, 108);
+            this.pictureBoxBlackPawn6.Name = "pictureBoxBlackPawn6";
+            this.pictureBoxBlackPawn6.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn6.TabIndex = 14;
+            this.pictureBoxBlackPawn6.TabStop = false;
+            this.pictureBoxBlackPawn6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn5
+            // 
+            this.pictureBoxBlackPawn5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn5.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn5.Location = new System.Drawing.Point(390, 108);
+            this.pictureBoxBlackPawn5.Name = "pictureBoxBlackPawn5";
+            this.pictureBoxBlackPawn5.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn5.TabIndex = 13;
+            this.pictureBoxBlackPawn5.TabStop = false;
+            this.pictureBoxBlackPawn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn4
+            // 
+            this.pictureBoxBlackPawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn4.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn4.Location = new System.Drawing.Point(296, 108);
+            this.pictureBoxBlackPawn4.Name = "pictureBoxBlackPawn4";
+            this.pictureBoxBlackPawn4.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn4.TabIndex = 12;
+            this.pictureBoxBlackPawn4.TabStop = false;
+            this.pictureBoxBlackPawn4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn3
+            // 
+            this.pictureBoxBlackPawn3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn3.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn3.Location = new System.Drawing.Point(202, 108);
+            this.pictureBoxBlackPawn3.Name = "pictureBoxBlackPawn3";
+            this.pictureBoxBlackPawn3.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn3.TabIndex = 11;
+            this.pictureBoxBlackPawn3.TabStop = false;
+            this.pictureBoxBlackPawn3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn2
+            // 
+            this.pictureBoxBlackPawn2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn2.Location = new System.Drawing.Point(108, 108);
+            this.pictureBoxBlackPawn2.Name = "pictureBoxBlackPawn2";
+            this.pictureBoxBlackPawn2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn2.TabIndex = 10;
+            this.pictureBoxBlackPawn2.TabStop = false;
+            this.pictureBoxBlackPawn2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackPawn1
+            // 
+            this.pictureBoxBlackPawn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackPawn1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackPawn1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.pawn_black;
+            this.pictureBoxBlackPawn1.Location = new System.Drawing.Point(14, 108);
+            this.pictureBoxBlackPawn1.Name = "pictureBoxBlackPawn1";
+            this.pictureBoxBlackPawn1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackPawn1.TabIndex = 9;
+            this.pictureBoxBlackPawn1.TabStop = false;
+            this.pictureBoxBlackPawn1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackQueen
+            // 
+            this.pictureBoxBlackQueen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackQueen.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackQueen.Image = global::csharp_vathmologoumeni_3.Properties.Resources.queen_black;
+            this.pictureBoxBlackQueen.Location = new System.Drawing.Point(296, 14);
+            this.pictureBoxBlackQueen.Name = "pictureBoxBlackQueen";
+            this.pictureBoxBlackQueen.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackQueen.TabIndex = 8;
+            this.pictureBoxBlackQueen.TabStop = false;
+            this.pictureBoxBlackQueen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackKing
+            // 
+            this.pictureBoxBlackKing.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackKing.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackKing.Image = global::csharp_vathmologoumeni_3.Properties.Resources.king_black;
+            this.pictureBoxBlackKing.Location = new System.Drawing.Point(390, 14);
+            this.pictureBoxBlackKing.Name = "pictureBoxBlackKing";
+            this.pictureBoxBlackKing.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackKing.TabIndex = 7;
+            this.pictureBoxBlackKing.TabStop = false;
+            this.pictureBoxBlackKing.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackRook2
+            // 
+            this.pictureBoxBlackRook2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackRook2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackRook2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.rook_black;
+            this.pictureBoxBlackRook2.Location = new System.Drawing.Point(672, 14);
+            this.pictureBoxBlackRook2.Name = "pictureBoxBlackRook2";
+            this.pictureBoxBlackRook2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackRook2.TabIndex = 6;
+            this.pictureBoxBlackRook2.TabStop = false;
+            this.pictureBoxBlackRook2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackKnight2
+            // 
+            this.pictureBoxBlackKnight2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackKnight2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackKnight2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.knight_black;
+            this.pictureBoxBlackKnight2.Location = new System.Drawing.Point(578, 14);
+            this.pictureBoxBlackKnight2.Name = "pictureBoxBlackKnight2";
+            this.pictureBoxBlackKnight2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackKnight2.TabIndex = 5;
+            this.pictureBoxBlackKnight2.TabStop = false;
+            this.pictureBoxBlackKnight2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackBishop2
+            // 
+            this.pictureBoxBlackBishop2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackBishop2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackBishop2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_black;
+            this.pictureBoxBlackBishop2.Location = new System.Drawing.Point(484, 14);
+            this.pictureBoxBlackBishop2.Name = "pictureBoxBlackBishop2";
+            this.pictureBoxBlackBishop2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackBishop2.TabIndex = 4;
+            this.pictureBoxBlackBishop2.TabStop = false;
+            this.pictureBoxBlackBishop2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxBlackBishop1
+            // 
+            this.pictureBoxBlackBishop1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxBlackBishop1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBlackBishop1.Image = global::csharp_vathmologoumeni_3.Properties.Resources.bishop_black;
+            this.pictureBoxBlackBishop1.Location = new System.Drawing.Point(202, 14);
+            this.pictureBoxBlackBishop1.Name = "pictureBoxBlackBishop1";
+            this.pictureBoxBlackBishop1.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxBlackBishop1.TabIndex = 3;
+            this.pictureBoxBlackBishop1.TabStop = false;
+            this.pictureBoxBlackBishop1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
             // pictureBoxWhiteKnight1
             // 
@@ -275,6 +626,90 @@ namespace csharp_vathmologoumeni_3
             this.pictureBoxBlackRook1.TabStop = false;
             this.pictureBoxBlackRook1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
             // 
+            // pictureBoxWhitePawn2
+            // 
+            this.pictureBoxWhitePawn2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn2.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn2.Location = new System.Drawing.Point(108, 578);
+            this.pictureBoxWhitePawn2.Name = "pictureBoxWhitePawn2";
+            this.pictureBoxWhitePawn2.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn2.TabIndex = 25;
+            this.pictureBoxWhitePawn2.TabStop = false;
+            this.pictureBoxWhitePawn2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn3
+            // 
+            this.pictureBoxWhitePawn3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn3.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn3.Location = new System.Drawing.Point(202, 578);
+            this.pictureBoxWhitePawn3.Name = "pictureBoxWhitePawn3";
+            this.pictureBoxWhitePawn3.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn3.TabIndex = 26;
+            this.pictureBoxWhitePawn3.TabStop = false;
+            this.pictureBoxWhitePawn3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn8
+            // 
+            this.pictureBoxWhitePawn8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn8.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn8.Location = new System.Drawing.Point(672, 578);
+            this.pictureBoxWhitePawn8.Name = "pictureBoxWhitePawn8";
+            this.pictureBoxWhitePawn8.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn8.TabIndex = 27;
+            this.pictureBoxWhitePawn8.TabStop = false;
+            this.pictureBoxWhitePawn8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn7
+            // 
+            this.pictureBoxWhitePawn7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn7.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn7.Location = new System.Drawing.Point(578, 578);
+            this.pictureBoxWhitePawn7.Name = "pictureBoxWhitePawn7";
+            this.pictureBoxWhitePawn7.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn7.TabIndex = 28;
+            this.pictureBoxWhitePawn7.TabStop = false;
+            this.pictureBoxWhitePawn7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn6
+            // 
+            this.pictureBoxWhitePawn6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn6.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn6.Location = new System.Drawing.Point(484, 578);
+            this.pictureBoxWhitePawn6.Name = "pictureBoxWhitePawn6";
+            this.pictureBoxWhitePawn6.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn6.TabIndex = 29;
+            this.pictureBoxWhitePawn6.TabStop = false;
+            this.pictureBoxWhitePawn6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn5
+            // 
+            this.pictureBoxWhitePawn5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn5.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn5.Location = new System.Drawing.Point(390, 578);
+            this.pictureBoxWhitePawn5.Name = "pictureBoxWhitePawn5";
+            this.pictureBoxWhitePawn5.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn5.TabIndex = 30;
+            this.pictureBoxWhitePawn5.TabStop = false;
+            this.pictureBoxWhitePawn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // pictureBoxWhitePawn4
+            // 
+            this.pictureBoxWhitePawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxWhitePawn4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWhitePawn4.Image = global::csharp_vathmologoumeni_3.Properties.Resources.white_pawn;
+            this.pictureBoxWhitePawn4.Location = new System.Drawing.Point(296, 578);
+            this.pictureBoxWhitePawn4.Name = "pictureBoxWhitePawn4";
+            this.pictureBoxWhitePawn4.Size = new System.Drawing.Size(95, 95);
+            this.pictureBoxWhitePawn4.TabIndex = 31;
+            this.pictureBoxWhitePawn4.TabStop = false;
+            this.pictureBoxWhitePawn4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
             // FormChess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -304,9 +739,38 @@ namespace csharp_vathmologoumeni_3
             this.Load += new System.EventHandler(this.FormChess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).EndInit();
             this.panelChessBoard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteQueen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteBishop2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteBishop1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteRook2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteRook1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackPawn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackQueen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackBishop2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackBishop1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhiteKnight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackKnight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlackRook1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +794,34 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.PictureBox pictureBoxBlackRook1;
         private System.Windows.Forms.PictureBox pictureBoxBlackKnight1;
         private System.Windows.Forms.PictureBox pictureBoxWhiteKnight1;
+        private System.Windows.Forms.PictureBox pictureBoxBlackBishop1;
+        private System.Windows.Forms.PictureBox pictureBoxBlackRook2;
+        private System.Windows.Forms.PictureBox pictureBoxBlackKnight2;
+        private System.Windows.Forms.PictureBox pictureBoxBlackBishop2;
+        private System.Windows.Forms.PictureBox pictureBoxBlackQueen;
+        private System.Windows.Forms.PictureBox pictureBoxBlackKing;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn8;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn7;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn6;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn5;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn4;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn3;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn2;
+        private System.Windows.Forms.PictureBox pictureBoxBlackPawn1;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteRook1;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteKnight2;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteBishop1;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteRook2;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteQueen;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteBishop2;
+        private System.Windows.Forms.PictureBox pictureBoxWhiteKing;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn1;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn4;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn5;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn6;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn7;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn8;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn3;
+        private System.Windows.Forms.PictureBox pictureBoxWhitePawn2;
     }
 }
