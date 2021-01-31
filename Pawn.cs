@@ -49,12 +49,21 @@ namespace csharp_vathmologoumeni_3
 
             this.Location = new Point(this.Location.X + 94 * blockXCount, this.Location.Y + 94 * blockYCount);
         }
-
+        
+        /// <summary>
+        /// Gets two numbers (both have to be in the set [0,7]) and moves the Pawn to the corresponding valid location.
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="j"></param>
         public void SetLocation(int i, int j)
         {
             this.Location = new Point(Chessboard.ValidXLocations[i], Chessboard.ValidYLocations[j]);
         }
 
+        /// <summary>
+        /// Gets a Point (preferably from the <see cref="Chessboard.ValidPoints"/>) and sets the Pawn's location to be exactly as the Point.
+        /// </summary>
+        /// <param name="p"></param>
         public void SetLocation(Point p)
         {
             this.Location = p;
@@ -77,6 +86,5 @@ namespace csharp_vathmologoumeni_3
 
             Chessboard.ActivePawns.Remove(ToDispose);
         }
-
     }
 }

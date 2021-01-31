@@ -80,6 +80,7 @@ namespace csharp_vathmologoumeni_3
             this.timerCountdown = new System.Windows.Forms.Timer(this.components);
             this.labelPlayer1Timer = new System.Windows.Forms.Label();
             this.labelPlayer2Timer = new System.Windows.Forms.Label();
+            this.labelTurn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).BeginInit();
@@ -120,11 +121,11 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonExit.Font = new System.Drawing.Font("Helvetica Rounded", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Font = new System.Drawing.Font("Helvetica Rounded", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1759, 27);
+            this.buttonExit.Location = new System.Drawing.Point(1740, 27);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(133, 35);
+            this.buttonExit.Size = new System.Drawing.Size(152, 46);
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit to Main Menu";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -339,7 +340,7 @@ namespace csharp_vathmologoumeni_3
             this.labelWinner.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelWinner.AutoSize = true;
             this.labelWinner.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWinner.ForeColor = System.Drawing.Color.Green;
+            this.labelWinner.ForeColor = System.Drawing.Color.Black;
             this.labelWinner.Location = new System.Drawing.Point(247, 310);
             this.labelWinner.Name = "labelWinner";
             this.labelWinner.Size = new System.Drawing.Size(251, 37);
@@ -804,12 +805,26 @@ namespace csharp_vathmologoumeni_3
             this.labelPlayer2Timer.Tag = "PostLogin";
             this.labelPlayer2Timer.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // labelTurn
+            // 
+            this.labelTurn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTurn.AutoSize = true;
+            this.labelTurn.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTurn.Location = new System.Drawing.Point(858, 85);
+            this.labelTurn.Name = "labelTurn";
+            this.labelTurn.Size = new System.Drawing.Size(166, 29);
+            this.labelTurn.TabIndex = 15;
+            this.labelTurn.Tag = "";
+            this.labelTurn.Text = "Player\'s turn.";
+            this.labelTurn.Visible = false;
+            // 
             // FormChess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.labelTurn);
             this.Controls.Add(this.labelPlayer2Timer);
             this.Controls.Add(this.labelPlayer1Timer);
             this.Controls.Add(this.panelChessBoard);
@@ -925,5 +940,6 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Label labelPlayer2Timer;
         private System.Windows.Forms.Label labelWinner;
         private System.Windows.Forms.Label labelGameOver;
+        private System.Windows.Forms.Label labelTurn;
     }
 }
