@@ -37,8 +37,15 @@ namespace csharp_vathmologoumeni_3
 
         public void Move(int blockXCount, int blockYCount)
         {
-            if (blockXCount > 7 || blockYCount > 7)
-                return;
+            if (blockXCount > 7)
+                blockXCount -= 7;
+            else if (blockXCount < -7)
+                blockXCount += 7;
+
+            if (blockYCount > 7)
+                blockYCount -= 7;
+            else if (blockYCount < -7)
+                blockYCount += 7;
 
             this.Location = new Point(this.Location.X + 94 * blockXCount, this.Location.Y + 94 * blockYCount);
         }

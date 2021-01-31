@@ -166,6 +166,13 @@ namespace csharp_vathmologoumeni_3
             WhitePawn6.SetLocation(5, 6);
             WhitePawn7.SetLocation(6, 6);
             WhitePawn8.SetLocation(7, 6);
+
+            //set the minutes
+            if (numericUpDownMinutes.Enabled)
+            {
+                time_PLAYER1 = 60 * (int)numericUpDownMinutes.Value;
+                time_PLAYER2 = 60 * (int)numericUpDownMinutes.Value;
+            }
         }
 
         private void EnableOrDisablePlayButton(bool handling)
@@ -185,16 +192,8 @@ namespace csharp_vathmologoumeni_3
                     c.Visible = handling;
                 else
                     c.Visible = !handling;
-                    
 
-            if (handling)
-            {
-
-            }
-            else
-            {
-                
-            }
+            timerCountdown.Enabled = !handling;
         }
 
         private void PanelPress(object sender, MouseEventArgs e)
@@ -213,34 +212,47 @@ namespace csharp_vathmologoumeni_3
             PictureBox pressed = (PictureBox)sender;
 
             Pawn PawnPressed = (from pawn in Chessboard.ActivePawns where pawn.Texture.Equals(pressed) select pawn).ToArray()[0];
-
             PawnSelected = (PawnSelected == null) ? PawnPressed : PawnSelected;
 
             //if no pawns are selected the pawn pressed is the same as the players turn...
             if (!PawnClicked && PawnPressed.IsWhite == Player1Turn)
             {
+                //select the pawn
                 PawnClicked = true;
                 PawnPressed.Texture.BackColor = Color.Green;
                 PawnSelected = PawnPressed;
-                Console.WriteLine(PawnPressed.Name);
             }
             //if the pawn selected is about to "eat" another pawn of a different colour
             else if (PawnPressed.IsWhite != PawnSelected.IsWhite)
             {
+                //Dispose the pawn that was selected.
                 PawnSelected.DisposePawn(PawnPressed);
+
+                //Deselect the pawn
                 PawnSelected.Texture.BackColor = Color.Transparent;
                 PawnClicked = false;
 
+                //Inverse the turn.
                 Player1Turn = !Player1Turn;
                 PawnSelected = null;
             }
             //if the player selects two pawns of the same colour.
             else
             {
+                //just deselect the pawn.
                 PawnSelected.Texture.BackColor = Color.Transparent;
                 PawnClicked = false;
                 PawnSelected = null;
             }
+        }
+
+        private void timerCountdown_Tick(object sender, EventArgs e)
+        {
+            time_PLAYER1 = (Player1Turn) ? time_PLAYER1 - 1 : time_PLAYER1;
+            time_PLAYER2 = (Player1Turn) ? time_PLAYER2 : time_PLAYER2 - 1;
+
+            labelPlayer1Timer.Text = textBoxPlayer1Nickname.Text + "'s Time:" + TimeSpan.FromSeconds(time_PLAYER1);
+            labelPlayer2Timer.Text = textBoxPlayer2Nickname.Text + "'s Time:" + TimeSpan.FromSeconds(time_PLAYER2);
         }
     }
 }

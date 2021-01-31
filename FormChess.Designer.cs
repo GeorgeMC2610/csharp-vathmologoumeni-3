@@ -77,6 +77,7 @@ namespace csharp_vathmologoumeni_3
             this.pictureBoxBlackRook1 = new System.Windows.Forms.PictureBox();
             this.timerCountdown = new System.Windows.Forms.Timer(this.components);
             this.labelPlayer1Timer = new System.Windows.Forms.Label();
+            this.labelPlayer2Timer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).BeginInit();
@@ -716,16 +717,27 @@ namespace csharp_vathmologoumeni_3
             // timerCountdown
             // 
             this.timerCountdown.Interval = 1000;
+            this.timerCountdown.Tick += new System.EventHandler(this.timerCountdown_Tick);
             // 
             // labelPlayer1Timer
             // 
             this.labelPlayer1Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPlayer1Timer.AutoSize = true;
-            this.labelPlayer1Timer.Location = new System.Drawing.Point(1274, 190);
+            this.labelPlayer1Timer.Location = new System.Drawing.Point(1080, 606);
             this.labelPlayer1Timer.Name = "labelPlayer1Timer";
-            this.labelPlayer1Timer.Size = new System.Drawing.Size(53, 19);
+            this.labelPlayer1Timer.Size = new System.Drawing.Size(117, 19);
             this.labelPlayer1Timer.TabIndex = 13;
-            this.labelPlayer1Timer.Text = "label1";
+            this.labelPlayer1Timer.Text = "(player)\'s Time:";
+            // 
+            // labelPlayer2Timer
+            // 
+            this.labelPlayer2Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPlayer2Timer.AutoSize = true;
+            this.labelPlayer2Timer.Location = new System.Drawing.Point(1080, 136);
+            this.labelPlayer2Timer.Name = "labelPlayer2Timer";
+            this.labelPlayer2Timer.Size = new System.Drawing.Size(117, 19);
+            this.labelPlayer2Timer.TabIndex = 14;
+            this.labelPlayer2Timer.Text = "(player)\'s Time:";
             // 
             // FormChess
             // 
@@ -733,6 +745,7 @@ namespace csharp_vathmologoumeni_3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1384, 861);
+            this.Controls.Add(this.labelPlayer2Timer);
             this.Controls.Add(this.labelPlayer1Timer);
             this.Controls.Add(this.panelChessBoard);
             this.Controls.Add(this.labelTimers);
@@ -843,5 +856,6 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.PictureBox pictureBoxWhitePawn2;
         private System.Windows.Forms.Timer timerCountdown;
         private System.Windows.Forms.Label labelPlayer1Timer;
+        private System.Windows.Forms.Label labelPlayer2Timer;
     }
 }

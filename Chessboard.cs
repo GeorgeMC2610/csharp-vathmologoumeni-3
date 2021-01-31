@@ -87,10 +87,5 @@ namespace csharp_vathmologoumeni_3
 
             return ValidPoints[pos];
         }
-
-        public static void InverseAllPawns()
-        {
-
-        }
     }
 }
