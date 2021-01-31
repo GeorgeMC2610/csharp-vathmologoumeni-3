@@ -94,17 +94,73 @@ namespace csharp_vathmologoumeni_3
 
             Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook1);
             Pawn BlackKnight1 = new Pawn("Knight", false, pictureBoxBlackKnight1);
+            Pawn BlackBishop1 = new Pawn("Bishop", false, pictureBoxBlackBishop1);
+            Pawn BlackBishop2 = new Pawn("Bishop", false, pictureBoxBlackBishop2);
+            Pawn BlackKnight2 = new Pawn("Knight", false, pictureBoxBlackKnight2);
+            Pawn BlackRook2   = new Pawn("Rook", false, pictureBoxBlackRook2);
+            Pawn BlackQueen   = new Pawn("Queen", false, pictureBoxBlackQueen);
+            Pawn BlackKing    = new Pawn("King", false, pictureBoxBlackKing);
+            Pawn BlackPawn1   = new Pawn("Pawn", false, pictureBoxBlackPawn1);
+            Pawn BlackPawn2   = new Pawn("Pawn", false, pictureBoxBlackPawn2);
+            Pawn BlackPawn3   = new Pawn("Pawn", false, pictureBoxBlackPawn3);
+            Pawn BlackPawn4   = new Pawn("Pawn", false, pictureBoxBlackPawn4);
+            Pawn BlackPawn5   = new Pawn("Pawn", false, pictureBoxBlackPawn5);
+            Pawn BlackPawn6   = new Pawn("Pawn", false, pictureBoxBlackPawn6);
+            Pawn BlackPawn7   = new Pawn("Pawn", false, pictureBoxBlackPawn7);
+            Pawn BlackPawn8   = new Pawn("Pawn", false, pictureBoxBlackPawn8);
+
+            Pawn WhiteRook1   = new Pawn("Rook", true, pictureBoxWhiteRook1);
             Pawn WhiteKnight1 = new Pawn("Knight", true, pictureBoxWhiteKnight1);
+            Pawn WhiteBishop1 = new Pawn("Bishop", true, pictureBoxWhiteBishop1);
+            Pawn WhiteBishop2 = new Pawn("Bishop", true, pictureBoxWhiteBishop2);
+            Pawn WhiteKnight2 = new Pawn("Knight", true, pictureBoxWhiteKnight2);
+            Pawn WhiteRook2   = new Pawn("Rook", true, pictureBoxWhiteRook2);
+            Pawn WhiteQueen   = new Pawn("Queen", true, pictureBoxWhiteQueen);
+            Pawn WhiteKing    = new Pawn("King", true, pictureBoxWhiteKing);
+            Pawn WhitePawn1   = new Pawn("Pawn", true, pictureBoxWhitePawn1);
+            Pawn WhitePawn2   = new Pawn("Pawn", true, pictureBoxWhitePawn2);
+            Pawn WhitePawn3   = new Pawn("Pawn", true, pictureBoxWhitePawn3);
+            Pawn WhitePawn4   = new Pawn("Pawn", true, pictureBoxWhitePawn4);
+            Pawn WhitePawn5   = new Pawn("Pawn", true, pictureBoxWhitePawn5);
+            Pawn WhitePawn6   = new Pawn("Pawn", true, pictureBoxWhitePawn6);
+            Pawn WhitePawn7   = new Pawn("Pawn", true, pictureBoxWhitePawn7);
+            Pawn WhitePawn8   = new Pawn("Pawn", true, pictureBoxWhitePawn8);
 
             Chessboard.InitializeVariables();
 
             BlackRook1.SetLocation(0, 0);
             BlackKnight1.SetLocation(1, 0);
+            BlackBishop1.SetLocation(2, 0);
+            BlackQueen.SetLocation(3, 0);
+            BlackKing.SetLocation(4, 0);
+            BlackBishop2.SetLocation(5, 0);
+            BlackKnight2.SetLocation(6, 0);
+            BlackRook2.SetLocation(7, 0);
+            BlackPawn1.SetLocation(0, 1);
+            BlackPawn2.SetLocation(1, 1);
+            BlackPawn3.SetLocation(2, 1);
+            BlackPawn4.SetLocation(3, 1);
+            BlackPawn5.SetLocation(4, 1);
+            BlackPawn6.SetLocation(5, 1);
+            BlackPawn7.SetLocation(6, 1);
+            BlackPawn8.SetLocation(7, 1);
 
+            WhiteRook1.SetLocation(0, 7);
             WhiteKnight1.SetLocation(1, 7);
-
-            Console.WriteLine(BlackRook1.Location);
-            Console.WriteLine(BlackKnight1.Location);
+            WhiteBishop1.SetLocation(2, 7);
+            WhiteQueen.SetLocation(3, 7);
+            WhiteKing.SetLocation(4, 7);
+            WhiteBishop2.SetLocation(5, 7);
+            WhiteKnight2.SetLocation(6, 7);
+            WhiteRook2.SetLocation(7, 7);
+            WhitePawn1.SetLocation(0, 6);
+            WhitePawn2.SetLocation(1, 6);
+            WhitePawn3.SetLocation(2, 6);
+            WhitePawn4.SetLocation(3, 6);
+            WhitePawn5.SetLocation(4, 6);
+            WhitePawn6.SetLocation(5, 6);
+            WhitePawn7.SetLocation(6, 6);
+            WhitePawn8.SetLocation(7, 6);
         }
 
         private void EnableOrDisablePlayButton(bool handling)
