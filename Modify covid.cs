@@ -123,9 +123,12 @@ namespace csharp_vathmologoumeni_3
 
             if (choice == DialogResult.Yes)
             {
-                OleDbCommand delete = new OleDbCommand("Delete from Covid_cases where Email = @email", connection);
-                delete.Parameters.AddWithValue("@email", richTextBox2.Lines[(int)numericUpDown1.Value - 1]);
-                delete.ExecuteNonQuery();
+                /* OleDbCommand delete = new OleDbCommand("Delete from Covid_cases where Email = @email", connection);
+                 delete.Parameters.AddWithValue("@email", richTextBox2.Lines[(int)numericUpDown1.Value - 1]);
+                 delete.ExecuteNonQuery();*/
+
+                CovidCase cov_case = new CovidCase(richTextBox2.Lines[(int)numericUpDown1.Value - 1]);
+                cov_case.deleteCase();
 
                 String[] lines;
 
@@ -168,12 +171,6 @@ namespace csharp_vathmologoumeni_3
             }
         }
 
-        private void Modify_covid_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            connection.Close();
-            Application.OpenForms[1].Show();
-        }
-
         private void aboutModificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("After a search for cases(refer in 'About search' option), select the desired row from the search results in the numericupdown control.\n\n" +
@@ -190,6 +187,11 @@ namespace csharp_vathmologoumeni_3
         {
             MessageBox.Show("Select in the top combobox, the category you want to search cases by.\nThen, write what you want to look about in the middle textbox.\n\n" +
             "If the application find any row from database that contains what you are looking for, the whole row is beeing added as a result in the bottom richtextboxes.", "About search");
+        }
+        private void Modify_covid_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            connection.Close();
+            Application.OpenForms[1].Show();
         }
     }
 }

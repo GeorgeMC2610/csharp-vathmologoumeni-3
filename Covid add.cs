@@ -18,7 +18,7 @@ namespace csharp_vathmologoumeni_3
         OleDbConnection connection;
 
         bool insert = true;
-        String previous_name,old_email;
+        String old_email;
 
         Regex email_regex = new Regex("^[a-zA-Z0-9]+@[a-zA-Z]+[.][a-zA-Z]+$"); //regular expression to check email input
         Regex fullname_regex = new Regex("^[a-zA-Z][ a-zA-Z.]*$");
@@ -33,7 +33,6 @@ namespace csharp_vathmologoumeni_3
         {
             InitializeComponent();
 
-            previous_name = values[0];
             old_email = values[1];
 
             insert = false;
@@ -99,7 +98,7 @@ namespace csharp_vathmologoumeni_3
             else
             {
                 comand = new OleDbCommand("Update Covid_cases set Full_name = @fn, Email = @email, Underlying_diseases=@ud, Date_of_record=@dor, " +
-                "Time_of_record=@tor, Phone_number=@pn, Home_address=@ha, Gender=@gender, Age=@age where Full_name = @oldfn", connection);
+                "Time_of_record=@tor, Phone_number=@pn, Home_address=@ha, Gender=@gender, Age=@age where Email = @oldemail", connection);
             }
 
             comand.Parameters.AddWithValue("@fn", textBox1.Text);
@@ -130,8 +129,7 @@ namespace csharp_vathmologoumeni_3
 
             if (!is_insertion)
             {
-                comand.Parameters.AddWithValue("@oldfn", previous_name);
-                previous_name = textBox1.Text;
+                comand.Parameters.AddWithValue("@oldemail", old_email);
                 old_email = textBox2.Text;
 
                 MessageBox.Show("Report has been successfully modified!", "Success");
@@ -250,9 +248,31 @@ namespace csharp_vathmologoumeni_3
                 }
             }
 
-            databaseFunction(insert); //if insert = true we are doing insertion else modification
-          
             connection.Close();
+
+            //EDW ALLAZEI SOBARA /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //databaseFunction(insert); //if insert = true we are doing insertion else modification
+
+            CovidCase cov_case = new CovidCase(textBox1.Text, textBox2.Text, richTextBox1.Lines, dateTimePicker1.Text, 
+            maskedTextBox2.Text, maskedTextBox1.Text, textBox3.Text, comboBox1.Text, numericUpDown1.Text);
+
+            if (insert)
+            {
+                cov_case.insertCase();
+                MessageBox.Show("Report has been successfully added!", "Success");
+            }
+            else
+            {
+                cov_case.updateCase(old_email);
+                old_email = textBox2.Text;
+                MessageBox.Show("Report has been successfully modified!", "Success");
+                ((Modify_covid)Application.OpenForms[2]).cleartxtbox();
+            }
+
+
+
+            
         }
 
         private void aboutValuesToolStripMenuItem_Click(object sender, EventArgs e)

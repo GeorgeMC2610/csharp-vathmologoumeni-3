@@ -83,7 +83,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 565);
+            this.label1.Location = new System.Drawing.Point(49, 561);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 22);
@@ -95,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(447, 41);
+            this.label2.Location = new System.Drawing.Point(442, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(220, 36);
@@ -112,7 +112,7 @@
             "Email",
             "Gender",
             "Age"});
-            this.comboBox1.Location = new System.Drawing.Point(673, 46);
+            this.comboBox1.Location = new System.Drawing.Point(668, 47);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 33);
@@ -452,31 +452,31 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1273, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1273, 28);
             this.menuStrip1.TabIndex = 74;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // aboutModificationToolStripMenuItem
             // 
-            this.aboutModificationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.aboutModificationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.aboutModificationToolStripMenuItem.Name = "aboutModificationToolStripMenuItem";
-            this.aboutModificationToolStripMenuItem.Size = new System.Drawing.Size(151, 23);
+            this.aboutModificationToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.aboutModificationToolStripMenuItem.Text = "About modification";
             this.aboutModificationToolStripMenuItem.Click += new System.EventHandler(this.aboutModificationToolStripMenuItem_Click);
             // 
             // aboutDeleteToolStripMenuItem
             // 
-            this.aboutDeleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.aboutDeleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.aboutDeleteToolStripMenuItem.Name = "aboutDeleteToolStripMenuItem";
-            this.aboutDeleteToolStripMenuItem.Size = new System.Drawing.Size(108, 23);
+            this.aboutDeleteToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.aboutDeleteToolStripMenuItem.Text = "About delete";
             this.aboutDeleteToolStripMenuItem.Click += new System.EventHandler(this.aboutDeleteToolStripMenuItem_Click);
             // 
             // aboutSearchToolStripMenuItem
             // 
-            this.aboutSearchToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.aboutSearchToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.aboutSearchToolStripMenuItem.Name = "aboutSearchToolStripMenuItem";
-            this.aboutSearchToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
+            this.aboutSearchToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.aboutSearchToolStripMenuItem.Text = "About search";
             this.aboutSearchToolStripMenuItem.Click += new System.EventHandler(this.aboutSearchToolStripMenuItem_Click);
             // 

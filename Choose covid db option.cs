@@ -40,16 +40,15 @@ namespace csharp_vathmologoumeni_3
 
         }
 
-        private void Choose_covid_db_option_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.OpenForms[0].Show();
-        }
-
         private void aboutTheApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to covid case reports application!\n\nSelect 'Database' option in the menustrip, in order to make an insertion or a modification in covid case reports.\n" +
             "More info for the insertion/modification can be found at the corresponding forms.\n\nPress the button bellow to visit the covid cases website.\nThere, you can have a look " +
             "at all case reports and at some statistics about them.\n\nSelect Quit to return back in the applications menu.","Info");
+        }
+        private void Choose_covid_db_option_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms[0].Show();
         }
     }
 }

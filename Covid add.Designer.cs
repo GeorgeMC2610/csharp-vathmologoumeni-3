@@ -74,8 +74,8 @@
             // 
             this.label2.BackColor = System.Drawing.Color.LightGreen;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(0, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label2.Location = new System.Drawing.Point(0, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1020, 34);
             this.label2.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(38, 110);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 33);
             this.textBox1.TabIndex = 2;
@@ -98,7 +98,7 @@
             this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox2.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(352, 110);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 33);
             this.textBox2.TabIndex = 3;
@@ -109,7 +109,7 @@
             this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox3.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(38, 382);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 33);
             this.textBox3.TabIndex = 6;
@@ -120,7 +120,7 @@
             this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox1.Location = new System.Drawing.Point(668, 272);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.maskedTextBox1.Mask = "0000000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(229, 33);
@@ -132,7 +132,7 @@
             this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft PhagsPa", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(668, 382);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(0);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -157,7 +157,7 @@
             "Man",
             "Woman"});
             this.comboBox1.Location = new System.Drawing.Point(352, 382);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(124, 34);
             this.comboBox1.TabIndex = 14;
@@ -167,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(30, 76);
-            this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 34);
             this.label3.TabIndex = 17;
@@ -177,7 +177,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(345, 76);
-            this.label4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 34);
             this.label4.TabIndex = 18;
@@ -189,7 +189,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft PhagsPa", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(38, 272);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(169, 38);
             this.dateTimePicker1.TabIndex = 31;
@@ -199,7 +199,7 @@
             this.maskedTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox2.Location = new System.Drawing.Point(352, 272);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(0);
             this.maskedTextBox2.Mask = "00:00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(229, 33);
@@ -210,7 +210,7 @@
             // 
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.richTextBox1.Location = new System.Drawing.Point(668, 110);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(326, 114);
             this.richTextBox1.TabIndex = 35;
@@ -220,7 +220,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(660, 238);
-            this.label6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 34);
             this.label6.TabIndex = 36;
@@ -230,7 +230,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(345, 238);
-            this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 34);
             this.label5.TabIndex = 37;
@@ -240,7 +240,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(30, 340);
-            this.label7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(185, 34);
             this.label7.TabIndex = 38;
@@ -250,7 +250,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(345, 348);
-            this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 34);
             this.label8.TabIndex = 39;
@@ -260,7 +260,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(660, 340);
-            this.label9.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 34);
             this.label9.TabIndex = 40;
@@ -270,7 +270,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(660, 76);
-            this.label10.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(331, 34);
             this.label10.TabIndex = 41;
@@ -280,7 +280,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(30, 238);
-            this.label11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 34);
             this.label11.TabIndex = 42;
@@ -291,7 +291,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 529);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 22);
             this.label1.TabIndex = 43;
@@ -306,7 +306,7 @@
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(390, 468);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(248, 76);
             this.button1.TabIndex = 45;
@@ -319,7 +319,7 @@
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(8, 527);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(38, 26);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,7 +332,7 @@
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(480, 382);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(38, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -345,7 +345,7 @@
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(270, 382);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(38, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -358,7 +358,7 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(585, 272);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -371,7 +371,7 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(900, 272);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -384,7 +384,7 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(585, 110);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -397,7 +397,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(270, 110);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -407,18 +407,20 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Khaki;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutValuesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1020, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1020, 28);
             this.menuStrip1.TabIndex = 46;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // aboutValuesToolStripMenuItem
             // 
+            this.aboutValuesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.aboutValuesToolStripMenuItem.Name = "aboutValuesToolStripMenuItem";
-            this.aboutValuesToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.aboutValuesToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.aboutValuesToolStripMenuItem.Text = "About values";
             this.aboutValuesToolStripMenuItem.Click += new System.EventHandler(this.aboutValuesToolStripMenuItem_Click);
             // 
@@ -458,7 +460,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft PhagsPa", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Covid_Insert";
             this.Text = "Add covid case report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Covid_Insert_FormClosed);

@@ -59,6 +59,7 @@
     <Compile Include="Covid add.Designer.cs">
       <DependentUpon>Covid add.cs</DependentUpon>
     </Compile>
+    <Compile Include="CovidCase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
