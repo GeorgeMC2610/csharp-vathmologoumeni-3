@@ -50,5 +50,10 @@ namespace csharp_vathmologoumeni_3
         {
             Application.OpenForms[0].Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://localhost:44390/WebForm1.aspx");
+        }
     }
 }

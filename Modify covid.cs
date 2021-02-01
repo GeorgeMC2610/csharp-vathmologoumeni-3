@@ -123,10 +123,6 @@ namespace csharp_vathmologoumeni_3
 
             if (choice == DialogResult.Yes)
             {
-                /* OleDbCommand delete = new OleDbCommand("Delete from Covid_cases where Email = @email", connection);
-                 delete.Parameters.AddWithValue("@email", richTextBox2.Lines[(int)numericUpDown1.Value - 1]);
-                 delete.ExecuteNonQuery();*/
-
                 CovidCase cov_case = new CovidCase(richTextBox2.Lines[(int)numericUpDown1.Value - 1]);
                 cov_case.deleteCase();
 
