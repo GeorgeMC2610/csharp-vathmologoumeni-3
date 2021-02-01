@@ -23,10 +23,10 @@ namespace csharp_vathmologoumeni_3
         Pawn PawnSelected;
         int time_PLAYER1;
         int time_PLAYER2;
-        int current_countdown;
 
         private void AnyButtonClicked(object sender, EventArgs e)
         {
+            //all buttons call this function, to reduce nesting and function writing.
             Control pressed = (Control)sender;
 
             switch (pressed.Name)
@@ -41,16 +41,10 @@ namespace csharp_vathmologoumeni_3
                     Application.OpenForms[0].Show();
                     Close();
                     break;
-
+                //when the player starts the game, enable everything.
                 case "buttonStartGame":
                     GameStarted = true;
-                    EnableOrDisableGame(!GameStarted);
-                    break;
-
-                case "panelChessBoard":
-                    MouseEventArgs mouse = (MouseEventArgs)e;
-                    Console.WriteLine(mouse.X.ToString() + ", " + mouse.Y.ToString());
-
+                    EnableGame();
                     break;
             }
         }
@@ -94,7 +88,9 @@ namespace csharp_vathmologoumeni_3
             numericUpDownMinutes.Location   = new Point(checkBoxTimers.Location.X, numericUpDownMinutes.Location.Y);
 
             panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height / 2 - panelChessBoard.Height / 2);
+            
             panelChessBoard.Visible = false;
+            labelPlayer1Timer.Visible = labelPlayer2Timer.Visible = false;
 
             //then initialize all pawns in the board.
             Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook1);
@@ -166,17 +162,11 @@ namespace csharp_vathmologoumeni_3
             WhitePawn6.SetLocation(5, 6);
             WhitePawn7.SetLocation(6, 6);
             WhitePawn8.SetLocation(7, 6);
-
-            //set the minutes
-            if (numericUpDownMinutes.Enabled)
-            {
-                time_PLAYER1 = 60 * (int)numericUpDownMinutes.Value;
-                time_PLAYER2 = 60 * (int)numericUpDownMinutes.Value;
-            }
         }
 
         private void EnableOrDisablePlayButton(bool handling)
         {
+            //set the button's color to be grey if it's disabled, or green if it's enabled.
             Color backColor = (handling) ? Color.Green : Color.Gray;
             Color foreColor = (handling) ? Color.White : Color.Black;
 
@@ -185,15 +175,52 @@ namespace csharp_vathmologoumeni_3
             buttonStartGame.BackColor = backColor;
         }
 
-        private void EnableOrDisableGame(bool handling)
+        private void EnableGame()
         {
+            //make all pre-login controls invisible
             foreach (Control c in Controls)
-                if (c.Tag != null)
-                    c.Visible = handling;
+                if (c.Tag != null && c.Tag.ToString().Equals("PreLogin"))
+                    c.Visible = false;
                 else
-                    c.Visible = !handling;
+                    c.Visible = true;
 
-            timerCountdown.Enabled = !handling;
+            labelTurn.Text = "It's " + textBoxPlayer1Nickname.Text + "'s (White Pawns) turn.";
+            labelTurn.Location = new Point(panelChessBoard.Location.X + panelChessBoard.Width / 2 - labelTurn.Width / 2, labelTurn.Location.Y);
+
+            //set the minutes
+            if (numericUpDownMinutes.Enabled)
+            {
+                time_PLAYER1 = 60 * (int)numericUpDownMinutes.Value;
+                time_PLAYER2 = 60 * (int)numericUpDownMinutes.Value;
+
+                timerCountdown.Enabled = true;
+            }
+        }
+
+        private void EndGame(string winner)
+        {
+            //we set the labels that announce the game winning to be visible
+            labelWinner.Visible = labelGameOver.Visible = true;
+            labelWinner.Text = winner + " won!";
+
+            //we set their location properly
+            labelGameOver.Location = new Point(panelChessBoard.Size.Width / 2 - labelGameOver.Size.Width / 2, labelGameOver.Location.Y);
+            labelWinner.Location   = new Point(panelChessBoard.Size.Width / 2 - labelWinner.Size.Width / 2, labelWinner.Location.Y);
+
+            //and then we set every pawn to be disabled so the controls don't keep tracking.
+            Chessboard.ActivePawns.ForEach(p => p.Texture.Enabled = false);
+            timerCountdown.Enabled = false;
+            GameStarted = false;
+        }
+
+        private void InverseTurns()
+        {
+            //to inverse the turns, we set the opposite bool to be the turn.
+            Player1Turn   = !Player1Turn;
+
+            //and then we update the label which shows the players' turn.
+            labelTurn.Text = "It's " + (Player1Turn ? textBoxPlayer1Nickname.Text + "'s (White Pawns)" : textBoxPlayer2Nickname.Text + "'s (Black Pawns)") + " turn.";
+            labelTurn.Location = new Point(panelChessBoard.Location.X + panelChessBoard.Width / 2 - labelTurn.Width / 2, labelTurn.Location.Y);
         }
 
         private void PanelPress(object sender, MouseEventArgs e)
@@ -201,12 +228,14 @@ namespace csharp_vathmologoumeni_3
             if (!PawnClicked)
                 return;
 
+            //when any player presses the panel with a selected pawn, move that pawn to the selected location.
             PawnSelected.SetLocation(Chessboard.GetLocationByClick(e.Location));
             PawnSelected.Texture.BackColor = Color.Transparent;
             PawnClicked = false;
-            Player1Turn = !Player1Turn;
+            InverseTurns();
         }
 
+        //All pawns call this function. The program understands by itself which pawn it is.
         private void AnyPawnClicked(object sender, MouseEventArgs e)
         {
             PictureBox pressed = (PictureBox)sender;
@@ -233,8 +262,12 @@ namespace csharp_vathmologoumeni_3
                 PawnClicked = false;
 
                 //Inverse the turn.
-                Player1Turn = !Player1Turn;
+                InverseTurns();
                 PawnSelected = null;
+
+                //If the disposed pawn was a king, end the game
+                if (PawnPressed.Name.Equals("King"))
+                    EndGame((PawnPressed.IsWhite) ? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text);
             }
             //if the player selects two pawns of the same colour.
             else
@@ -248,11 +281,21 @@ namespace csharp_vathmologoumeni_3
 
         private void timerCountdown_Tick(object sender, EventArgs e)
         {
+            //according to the player's turn, decrement their time.
             time_PLAYER1 = (Player1Turn) ? time_PLAYER1 - 1 : time_PLAYER1;
             time_PLAYER2 = (Player1Turn) ? time_PLAYER2 : time_PLAYER2 - 1;
 
-            labelPlayer1Timer.Text = textBoxPlayer1Nickname.Text + "'s Time:" + TimeSpan.FromSeconds(time_PLAYER1);
-            labelPlayer2Timer.Text = textBoxPlayer2Nickname.Text + "'s Time:" + TimeSpan.FromSeconds(time_PLAYER2);
+            //update the labels showing the time
+            labelPlayer1Timer.Text = textBoxPlayer1Nickname.Text + "'s Time:" + Environment.NewLine + TimeSpan.FromSeconds(time_PLAYER1);
+            labelPlayer2Timer.Text = textBoxPlayer2Nickname.Text + "'s Time:" + Environment.NewLine + TimeSpan.FromSeconds(time_PLAYER2);
+
+            //update their location to be proper as well.
+            labelPlayer1Timer.Location = new Point(panelChessBoard.Size.Width + panelChessBoard.Location.X + 12, labelPlayer1Timer.Location.Y);
+            labelPlayer2Timer.Location = new Point(panelChessBoard.Location.X - labelPlayer2Timer.Size.Width - 12, labelPlayer2Timer.Location.Y);
+
+            //and if the time runs out, end the game.
+            if (time_PLAYER1 == 0 || time_PLAYER2 == 0)
+                EndGame((time_PLAYER1 == 0)? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text);
         }
     }
 }
