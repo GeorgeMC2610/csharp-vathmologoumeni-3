@@ -20,6 +20,7 @@ namespace csharp_vathmologoumeni_3
         bool Player1Turn = true;
         bool GameStarted = false;
         bool PawnClicked = false;
+        bool ControlledExit = false;
         Pawn PawnSelected;
         int time_PLAYER1;
         int time_PLAYER2;
@@ -33,12 +34,15 @@ namespace csharp_vathmologoumeni_3
             {
                 //when the player exits, show the form that was already shown before. NOTE: There will be a popup message if the game has started.
                 case "buttonExit":
-                    DialogResult coninueGame = (GameStarted) ? MessageBox.Show("All progress will be discarded. Are you sure you want to exit?", "Exit Chess", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) : DialogResult.OK;
-
-                    if (coninueGame == DialogResult.Cancel)
+                    Close();
+                    break;
+                //when the player restarts the game, we show a dialog. If the game hasn't started, the game doesn't show the dialog and immideately restarts the game.
+                case "buttonStartOver":
+                    DialogResult continueGame = (GameStarted) ? MessageBox.Show("Are you sure you want to restart the game?", "Restart Game", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) : DialogResult.OK;
+                    if (continueGame == DialogResult.Cancel)
                         return;
 
-                    Application.OpenForms[0].Show();
+                    ControlledExit = true;
                     Close();
                     break;
                 //when the player starts the game, enable everything.
@@ -93,39 +97,39 @@ namespace csharp_vathmologoumeni_3
             labelPlayer1Timer.Visible = labelPlayer2Timer.Visible = false;
 
             //then initialize all pawns in the board.
-            Pawn BlackRook1   = new Pawn("Rook", false, pictureBoxBlackRook1);
+            Pawn BlackRook1   = new Pawn("Rook",   false, pictureBoxBlackRook1);
             Pawn BlackKnight1 = new Pawn("Knight", false, pictureBoxBlackKnight1);
             Pawn BlackBishop1 = new Pawn("Bishop", false, pictureBoxBlackBishop1);
             Pawn BlackBishop2 = new Pawn("Bishop", false, pictureBoxBlackBishop2);
             Pawn BlackKnight2 = new Pawn("Knight", false, pictureBoxBlackKnight2);
-            Pawn BlackRook2   = new Pawn("Rook", false, pictureBoxBlackRook2);
-            Pawn BlackQueen   = new Pawn("Queen", false, pictureBoxBlackQueen);
-            Pawn BlackKing    = new Pawn("King", false, pictureBoxBlackKing);
-            Pawn BlackPawn1   = new Pawn("Pawn", false, pictureBoxBlackPawn1);
-            Pawn BlackPawn2   = new Pawn("Pawn", false, pictureBoxBlackPawn2);
-            Pawn BlackPawn3   = new Pawn("Pawn", false, pictureBoxBlackPawn3);
-            Pawn BlackPawn4   = new Pawn("Pawn", false, pictureBoxBlackPawn4);
-            Pawn BlackPawn5   = new Pawn("Pawn", false, pictureBoxBlackPawn5);
-            Pawn BlackPawn6   = new Pawn("Pawn", false, pictureBoxBlackPawn6);
-            Pawn BlackPawn7   = new Pawn("Pawn", false, pictureBoxBlackPawn7);
-            Pawn BlackPawn8   = new Pawn("Pawn", false, pictureBoxBlackPawn8);
+            Pawn BlackRook2   = new Pawn("Rook",   false, pictureBoxBlackRook2);
+            Pawn BlackQueen   = new Pawn("Queen",  false, pictureBoxBlackQueen);
+            Pawn BlackKing    = new Pawn("King",   false, pictureBoxBlackKing);
+            Pawn BlackPawn1   = new Pawn("Pawn",   false, pictureBoxBlackPawn1);
+            Pawn BlackPawn2   = new Pawn("Pawn",   false, pictureBoxBlackPawn2);
+            Pawn BlackPawn3   = new Pawn("Pawn",   false, pictureBoxBlackPawn3);
+            Pawn BlackPawn4   = new Pawn("Pawn",   false, pictureBoxBlackPawn4);
+            Pawn BlackPawn5   = new Pawn("Pawn",   false, pictureBoxBlackPawn5);
+            Pawn BlackPawn6   = new Pawn("Pawn",   false, pictureBoxBlackPawn6);
+            Pawn BlackPawn7   = new Pawn("Pawn",   false, pictureBoxBlackPawn7);
+            Pawn BlackPawn8   = new Pawn("Pawn",   false, pictureBoxBlackPawn8);
 
-            Pawn WhiteRook1   = new Pawn("Rook", true, pictureBoxWhiteRook1);
+            Pawn WhiteRook1   = new Pawn("Rook",   true, pictureBoxWhiteRook1);
             Pawn WhiteKnight1 = new Pawn("Knight", true, pictureBoxWhiteKnight1);
             Pawn WhiteBishop1 = new Pawn("Bishop", true, pictureBoxWhiteBishop1);
             Pawn WhiteBishop2 = new Pawn("Bishop", true, pictureBoxWhiteBishop2);
             Pawn WhiteKnight2 = new Pawn("Knight", true, pictureBoxWhiteKnight2);
-            Pawn WhiteRook2   = new Pawn("Rook", true, pictureBoxWhiteRook2);
-            Pawn WhiteQueen   = new Pawn("Queen", true, pictureBoxWhiteQueen);
-            Pawn WhiteKing    = new Pawn("King", true, pictureBoxWhiteKing);
-            Pawn WhitePawn1   = new Pawn("Pawn", true, pictureBoxWhitePawn1);
-            Pawn WhitePawn2   = new Pawn("Pawn", true, pictureBoxWhitePawn2);
-            Pawn WhitePawn3   = new Pawn("Pawn", true, pictureBoxWhitePawn3);
-            Pawn WhitePawn4   = new Pawn("Pawn", true, pictureBoxWhitePawn4);
-            Pawn WhitePawn5   = new Pawn("Pawn", true, pictureBoxWhitePawn5);
-            Pawn WhitePawn6   = new Pawn("Pawn", true, pictureBoxWhitePawn6);
-            Pawn WhitePawn7   = new Pawn("Pawn", true, pictureBoxWhitePawn7);
-            Pawn WhitePawn8   = new Pawn("Pawn", true, pictureBoxWhitePawn8);
+            Pawn WhiteRook2   = new Pawn("Rook",   true, pictureBoxWhiteRook2);
+            Pawn WhiteQueen   = new Pawn("Queen",  true, pictureBoxWhiteQueen);
+            Pawn WhiteKing    = new Pawn("King",   true, pictureBoxWhiteKing);
+            Pawn WhitePawn1   = new Pawn("Pawn",   true, pictureBoxWhitePawn1);
+            Pawn WhitePawn2   = new Pawn("Pawn",   true, pictureBoxWhitePawn2);
+            Pawn WhitePawn3   = new Pawn("Pawn",   true, pictureBoxWhitePawn3);
+            Pawn WhitePawn4   = new Pawn("Pawn",   true, pictureBoxWhitePawn4);
+            Pawn WhitePawn5   = new Pawn("Pawn",   true, pictureBoxWhitePawn5);
+            Pawn WhitePawn6   = new Pawn("Pawn",   true, pictureBoxWhitePawn6);
+            Pawn WhitePawn7   = new Pawn("Pawn",   true, pictureBoxWhitePawn7);
+            Pawn WhitePawn8   = new Pawn("Pawn",   true, pictureBoxWhitePawn8);
 
             Chessboard.InitializeVariables();
 
@@ -267,7 +271,7 @@ namespace csharp_vathmologoumeni_3
 
                 //If the disposed pawn was a king, end the game
                 if (PawnPressed.Name.Equals("King"))
-                    EndGame((PawnPressed.IsWhite) ? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text);
+                    EndGame((PawnPressed.IsWhite) ? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text); //determine the winner by the colour of the king slayed.
             }
             //if the player selects two pawns of the same colour.
             else
@@ -296,6 +300,76 @@ namespace csharp_vathmologoumeni_3
             //and if the time runs out, end the game.
             if (time_PLAYER1 == 0 || time_PLAYER2 == 0)
                 EndGame((time_PLAYER1 == 0)? textBoxPlayer2Nickname.Text : textBoxPlayer1Nickname.Text);
+        }
+
+        private void AnyToolStripItemClicked(object sender, EventArgs e)
+        {
+            ToolStripMenuItem ItemClicked = (ToolStripMenuItem)sender;
+
+            string message = "";
+            switch (ItemClicked.Name)
+            {
+                case "manageDatabaseToolStripMenuItem":
+                    break;
+
+                case "howToPlayToolStripMenuItem":
+                    message = "SELECTING A PAWN: In order to select an allied pawn, it must be your turn. The turn is determined each time a player makes a move. Clicking" +
+                                     " on any allied pawn, will make its background green, letting you know it's selected.\n\n" +
+
+                                     "MOVING A PAWN: Clicking at any point of the chessboard, that isn't an allied pawn, will make the selected pawn to move to the clicked point." +
+                                     " Once that's done, the turn will change.\n\n" +
+                                     
+                                     "DISPOSING ENEMY PAWNS: While having selected an allied pawn, you will be able to click at an enemy pawn to dispose it. All disposed pawns" +
+                                     " disappear and become anavailable for the rest of the game.";
+
+                    MessageBox.Show(message, "How To Play The Game", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+
+                case "winningTheGameToolStripMenuItem":
+                    message = "There is no Checkmate or automated rules. Therefore leaving two possibilities to win the game:\n\n" +
+
+                              "- The game will end if the time of any player runs out. In this occasion, the player that ran out of time loses.\n\n" +
+                              
+                              "- At any point, any player can dispose the enemy King. If a player loses their King, they lose.";
+
+                    MessageBox.Show(message, "Winning The Game", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+
+                case "rulesToolStripMenuItem":
+                    message = "By clicking yes, you will be redirected to a Wikipedia Page, showing the rules of Chess. Do you want to?";
+
+                    if (MessageBox.Show(message, "Chess Rules", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                        return;
+
+                    try
+                    {
+                        System.Diagnostics.Process.Start("https://en.wikipedia.org/wiki/Rules_of_chess");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something went wrong. EXCEPTION MESSAGE: " + ex.Message, "Error");
+                    }
+
+                    break;
+            }
+        }
+
+        private void FormChess_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (ControlledExit)
+            {
+                new FormChess().Show();
+                return; 
+            }
+
+            //If the game has already begun, warn the players that all progress will be lost if they close the game.
+            DialogResult coninueGame = (GameStarted) ? MessageBox.Show("All progress will be discarded. Are you sure you want to exit?", "Exit Chess", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) : DialogResult.OK;
+
+            if (coninueGame == DialogResult.Cancel)
+                return;
+
+            //then, show the first form that has appeared (the main menu).
+            Application.OpenForms[0].Show();
         }
     }
 }
