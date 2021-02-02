@@ -14,8 +14,11 @@ namespace Covid_Website
             Label2.Text = "Covid case reports until today: " + GridView1.Rows.Count.ToString();
 
             Covid_statistics stats = new Covid_statistics(GridView1);
-            stats.ageStats(TextBox1);
 
+            stats.ageOrdateStats("Ages",TextBox1);
+            stats.genderStats(TextBox2);
+            stats.ageOrdateStats("Dates",TextBox3);
+            
         }
     }
 }

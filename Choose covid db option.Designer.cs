@@ -130,6 +130,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Choose_covid_db_option";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Covid case reports application";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Choose_covid_db_option_FormClosed);
             this.menuStrip1.ResumeLayout(false);

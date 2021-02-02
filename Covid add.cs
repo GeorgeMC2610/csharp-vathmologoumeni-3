@@ -152,7 +152,7 @@ namespace csharp_vathmologoumeni_3
             {
                 if (c.Name.Equals(labelname))
                 {
-                    MessageBox.Show("Invalid " + c.Text + " format");
+                    MessageBox.Show("Invalid " + c.Text + " format","Invalid format");
                     break;
                 }
                                    
@@ -161,7 +161,7 @@ namespace csharp_vathmologoumeni_3
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please choose a gender");
+            MessageBox.Show("Please choose a gender","Choose gender");
         }
 
         private void Covid_TextChanged(object sender, EventArgs e)
@@ -249,10 +249,6 @@ namespace csharp_vathmologoumeni_3
             }
 
             connection.Close();
-
-            //EDW ALLAZEI SOBARA /////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            //databaseFunction(insert); //if insert = true we are doing insertion else modification
 
             CovidCase cov_case = new CovidCase(textBox1.Text, textBox2.Text, richTextBox1.Lines, dateTimePicker1.Text, 
             maskedTextBox2.Text, maskedTextBox1.Text, textBox3.Text, comboBox1.Text, numericUpDown1.Text);

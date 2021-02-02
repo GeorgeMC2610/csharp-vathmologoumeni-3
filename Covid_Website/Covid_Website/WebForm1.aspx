@@ -7,11 +7,18 @@
     <title>Covid case reports</title>
     <style type="text/css">
         #form1 {
-            height: 653px;
+            height: 773px;
         }
     </style>
 </head>
-<body>
+<body style="min-width:1333px;" onresize="resize()">
+    <script>
+        function resize() {
+            //document.getElementById("TextBox1").style.position = "absolute";
+            //document.getElementById("TextBox1").style.left = 100 + 'px';
+
+        }
+    </script>
     <form id="form1" runat="server">
         <div style="margin-left: auto; margin-right: auto; text-align: center;">
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Welcome to Covid case reports website"></asp:Label>
@@ -56,24 +63,24 @@
         <br />
         <br />
         <br />
-
-     <!--   <div style="margin-left: auto; margin-right: auto; text-align: left;"> -->
-        <asp:Label ID="Label4" runat="server" Text="Age reports" style="margin-left: 10.5%;" Font-Size="X-Large" Font-Bold="True" Font-Overline="False" Font-Underline="True" ></asp:Label>            
-   <!--    </div> -->
-
-       <!-- <div style="margin-left: auto; margin-right: auto; text-align: center;"> -->
-        <asp:Label ID="Label5" runat="server" Text="Gender reports" style="margin-left: 24%;" Font-Size="X-Large" Font-Bold="True" Font-Underline="True"></asp:Label>
-       <!-- </div> -->
-
-      <!--  <div style="margin-left: auto; margin-right: auto; text-align: right;"> -->
-        <asp:Label ID="Label6" runat="server" Text="Date reports" style="margin-left: 23.5%;" Font-Size="X-Large" Font-Bold="True" Font-Underline="True"></asp:Label>
-      <!--  </div> -->
-
         <br />
-
-        <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" ReadOnly="True" style="margin-left: 3.5%; resize: none;" Width="310px" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px"></asp:TextBox>
-        <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine" ReadOnly="True" style="margin-left: 10%; resize: none;" Width="310px" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px"></asp:TextBox>
-        <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True" style="margin-left: 7.5%; resize: none;" Width="390px" Font-Bold="True" Font-Size="Large" ForeColor="Red" TextMode="MultiLine" Height="100px"></asp:TextBox>        
+        <asp:Panel ID="Panel1" runat="server" Height="216px" HorizontalAlign="Center">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="X-Large" Font-Underline="True" style="margin-left: -5%;" Text="Age reports"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="True" style="margin-left: 0px;" Text="Gender reports"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="True" style="margin-left: 0%"  Text="Date reports"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="TextBox1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none; " TextMode="MultiLine" Width="330px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none;" TextMode="MultiLine" Width="390px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none; " TextMode="MultiLine" Width="370px"></asp:TextBox>
+        </asp:Panel>
+        <br />  
+        <br />
 
     </form>
 </body>
