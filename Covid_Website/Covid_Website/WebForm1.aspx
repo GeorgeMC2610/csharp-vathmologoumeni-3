@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Covid_Website.WebForm1" %>
+﻿<%@ Page Async="true" Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Covid_Website.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -7,27 +7,30 @@
     <title>Covid case reports</title>
     <style type="text/css">
         #form1 {
-            height: 773px;
+            height: 923px;
         }
     </style>
 </head>
-<body style="min-width:1333px;">
+<body style="min-width:1333px; background-image: url('covid.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%">
     <form id="form1" runat="server">
-        <div style="margin-left: auto; margin-right: auto; text-align: center;">
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Welcome to Covid case reports website"></asp:Label>
-        </div>
+        <asp:Panel ID="Panel2" runat="server" BackColor="#6666FF" Height="244px" HorizontalAlign="Center" BorderStyle="Ridge" Width="100%">            
+            <asp:Label ID="Label1" runat="server" BackColor="#FF6666" Font-Bold="True" Font-Size="XX-Large" style="text-align:center;" Text="Welcome to Covid case reports website" Width="100%"></asp:Label>
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label2" runat="server" BorderColor="Black" Font-Bold="True" Font-Size="20pt" Text="Label" Font-Names="Sitka Banner"></asp:Label>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Font-Size="20pt" Font-Strikeout="False" Text="The reports are being represented analytically in the table bellow:" Font-Names="Sitka Banner"></asp:Label>
+        </asp:Panel>
         <br />
         <br />
-        <div style="margin-left: auto; margin-right: auto; text-align: center;">
-            <asp:Label ID="Label2" runat="server" BorderColor="Black" Font-Bold="True" Font-Size="20pt" Text="Label"></asp:Label>
-        </div>
         <br />
-        <div style="margin-left: auto; margin-right: auto; text-align: center;">
-        <asp:Label ID="Label3" runat="server" BackColor="White" Font-Size="20pt" Font-Strikeout="False" Text="The reports are being represented analytically in the table bellow:"></asp:Label>
-        </div>
-        <br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="Black" BorderColor="White" BorderStyle="None" BorderWidth="2px" CellPadding="5" CellSpacing="2" DataSourceID="SqlDataSource1" EnableTheming="True" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" GridLines="None" Height="147px" HorizontalAlign="Center">
+        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="Black" BorderColor="White" BorderStyle="None" BorderWidth="2px" CellPadding="5" CellSpacing="2" DataSourceID="SqlDataSource1" EnableTheming="True" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="15pt" GridLines="None" Height="147px" HorizontalAlign="Center" Font-Names="Sitka Banner">
             <AlternatingRowStyle Font-Bold="False" HorizontalAlign="Left" />
             <Columns>
                 <asp:BoundField DataField="Full_name" HeaderText="Full_name" SortExpression="Full_name" />
@@ -57,20 +60,21 @@
         <br />
         <br />
         <br />
-        <br />
-        <asp:Panel ID="Panel1" runat="server" Height="216px" HorizontalAlign="Center">            
-            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="X-Large" Font-Underline="True" style="margin-left: -1%" Text="Age reports"></asp:Label>
+        <asp:Panel ID="Panel1" runat="server" Height="236px" HorizontalAlign="Center">            
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="X-Large" Font-Underline="False" style="margin-left: -1%" Text="Age reports" BackColor="#6666FF" ForeColor="Black" BorderStyle="Ridge" Font-Names="Sitka Banner"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="True" Text="Gender reports"></asp:Label>
+            <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="False" Text="Gender reports" BackColor="#6666FF" ForeColor="Black" BorderStyle="Ridge" Font-Names="Sitka Banner"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="True" Text="Date reports"></asp:Label>
+            <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="False" Text="Date reports" BackColor="#6666FF" ForeColor="Black" BorderStyle="Ridge" Font-Names="Sitka Banner"></asp:Label>
             <br />
             <br />
-            <asp:TextBox ID="TextBox1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none; " TextMode="MultiLine" Width="330px"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none; " TextMode="MultiLine" Width="330px" BackColor="#CCCCFF"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none;" TextMode="MultiLine" Width="390px"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none;" TextMode="MultiLine" Width="390px" BackColor="#CCCCFF"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none; " TextMode="MultiLine" Width="370px"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Red" Height="100px" ReadOnly="True" style=" resize: none; " TextMode="MultiLine" Width="370px" BackColor="#CCCCFF"></asp:TextBox>
+            <br />
+            <br />
         </asp:Panel>
         <br />  
         <br />
