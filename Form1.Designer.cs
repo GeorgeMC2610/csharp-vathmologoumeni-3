@@ -97,6 +97,7 @@ namespace csharp_vathmologoumeni_3
             // buttonSkakiera
             // 
             this.buttonSkakiera.AutoSize = true;
+            this.buttonSkakiera.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonSkakiera.Location = new System.Drawing.Point(497, 338);
             this.buttonSkakiera.Name = "buttonSkakiera";
             this.buttonSkakiera.Size = new System.Drawing.Size(307, 73);
@@ -108,6 +109,7 @@ namespace csharp_vathmologoumeni_3
             // buttonMemoryGame
             // 
             this.buttonMemoryGame.AutoSize = true;
+            this.buttonMemoryGame.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonMemoryGame.Location = new System.Drawing.Point(497, 244);
             this.buttonMemoryGame.Name = "buttonMemoryGame";
             this.buttonMemoryGame.Size = new System.Drawing.Size(307, 73);
@@ -119,6 +121,7 @@ namespace csharp_vathmologoumeni_3
             // button1
             // 
             this.button1.AutoSize = true;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Location = new System.Drawing.Point(497, 435);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(307, 73);
