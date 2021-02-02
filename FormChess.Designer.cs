@@ -44,9 +44,9 @@ namespace csharp_vathmologoumeni_3
             this.labelTimers = new System.Windows.Forms.Label();
             this.panelChessBoard = new System.Windows.Forms.Panel();
             this.labelWinner = new System.Windows.Forms.Label();
-            this.labelGameOver = new System.Windows.Forms.Label();
             this.pictureBoxWhitePawn4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhitePawn5 = new System.Windows.Forms.PictureBox();
+            this.labelGameOver = new System.Windows.Forms.Label();
             this.pictureBoxWhitePawn6 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhitePawn7 = new System.Windows.Forms.PictureBox();
             this.pictureBoxWhitePawn8 = new System.Windows.Forms.PictureBox();
@@ -81,6 +81,13 @@ namespace csharp_vathmologoumeni_3
             this.labelPlayer1Timer = new System.Windows.Forms.Label();
             this.labelPlayer2Timer = new System.Windows.Forms.Label();
             this.labelTurn = new System.Windows.Forms.Label();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.winningTheGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhitePawn4)).BeginInit();
@@ -121,7 +128,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonExit.Font = new System.Drawing.Font("Helvetica Rounded", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Location = new System.Drawing.Point(1740, 27);
             this.buttonExit.Name = "buttonExit";
@@ -134,6 +141,9 @@ namespace csharp_vathmologoumeni_3
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.historyToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
@@ -159,7 +169,7 @@ namespace csharp_vathmologoumeni_3
             this.labelFirstNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFirstNickname.Location = new System.Drawing.Point(260, 168);
             this.labelFirstNickname.Name = "labelFirstNickname";
-            this.labelFirstNickname.Size = new System.Drawing.Size(167, 19);
+            this.labelFirstNickname.Size = new System.Drawing.Size(163, 19);
             this.labelFirstNickname.TabIndex = 3;
             this.labelFirstNickname.Tag = "PreLogin";
             this.labelFirstNickname.Text = "Player 1\'s Nickname";
@@ -195,7 +205,7 @@ namespace csharp_vathmologoumeni_3
             this.labelSecondNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSecondNickname.Location = new System.Drawing.Point(265, 280);
             this.labelSecondNickname.Name = "labelSecondNickname";
-            this.labelSecondNickname.Size = new System.Drawing.Size(167, 19);
+            this.labelSecondNickname.Size = new System.Drawing.Size(163, 19);
             this.labelSecondNickname.TabIndex = 7;
             this.labelSecondNickname.Tag = "PreLogin";
             this.labelSecondNickname.Text = "Player 2\'s Nickname";
@@ -238,7 +248,7 @@ namespace csharp_vathmologoumeni_3
             this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTimers.Location = new System.Drawing.Point(276, 195);
             this.checkBoxTimers.Name = "checkBoxTimers";
-            this.checkBoxTimers.Size = new System.Drawing.Size(133, 21);
+            this.checkBoxTimers.Size = new System.Drawing.Size(132, 22);
             this.checkBoxTimers.TabIndex = 9;
             this.checkBoxTimers.Tag = "PreLogin";
             this.checkBoxTimers.Text = "Include Timers";
@@ -282,7 +292,7 @@ namespace csharp_vathmologoumeni_3
             this.labelTimers.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTimers.Location = new System.Drawing.Point(267, 283);
             this.labelTimers.Name = "labelTimers";
-            this.labelTimers.Size = new System.Drawing.Size(262, 19);
+            this.labelTimers.Size = new System.Drawing.Size(256, 19);
             this.labelTimers.TabIndex = 11;
             this.labelTimers.Tag = "PreLogin";
             this.labelTimers.Text = "Time for each player (in minutes)";
@@ -348,19 +358,6 @@ namespace csharp_vathmologoumeni_3
             this.labelWinner.Text = "(player) WON!";
             this.labelWinner.Visible = false;
             // 
-            // labelGameOver
-            // 
-            this.labelGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelGameOver.AutoSize = true;
-            this.labelGameOver.Font = new System.Drawing.Font("Helvetica Rounded", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGameOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelGameOver.Location = new System.Drawing.Point(246, 266);
-            this.labelGameOver.Name = "labelGameOver";
-            this.labelGameOver.Size = new System.Drawing.Size(262, 44);
-            this.labelGameOver.TabIndex = 32;
-            this.labelGameOver.Text = "GAME OVER!";
-            this.labelGameOver.Visible = false;
-            // 
             // pictureBoxWhitePawn4
             // 
             this.pictureBoxWhitePawn4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -386,6 +383,19 @@ namespace csharp_vathmologoumeni_3
             this.pictureBoxWhitePawn5.TabIndex = 30;
             this.pictureBoxWhitePawn5.TabStop = false;
             this.pictureBoxWhitePawn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AnyPawnClicked);
+            // 
+            // labelGameOver
+            // 
+            this.labelGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelGameOver.AutoSize = true;
+            this.labelGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGameOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelGameOver.Location = new System.Drawing.Point(246, 266);
+            this.labelGameOver.Name = "labelGameOver";
+            this.labelGameOver.Size = new System.Drawing.Size(264, 42);
+            this.labelGameOver.TabIndex = 32;
+            this.labelGameOver.Text = "GAME OVER!";
+            this.labelGameOver.Visible = false;
             // 
             // pictureBoxWhitePawn6
             // 
@@ -812,11 +822,57 @@ namespace csharp_vathmologoumeni_3
             this.labelTurn.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTurn.Location = new System.Drawing.Point(858, 85);
             this.labelTurn.Name = "labelTurn";
-            this.labelTurn.Size = new System.Drawing.Size(166, 29);
+            this.labelTurn.Size = new System.Drawing.Size(164, 29);
             this.labelTurn.TabIndex = 15;
             this.labelTurn.Tag = "";
             this.labelTurn.Text = "Player\'s turn.";
             this.labelTurn.Visible = false;
+            // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageDatabaseToolStripMenuItem});
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.historyToolStripMenuItem.Text = "Previous Games";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.howToPlayToolStripMenuItem,
+            this.winningTheGameToolStripMenuItem,
+            this.rulesToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // howToPlayToolStripMenuItem
+            // 
+            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.howToPlayToolStripMenuItem.Text = "How To Play";
+            this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // winningTheGameToolStripMenuItem
+            // 
+            this.winningTheGameToolStripMenuItem.Name = "winningTheGameToolStripMenuItem";
+            this.winningTheGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.winningTheGameToolStripMenuItem.Text = "Winning The Game";
+            this.winningTheGameToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // manageDatabaseToolStripMenuItem
+            // 
+            this.manageDatabaseToolStripMenuItem.Name = "manageDatabaseToolStripMenuItem";
+            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageDatabaseToolStripMenuItem.Text = "Manage Database";
+            this.manageDatabaseToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // rulesToolStripMenuItem
+            // 
+            this.rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
+            this.rulesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rulesToolStripMenuItem.Text = "Rules";
+            this.rulesToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
             // 
             // FormChess
             // 
@@ -847,7 +903,10 @@ namespace csharp_vathmologoumeni_3
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chess Game";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormChess_FormClosed);
             this.Load += new System.EventHandler(this.FormChess_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).EndInit();
             this.panelChessBoard.ResumeLayout(false);
             this.panelChessBoard.PerformLayout();
@@ -941,5 +1000,11 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Label labelWinner;
         private System.Windows.Forms.Label labelGameOver;
         private System.Windows.Forms.Label labelTurn;
+        private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem howToPlayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem winningTheGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rulesToolStripMenuItem;
     }
 }
