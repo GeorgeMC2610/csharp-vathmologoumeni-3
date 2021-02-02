@@ -25,7 +25,7 @@
             <br />
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Font-Size="20pt" Font-Strikeout="False" Text="The reports are being represented analytically in the table bellow:" Font-Names="Sitka Banner"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Font-Size="20pt" Font-Strikeout="False" Text="The reports are being represented analytically in the table below:" Font-Names="Sitka Banner"></asp:Label>
         </asp:Panel>
         <br />
         <br />

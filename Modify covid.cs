@@ -49,6 +49,7 @@ namespace csharp_vathmologoumeni_3
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
+            Covid_Insert.player.Play();
             Close();
         }
 
@@ -60,55 +61,10 @@ namespace csharp_vathmologoumeni_3
 
             textBox1.Text = "";
         }
-        
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            button1.Enabled = button2.Enabled = false;
-            button1.BackColor = button2.BackColor = Color.Silver;
-            numericUpDown1.Maximum = 1;
-
-            clearRichTextBoxes();
-
-            OleDbCommand search = new OleDbCommand("Select * from Covid_cases where "+ comboBox1.Text +" = @txtboxtext",connection);
-            search.Parameters.AddWithValue("@txtboxtext", textBox1.Text);            
-            OleDbDataReader row = search.ExecuteReader();
-
-            if (row.HasRows)
-            {
-                button1.Enabled = button2.Enabled = true;
-                button1.BackColor = Color.Bisque;
-                button2.BackColor = Color.LightCoral;
-
-                col = 0;
-                int id;
-
-                while (row.Read())
-                {
-                    numericUpDown1.Maximum += 1;
-
-                    if (col == 3)
-                        col = 0;
-
-                    foreach (Control c in Controls)
-                    {
-                        if (c.GetType() == typeof(RichTextBox))
-                        {
-                            id = Int32.Parse(c.Name[11].ToString());
-                            ((RichTextBox)c).SelectionColor = colorlist[col];
-                            ((RichTextBox)c).AppendText(row[id - 1].ToString());
-                            ((RichTextBox)c).AppendText("\n");
-                        }
-
-                    }
-                    col++;
-                }
-
-                numericUpDown1.Maximum -= 1;
-            }    
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            Covid_Insert.player.Play();
+
             String[] values = {richTextBox1.Lines[(int)numericUpDown1.Value - 1], richTextBox2.Lines[(int)numericUpDown1.Value - 1], richTextBox3.Lines[(int)numericUpDown1.Value - 1],
             richTextBox4.Lines[(int)numericUpDown1.Value - 1],richTextBox5.Lines[(int)numericUpDown1.Value - 1],richTextBox6.Lines[(int)numericUpDown1.Value - 1],
             richTextBox7.Lines[(int)numericUpDown1.Value - 1],richTextBox8.Lines[(int)numericUpDown1.Value - 1],richTextBox9.Lines[(int)numericUpDown1.Value - 1]};
@@ -119,7 +75,9 @@ namespace csharp_vathmologoumeni_3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult choice = MessageBox.Show("Are you sure you want to delete row " + numericUpDown1.Value.ToString() + " from results?", "Delete row", MessageBoxButtons.YesNo);
+            Covid_Insert.player.Play();
+
+            DialogResult choice = MessageBox.Show("Are you sure you want to delete row " + numericUpDown1.Value.ToString() + " from results?", "Delete row", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (choice == DialogResult.Yes)
             {
@@ -167,22 +125,72 @@ namespace csharp_vathmologoumeni_3
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = button2.Enabled = false;
+            button1.BackColor = button2.BackColor = Color.Silver;
+            numericUpDown1.Maximum = 1;
+
+            clearRichTextBoxes();
+
+            OleDbCommand search = new OleDbCommand("Select * from Covid_cases where "+ comboBox1.Text +" = @txtboxtext",connection);
+            search.Parameters.AddWithValue("@txtboxtext", textBox1.Text);            
+            OleDbDataReader row = search.ExecuteReader();
+
+            if (row.HasRows)
+            {
+                button1.Enabled = button2.Enabled = true;
+                button1.BackColor = Color.Bisque;
+                button2.BackColor = Color.LightCoral;
+
+                col = 0;
+                int id;
+
+                while (row.Read())
+                {
+                    numericUpDown1.Maximum += 1;
+
+                    if (col == 3)
+                        col = 0;
+
+                    foreach (Control c in Controls)
+                    {
+                        if (c.GetType() == typeof(RichTextBox))
+                        {
+                            id = Int32.Parse(c.Name[11].ToString());
+                            ((RichTextBox)c).SelectionColor = colorlist[col];
+                            ((RichTextBox)c).AppendText(row[id - 1].ToString());
+                            ((RichTextBox)c).AppendText("\n");
+                        }
+
+                    }
+                    col++;
+                }
+
+                numericUpDown1.Maximum -= 1;
+            }    
+        }
+
+       
         private void aboutModificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Covid_Insert.player.Play();
             MessageBox.Show("After a search for cases(refer in 'About search' option), select the desired row from the search results in the numericupdown control.\n\n" +
-            "Press the 'Modify' button in order for the app to transfer you in the report modification form.\n\nThere, you will be requested to modify the selected report values.","About modification");
+            "Press the 'Modify' button in order for the app to transfer you in the report modification form.\n\nThere, you will be requested to modify the selected report values.","About modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void aboutDeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Covid_Insert.player.Play();
             MessageBox.Show("After a search for cases(refer in 'About search' option), select the desired row from the search results in the numericupdown control.\n\n" +
-            "Press the 'Delete' button and then, choose 'yes' in the confirmation message, in order for the app to delete the selected row from the database.", "About deletion");
+            "Press the 'Delete' button and then, choose 'yes' in the confirmation message, in order for the app to delete the selected row from the database.", "About deletion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void aboutSearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Covid_Insert.player.Play();
             MessageBox.Show("Select in the top combobox, the category you want to search cases by.\nThen, write what you want to look about in the middle textbox.\n\n" +
-            "If the application find any row from database that contains what you are looking for, the whole row is beeing added as a result in the bottom richtextboxes.", "About search");
+            "If the application find any row from database that contains what you are looking for, the whole row is beeing added as a result in the bottom richtextboxes.", "About search", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void Modify_covid_FormClosed(object sender, FormClosedEventArgs e)
         {

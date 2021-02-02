@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.OleDb;
+using System.Speech.Synthesis;
+using System.Media;
 
 namespace csharp_vathmologoumeni_3
 {
@@ -16,6 +18,8 @@ namespace csharp_vathmologoumeni_3
     {
         String connection_str;
         OleDbConnection connection;
+
+        public static SoundPlayer player = new SoundPlayer("click.wav");
 
         bool insert = true;
         String old_email;
@@ -83,63 +87,11 @@ namespace csharp_vathmologoumeni_3
 
                 maskedTextBox2.Text = datetime;
             }
+            else
+            {
+                BackgroundImage = Image.FromFile("images/modify.png");
+            }
             
-        }
-
-        private void databaseFunction(bool is_insertion)
-        {
-            OleDbCommand comand;
-
-            if (is_insertion)
-            {
-                comand = new OleDbCommand("Insert into Covid_cases(Full_name,Email,Underlying_diseases,Date_of_record," +
-                "Time_of_record,Phone_number,Home_address,Gender,Age) values(@fn,@email,@ud,@dor,@tor,@pn,@ha,@gender,@age)", connection);
-            }
-            else
-            {
-                comand = new OleDbCommand("Update Covid_cases set Full_name = @fn, Email = @email, Underlying_diseases=@ud, Date_of_record=@dor, " +
-                "Time_of_record=@tor, Phone_number=@pn, Home_address=@ha, Gender=@gender, Age=@age where Email = @oldemail", connection);
-            }
-
-            comand.Parameters.AddWithValue("@fn", textBox1.Text);
-            comand.Parameters.AddWithValue("@email", textBox2.Text);
-
-            String[] lines = richTextBox1.Lines;
-            StringBuilder diseases = new StringBuilder("");
-
-            if (lines.Length != 0)
-            {
-                foreach (String line in lines)
-                {
-                    diseases.Append(line);
-                    diseases.Append(", ");
-                }
-                diseases.Remove(diseases.Length - 2, 2);
-            }
-            else
-                diseases.Append("none");
-
-            comand.Parameters.AddWithValue("@ud", diseases.ToString());
-            comand.Parameters.AddWithValue("@dor", dateTimePicker1.Text);
-            comand.Parameters.AddWithValue("@tor", maskedTextBox2.Text);
-            comand.Parameters.AddWithValue("@pn", maskedTextBox1.Text);
-            comand.Parameters.AddWithValue("@ha", textBox3.Text);
-            comand.Parameters.AddWithValue("@gender", comboBox1.Text);
-            comand.Parameters.AddWithValue("@age", numericUpDown1.Text);
-
-            if (!is_insertion)
-            {
-                comand.Parameters.AddWithValue("@oldemail", old_email);
-                old_email = textBox2.Text;
-
-                MessageBox.Show("Report has been successfully modified!", "Success");
-
-                ((Modify_covid)Application.OpenForms[2]).cleartxtbox();
-            }
-            else
-                MessageBox.Show("Report has been successfully added!", "Success");
-
-            comand.ExecuteNonQuery();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) //function for all the pictureboxes
@@ -152,7 +104,7 @@ namespace csharp_vathmologoumeni_3
             {
                 if (c.Name.Equals(labelname))
                 {
-                    MessageBox.Show("Invalid " + c.Text + " format","Invalid format");
+                    MessageBox.Show("Invalid " + c.Text + " format","Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 }
                                    
@@ -161,7 +113,7 @@ namespace csharp_vathmologoumeni_3
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please choose a gender","Choose gender");
+            MessageBox.Show("Please choose a gender","Choose gender", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Covid_TextChanged(object sender, EventArgs e)
@@ -225,58 +177,70 @@ namespace csharp_vathmologoumeni_3
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
+            player.Play();
             Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            connection.Open();
+            player.Play();
 
             //check for email duplicate if we are doing insertion or modification but the old mail is different than the new one
 
             if (insert || !insert && !old_email.Equals(textBox2.Text)) 
             {
+                connection.Open();
+
                 OleDbCommand check_email = new OleDbCommand("Select Email from Covid_cases where Email=@email", connection);
                 check_email.Parameters.AddWithValue("@email", textBox2.Text);
                 OleDbDataReader reader = check_email.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    MessageBox.Show("There is already a report with email: " + textBox2.Text, "Email already exists");
+                    MessageBox.Show("There is already a report with email: " + textBox2.Text, "Email already exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     connection.Close();
                     return;
                 }
-            }
 
-            connection.Close();
+                connection.Close();
+            }
 
             CovidCase cov_case = new CovidCase(textBox1.Text, textBox2.Text, richTextBox1.Lines, dateTimePicker1.Text, 
             maskedTextBox2.Text, maskedTextBox1.Text, textBox3.Text, comboBox1.Text, numericUpDown1.Text);
 
+            String text = "";
+            SpeechSynthesizer engine = new SpeechSynthesizer();
+            engine.SelectVoice("Microsoft Mark");
+
             if (insert)
             {
-                cov_case.insertCase();
-                MessageBox.Show("Report has been successfully added!", "Success");
+                cov_case.insertCase();                
+                text = "Report has been successfully added!";
+
             }
             else
-            {
+            {               
                 cov_case.updateCase(old_email);
                 old_email = textBox2.Text;
-                MessageBox.Show("Report has been successfully modified!", "Success");
+                text = "Report has been successfully modified!";
+                
                 ((Modify_covid)Application.OpenForms[2]).cleartxtbox();
             }
 
-
-
+            engine.SpeakAsync(text);
+            MessageBox.Show(text, "Success");
             
-        }
+        }       
+
 
         private void aboutValuesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            player.Play();
+
             MessageBox.Show("Acceptable formats for each value:\n\nFullname: Only letters,comas and fullstops with space between them(double space is not accepted)\n\n" +
             "Email: xxx@yyy.yyy where x = letters or numbers and y = letters\n\nUnderlying diseases: No restrictions\n\nDate of record: Any selected date\n\n" +
             "Time of record: A correct time format(hours are represented from 00-23)\n\nPhone number: Only numbers\n\nHome address: Only letters,comas,fullstops and numbers with space between them(double space is not accepted)\n\n" +
-            "Gender: Any selected gender\n\nAge: Any age between 1-100", "Acceptable formats");
+            "Gender: Any selected gender\n\nAge: Any age between 1-100", "Acceptable formats", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Covid_Insert_FormClosed(object sender, FormClosedEventArgs e)

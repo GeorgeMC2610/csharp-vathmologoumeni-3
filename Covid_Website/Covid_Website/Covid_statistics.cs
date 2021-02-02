@@ -39,7 +39,7 @@ namespace Covid_Website
             }
 
             output.Text = "Total of Man covid case reports: " + man_count.ToString() + "\nTotal of Woman covid case reports: " + woman_count.ToString() + "\n\n" +
-            "Most case reports are " + (man_count > woman_count ? "mans." : "womans.") + "They form a " + max_percentage.ToString() + "% of total reports.";
+            "Most case reports are " + (man_count > woman_count ? "mans." : "womans.") + "They form a " + max_percentage.ToString("0.0") + "% of total reports.";
         }
 
         
@@ -100,9 +100,9 @@ namespace Covid_Website
                     float max_percentage = ((float)max_count / (float)gridview.Rows.Count) * 100;
 
                     if(stats.Equals("Dates"))
-                        output.Text += "\nMost cases have been reported in " + max_count_date_or_age + ".The " + max_percentage.ToString() + "% of total reports, have been reported that day.";
+                        output.Text += "\nMost cases have been reported in " + max_count_date_or_age + ".The " + max_percentage.ToString("0.0") + "% of total reports, have been reported that day.";
                     else if(stats.Equals("Ages"))
-                        output.Text += "\nMost case reports have an age of " + max_count_date_or_age + ".They form a " + max_percentage.ToString() + "% of total reports.";
+                        output.Text += "\nMost case reports have an age of " + max_count_date_or_age + ".They form a " + max_percentage.ToString("0.0") + "% of total reports.";
 
                     return;
                 }
