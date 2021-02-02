@@ -11,14 +11,7 @@
         }
     </style>
 </head>
-<body style="min-width:1333px;" onresize="resize()">
-    <script>
-        function resize() {
-            //document.getElementById("TextBox1").style.position = "absolute";
-            //document.getElementById("TextBox1").style.left = 100 + 'px';
-
-        }
-    </script>
+<body style="min-width:1333px;">
     <form id="form1" runat="server">
         <div style="margin-left: auto; margin-right: auto; text-align: center;">
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Welcome to Covid case reports website"></asp:Label>
