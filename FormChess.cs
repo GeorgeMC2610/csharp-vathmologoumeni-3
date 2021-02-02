@@ -294,7 +294,40 @@ namespace csharp_vathmologoumeni_3
 
         private void AnyToolStripItemClicked(object sender, EventArgs e)
         {
+            ToolStripMenuItem ItemClicked = (ToolStripMenuItem)sender;
 
+            string message = "";
+            switch (ItemClicked.Name)
+            {
+                case "manageDatabaseToolStripMenuItem":
+                    break;
+
+                case "howToPlayToolStripMenuItem":
+                    message = "SELECTING A PAWN: In order to select an allied pawn, it must be your turn. The turn is determined each time a player makes a move. Clicking" +
+                                     " on any allied pawn, will make its background green, letting you know it's selected.\n\n" +
+
+                                     "MOVING A PAWN: Clicking at any point of the chessboard, that isn't an allied pawn, will make the selected pawn to move to the clicked point." +
+                                     " Once that's done, the turn will change.\n\n" +
+                                     
+                                     "DISPOSING ENEMY PAWNS: While having selected an allied pawn, you will be able to click at an enemy pawn to dispose it. All disposed pawns" +
+                                     " disappear and become anavailable for the rest of the game.";
+
+                    MessageBox.Show(message, "How To Play The Game", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+
+                case "winningTheGameToolStripMenuItem":
+                    message = "There is no Checkmate or automated rules. Therefore leaving two possibilities to win the game:\n\n" +
+
+                              "- The game will end if the time of any player runs out. In this occasion, the player that ran out of time loses.\n\n" +
+                              
+                              "- At any point, any player can dispose the enemy King. If a player loses their King, they lose.";
+
+                    MessageBox.Show(message, "Winning The Game", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+
+                case "rulesToolStripMenuItem":
+                    break;
+            }
         }
 
         private void FormChess_FormClosed(object sender, FormClosedEventArgs e)
