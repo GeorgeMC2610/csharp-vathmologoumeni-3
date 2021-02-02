@@ -32,6 +32,12 @@ namespace csharp_vathmologoumeni_3
             this.components = new System.ComponentModel.Container();
             this.buttonExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.winningTheGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxPlayer1Nickname = new System.Windows.Forms.TextBox();
             this.labelFirstNickname = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
@@ -81,12 +87,7 @@ namespace csharp_vathmologoumeni_3
             this.labelPlayer1Timer = new System.Windows.Forms.Label();
             this.labelPlayer2Timer = new System.Windows.Forms.Label();
             this.labelTurn = new System.Windows.Forms.Label();
-            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.winningTheGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonStartOver = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
             this.panelChessBoard.SuspendLayout();
@@ -128,9 +129,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExit.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(1740, 27);
+            this.buttonExit.Location = new System.Drawing.Point(1740, 36);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(152, 46);
             this.buttonExit.TabIndex = 0;
@@ -149,6 +151,52 @@ namespace csharp_vathmologoumeni_3
             this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageDatabaseToolStripMenuItem});
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.historyToolStripMenuItem.Text = "Previous Games";
+            // 
+            // manageDatabaseToolStripMenuItem
+            // 
+            this.manageDatabaseToolStripMenuItem.Name = "manageDatabaseToolStripMenuItem";
+            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.manageDatabaseToolStripMenuItem.Text = "Manage Database";
+            this.manageDatabaseToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.howToPlayToolStripMenuItem,
+            this.winningTheGameToolStripMenuItem,
+            this.rulesToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // howToPlayToolStripMenuItem
+            // 
+            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.howToPlayToolStripMenuItem.Text = "How To Play";
+            this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // winningTheGameToolStripMenuItem
+            // 
+            this.winningTheGameToolStripMenuItem.Name = "winningTheGameToolStripMenuItem";
+            this.winningTheGameToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.winningTheGameToolStripMenuItem.Text = "Winning The Game";
+            this.winningTheGameToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // rulesToolStripMenuItem
+            // 
+            this.rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
+            this.rulesToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.rulesToolStripMenuItem.Text = "Rules";
+            this.rulesToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
             // 
             // textBoxPlayer1Nickname
             // 
@@ -169,7 +217,7 @@ namespace csharp_vathmologoumeni_3
             this.labelFirstNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFirstNickname.Location = new System.Drawing.Point(260, 168);
             this.labelFirstNickname.Name = "labelFirstNickname";
-            this.labelFirstNickname.Size = new System.Drawing.Size(163, 19);
+            this.labelFirstNickname.Size = new System.Drawing.Size(167, 19);
             this.labelFirstNickname.TabIndex = 3;
             this.labelFirstNickname.Tag = "PreLogin";
             this.labelFirstNickname.Text = "Player 1\'s Nickname";
@@ -205,7 +253,7 @@ namespace csharp_vathmologoumeni_3
             this.labelSecondNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSecondNickname.Location = new System.Drawing.Point(265, 280);
             this.labelSecondNickname.Name = "labelSecondNickname";
-            this.labelSecondNickname.Size = new System.Drawing.Size(163, 19);
+            this.labelSecondNickname.Size = new System.Drawing.Size(167, 19);
             this.labelSecondNickname.TabIndex = 7;
             this.labelSecondNickname.Tag = "PreLogin";
             this.labelSecondNickname.Text = "Player 2\'s Nickname";
@@ -248,7 +296,7 @@ namespace csharp_vathmologoumeni_3
             this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTimers.Location = new System.Drawing.Point(276, 195);
             this.checkBoxTimers.Name = "checkBoxTimers";
-            this.checkBoxTimers.Size = new System.Drawing.Size(132, 22);
+            this.checkBoxTimers.Size = new System.Drawing.Size(133, 21);
             this.checkBoxTimers.TabIndex = 9;
             this.checkBoxTimers.Tag = "PreLogin";
             this.checkBoxTimers.Text = "Include Timers";
@@ -292,7 +340,7 @@ namespace csharp_vathmologoumeni_3
             this.labelTimers.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTimers.Location = new System.Drawing.Point(267, 283);
             this.labelTimers.Name = "labelTimers";
-            this.labelTimers.Size = new System.Drawing.Size(256, 19);
+            this.labelTimers.Size = new System.Drawing.Size(262, 19);
             this.labelTimers.TabIndex = 11;
             this.labelTimers.Tag = "PreLogin";
             this.labelTimers.Text = "Time for each player (in minutes)";
@@ -822,57 +870,26 @@ namespace csharp_vathmologoumeni_3
             this.labelTurn.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTurn.Location = new System.Drawing.Point(858, 85);
             this.labelTurn.Name = "labelTurn";
-            this.labelTurn.Size = new System.Drawing.Size(164, 29);
+            this.labelTurn.Size = new System.Drawing.Size(166, 29);
             this.labelTurn.TabIndex = 15;
             this.labelTurn.Tag = "";
             this.labelTurn.Text = "Player\'s turn.";
             this.labelTurn.Visible = false;
             // 
-            // historyToolStripMenuItem
+            // buttonStartOver
             // 
-            this.historyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageDatabaseToolStripMenuItem});
-            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.historyToolStripMenuItem.Text = "Previous Games";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.howToPlayToolStripMenuItem,
-            this.winningTheGameToolStripMenuItem,
-            this.rulesToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // howToPlayToolStripMenuItem
-            // 
-            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.howToPlayToolStripMenuItem.Text = "How To Play";
-            this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
-            // 
-            // winningTheGameToolStripMenuItem
-            // 
-            this.winningTheGameToolStripMenuItem.Name = "winningTheGameToolStripMenuItem";
-            this.winningTheGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.winningTheGameToolStripMenuItem.Text = "Winning The Game";
-            this.winningTheGameToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
-            // 
-            // manageDatabaseToolStripMenuItem
-            // 
-            this.manageDatabaseToolStripMenuItem.Name = "manageDatabaseToolStripMenuItem";
-            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.manageDatabaseToolStripMenuItem.Text = "Manage Database";
-            this.manageDatabaseToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
-            // 
-            // rulesToolStripMenuItem
-            // 
-            this.rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
-            this.rulesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rulesToolStripMenuItem.Text = "Rules";
-            this.rulesToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            this.buttonStartOver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStartOver.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonStartOver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonStartOver.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStartOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonStartOver.Location = new System.Drawing.Point(1740, 99);
+            this.buttonStartOver.Name = "buttonStartOver";
+            this.buttonStartOver.Size = new System.Drawing.Size(152, 46);
+            this.buttonStartOver.TabIndex = 16;
+            this.buttonStartOver.Text = "Start Over";
+            this.buttonStartOver.UseVisualStyleBackColor = false;
+            this.buttonStartOver.Click += new System.EventHandler(this.AnyButtonClicked);
             // 
             // FormChess
             // 
@@ -880,6 +897,7 @@ namespace csharp_vathmologoumeni_3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.buttonStartOver);
             this.Controls.Add(this.labelTurn);
             this.Controls.Add(this.labelPlayer2Timer);
             this.Controls.Add(this.labelPlayer1Timer);
@@ -1006,5 +1024,6 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.ToolStripMenuItem winningTheGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rulesToolStripMenuItem;
+        private System.Windows.Forms.Button buttonStartOver;
     }
 }

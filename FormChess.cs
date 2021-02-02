@@ -20,6 +20,7 @@ namespace csharp_vathmologoumeni_3
         bool Player1Turn = true;
         bool GameStarted = false;
         bool PawnClicked = false;
+        bool ControlledExit = false;
         Pawn PawnSelected;
         int time_PLAYER1;
         int time_PLAYER2;
@@ -33,6 +34,15 @@ namespace csharp_vathmologoumeni_3
             {
                 //when the player exits, show the form that was already shown before. NOTE: There will be a popup message if the game has started.
                 case "buttonExit":
+                    Close();
+                    break;
+                //when the player restarts the game, we show a dialog. If the game hasn't started, the game doesn't show the dialog and immideately restarts the game.
+                case "buttonStartOver":
+                    DialogResult continueGame = (GameStarted) ? MessageBox.Show("Are you sure you want to restart the game?", "Restart Game", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) : DialogResult.OK;
+                    if (continueGame == DialogResult.Cancel)
+                        return;
+
+                    ControlledExit = true;
                     Close();
                     break;
                 //when the player starts the game, enable everything.
@@ -326,12 +336,32 @@ namespace csharp_vathmologoumeni_3
                     break;
 
                 case "rulesToolStripMenuItem":
+                    message = "By clicking yes, you will be redirected to a Wikipedia Page, showing the rules of Chess. Do you want to?";
+
+                    if (MessageBox.Show(message, "Chess Rules", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                        return;
+
+                    try
+                    {
+                        System.Diagnostics.Process.Start("https://en.wikipedia.org/wiki/Rules_of_chess");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something went wrong. EXCEPTION MESSAGE: " + ex.Message, "Error");
+                    }
+
                     break;
             }
         }
 
         private void FormChess_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (ControlledExit)
+            {
+                new FormChess().Show();
+                return; 
+            }
+
             //If the game has already begun, warn the players that all progress will be lost if they close the game.
             DialogResult coninueGame = (GameStarted) ? MessageBox.Show("All progress will be discarded. Are you sure you want to exit?", "Exit Chess", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) : DialogResult.OK;
 
