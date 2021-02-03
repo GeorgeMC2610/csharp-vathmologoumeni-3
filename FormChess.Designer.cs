@@ -129,6 +129,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonExit.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
@@ -880,6 +881,11 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonStartOver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStartOver.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonStartOver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStartOver.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.buttonStartOver.FlatAppearance.BorderSize = 4;
+            this.buttonStartOver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonStartOver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.buttonStartOver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStartOver.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
