@@ -93,8 +93,8 @@ namespace csharp_vathmologoumeni_3
 
             panelChessBoard.Location        = new Point(Width / 2 - panelChessBoard.Width / 2, Height / 2 - panelChessBoard.Height / 2);
             
-            panelChessBoard.Visible = false;
-            labelPlayer1Timer.Visible = labelPlayer2Timer.Visible = false;
+            labelPlayer1Timer.Visible = labelPlayer2Timer.Visible = panelChessBoard.Visible = false;
+            buttonStartOver.Enabled = false;
 
             //then initialize all pawns in the board.
             Pawn BlackRook1   = new Pawn("Rook",   false, pictureBoxBlackRook1);
@@ -188,8 +188,9 @@ namespace csharp_vathmologoumeni_3
                 else
                     c.Visible = true;
 
-            labelTurn.Text = "It's " + textBoxPlayer1Nickname.Text + "'s (White Pawns) turn.";
-            labelTurn.Location = new Point(panelChessBoard.Location.X + panelChessBoard.Width / 2 - labelTurn.Width / 2, labelTurn.Location.Y);
+            labelTurn.Text          = "It's " + textBoxPlayer1Nickname.Text + "'s (White Pawns) turn.";
+            labelTurn.Location      = new Point(panelChessBoard.Location.X + panelChessBoard.Width / 2 - labelTurn.Width / 2, labelTurn.Location.Y);
+            buttonStartOver.Enabled = true;
 
             //set the minutes
             if (numericUpDownMinutes.Enabled)
