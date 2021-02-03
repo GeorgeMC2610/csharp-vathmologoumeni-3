@@ -82,8 +82,11 @@ namespace csharp_vathmologoumeni_3
         private void button3_Click(object sender, EventArgs e)
         {
             Covid_Insert.player.Play();
-            MessageBox.Show("You have to open Covid_Website project first.","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            System.Diagnostics.Process.Start("https://localhost:44390/WebForm1.aspx"); 
+
+            DialogResult result =  MessageBox.Show("Is the Covid_Website project open?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+            if(result == DialogResult.Yes)
+                System.Diagnostics.Process.Start("https://localhost:44390/WebForm1.aspx"); 
         }
 
         private void Choose_covid_db_option_FormClosed(object sender, FormClosedEventArgs e)
