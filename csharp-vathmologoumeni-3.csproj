@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chessboard.cs" />
+    <Compile Include="ChessGamesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChessGamesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Choose covid db option.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +130,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ChessGamesDataSet.xsc">
+      <DependentUpon>ChessGamesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ChessGamesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChessGamesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChessGamesDataSet.xss">
+      <DependentUpon>ChessGamesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
