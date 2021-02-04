@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -216,6 +217,29 @@ namespace csharp_vathmologoumeni_3
             Chessboard.ActivePawns.ForEach(p => p.Texture.Enabled = false);
             timerCountdown.Enabled = false;
             GameStarted = false;
+            InsertToDatabase(winner);
+        }
+
+        private void InsertToDatabase(string winner)
+        {
+            try
+            {
+                OleDbConnection connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;;Data Source=ChessGames.mdb");
+                connection.Open();
+
+                OleDbCommand command = new OleDbCommand("INSERT INTO Games (Player1, Player2, Winner, Timer, DateEnded, TimeEnded) VALUES ('" + textBoxPlayer1Nickname.Text + "', '"
+                                                                                                                                                    + textBoxPlayer2Nickname.Text + "', '"
+                                                                                                                                                    + winner + "', '"
+                                                                                                                                                    + (checkBoxTimers.Checked ? numericUpDownMinutes.Value.ToString() + " minutes" : "None") + "', '"
+                                                                                                                                                    + DateTime.Now.ToShortDateString() + "', '"
+                                                                                                                                                    + DateTime.Now.ToLongTimeString() + "')", connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error has occured while trying to write the game in the database. This game will not be recorded.\n\nERROR MESSAGE: " + e.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void InverseTurns()
@@ -307,7 +331,7 @@ namespace csharp_vathmologoumeni_3
         {
             ToolStripMenuItem ItemClicked = (ToolStripMenuItem)sender;
 
-            string message = "";
+            string message;
             switch (ItemClicked.Name)
             {
                 case "manageDatabaseToolStripMenuItem":
