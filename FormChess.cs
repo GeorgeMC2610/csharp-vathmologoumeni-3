@@ -335,6 +335,8 @@ namespace csharp_vathmologoumeni_3
             switch (ItemClicked.Name)
             {
                 case "manageDatabaseToolStripMenuItem":
+                    new FormChessDB().Show();
+                    Hide();
                     break;
 
                 case "howToPlayToolStripMenuItem":

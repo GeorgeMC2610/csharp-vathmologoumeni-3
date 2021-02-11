@@ -143,7 +143,7 @@ namespace csharp_vathmologoumeni_3
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historyToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -164,7 +164,7 @@ namespace csharp_vathmologoumeni_3
             // manageDatabaseToolStripMenuItem
             // 
             this.manageDatabaseToolStripMenuItem.Name = "manageDatabaseToolStripMenuItem";
-            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageDatabaseToolStripMenuItem.Text = "Manage Database";
             this.manageDatabaseToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
             // 
