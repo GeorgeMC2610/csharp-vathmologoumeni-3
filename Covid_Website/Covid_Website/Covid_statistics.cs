@@ -63,14 +63,10 @@ namespace Covid_Website
             for (int i = 0; i < gridview.Rows.Count; i++)
             {
                 if (!Dates_or_ages.Contains(All_dates_or_ages[i]))
-                {
                     Dates_or_ages.Add(All_dates_or_ages[i]);
-                }
                 else
-                {
                     continue;
-                }
-
+                
                 foreach (String date in All_dates_or_ages)
                 {
                     if (date.Equals(All_dates_or_ages[i]))

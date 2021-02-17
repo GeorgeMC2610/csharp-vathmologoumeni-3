@@ -209,8 +209,6 @@ namespace csharp_vathmologoumeni_3
             maskedTextBox2.Text, maskedTextBox1.Text, textBox3.Text, comboBox1.Text, numericUpDown1.Text);
 
             String text = "";
-            SpeechSynthesizer engine = new SpeechSynthesizer();
-            engine.SelectVoice("Microsoft Mark");
 
             if (insert)
             {
@@ -227,9 +225,17 @@ namespace csharp_vathmologoumeni_3
                 ((Modify_covid)Application.OpenForms[2]).cleartxtbox();
             }
 
-            engine.SpeakAsync(text);
-            MessageBox.Show(text, "Success");
-            
+            SpeechSynthesizer engine = new SpeechSynthesizer();
+            try
+            {
+                MessageBox.Show(text, "Success");
+                engine.SelectVoice("Microsoft Mark");
+                engine.SpeakAsync(text);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("There is no such voice.");
+            }
         }       
 
 

@@ -228,11 +228,11 @@ namespace csharp_vathmologoumeni_3
                 connection.Open();
 
                 OleDbCommand command = new OleDbCommand("INSERT INTO Games (Player1, Player2, Winner, Timer, DateEnded, TimeEnded) VALUES ('" + textBoxPlayer1Nickname.Text + "', '"
-                                                                                                                                                    + textBoxPlayer2Nickname.Text + "', '"
-                                                                                                                                                    + winner + "', '"
-                                                                                                                                                    + (checkBoxTimers.Checked ? numericUpDownMinutes.Value.ToString() + " minutes" : "None") + "', '"
-                                                                                                                                                    + DateTime.Now.ToShortDateString() + "', '"
-                                                                                                                                                    + DateTime.Now.ToLongTimeString() + "')", connection);
+                                                                                                                                              + textBoxPlayer2Nickname.Text + "', '"
+                                                                                                                                              + winner + "', '"
+                                                                                                                                              + (checkBoxTimers.Checked ? numericUpDownMinutes.Value.ToString() + " minutes" : "None") + "', '"
+                                                                                                                                              + DateTime.Now.ToShortDateString() + "', '"
+                                                                                                                                              + DateTime.Now.ToLongTimeString() + "')", connection);
                 command.ExecuteNonQuery();
                 connection.Close();
             }

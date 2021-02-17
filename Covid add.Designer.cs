@@ -78,7 +78,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1020, 34);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 99;
             this.label2.Text = "Please insert the details about the covid case";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -90,7 +90,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 33);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // textBox2
@@ -101,7 +101,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 33);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // textBox3
@@ -112,7 +112,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 33);
-            this.textBox3.TabIndex = 6;
+            this.textBox3.TabIndex = 7;
             this.textBox3.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // maskedTextBox1
@@ -124,7 +124,7 @@
             this.maskedTextBox1.Mask = "0000000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(229, 33);
-            this.maskedTextBox1.TabIndex = 10;
+            this.maskedTextBox1.TabIndex = 6;
             this.maskedTextBox1.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // numericUpDown1
@@ -140,7 +140,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(82, 33);
-            this.numericUpDown1.TabIndex = 11;
+            this.numericUpDown1.TabIndex = 9;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
             0,
@@ -160,7 +160,8 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(124, 34);
-            this.comboBox1.TabIndex = 14;
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.Covid_TextChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // label3
@@ -171,7 +172,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 34);
-            this.label3.TabIndex = 17;
+            this.label3.TabIndex = 97;
             this.label3.Text = "Full name";
             // 
             // label4
@@ -182,7 +183,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 34);
-            this.label4.TabIndex = 18;
+            this.label4.TabIndex = 96;
             this.label4.Text = "Email";
             // 
             // dateTimePicker1
@@ -194,7 +195,7 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(169, 33);
-            this.dateTimePicker1.TabIndex = 31;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // maskedTextBox2
             // 
@@ -205,7 +206,7 @@
             this.maskedTextBox2.Mask = "00:00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(229, 33);
-            this.maskedTextBox2.TabIndex = 34;
+            this.maskedTextBox2.TabIndex = 5;
             this.maskedTextBox2.TextChanged += new System.EventHandler(this.Covid_TextChanged);
             // 
             // richTextBox1
@@ -215,7 +216,7 @@
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(326, 114);
-            this.richTextBox1.TabIndex = 35;
+            this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
             // label6
@@ -226,7 +227,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 34);
-            this.label6.TabIndex = 36;
+            this.label6.TabIndex = 92;
             this.label6.Text = "Phone number";
             // 
             // label5
@@ -237,7 +238,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 34);
-            this.label5.TabIndex = 37;
+            this.label5.TabIndex = 93;
             this.label5.Text = "Time of record";
             // 
             // label7
@@ -248,7 +249,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(185, 34);
-            this.label7.TabIndex = 38;
+            this.label7.TabIndex = 91;
             this.label7.Text = "Home address";
             // 
             // label8
@@ -259,7 +260,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 34);
-            this.label8.TabIndex = 39;
+            this.label8.TabIndex = 90;
             this.label8.Text = "Gender";
             // 
             // label9
@@ -270,7 +271,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 34);
-            this.label9.TabIndex = 40;
+            this.label9.TabIndex = 89;
             this.label9.Text = "Age";
             // 
             // label10
@@ -281,7 +282,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(331, 34);
-            this.label10.TabIndex = 41;
+            this.label10.TabIndex = 95;
             this.label10.Text = "Underlying diseases(if any)";
             // 
             // label11
@@ -292,7 +293,7 @@
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 34);
-            this.label11.TabIndex = 42;
+            this.label11.TabIndex = 94;
             this.label11.Text = "Date of record";
             // 
             // label1
@@ -318,7 +319,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(248, 76);
-            this.button1.TabIndex = 45;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Add covid case";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -428,7 +429,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1020, 28);
-            this.menuStrip1.TabIndex = 46;
+            this.menuStrip1.TabIndex = 98;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // aboutValuesToolStripMenuItem
