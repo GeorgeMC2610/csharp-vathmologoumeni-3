@@ -29,28 +29,28 @@ namespace csharp_vathmologoumeni_3
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelMenu = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.labelHorizontalLine = new System.Windows.Forms.Label();
             this.pictureBoxUnipi = new System.Windows.Forms.PictureBox();
             this.labelStudents = new System.Windows.Forms.Label();
             this.buttonSkakiera = new System.Windows.Forms.Button();
             this.buttonMemoryGame = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonCovid = new System.Windows.Forms.Button();
+            this.labelSubtitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelMenu
+            // labelTitle
             // 
-            this.labelMenu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelMenu.AutoSize = true;
-            this.labelMenu.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMenu.Location = new System.Drawing.Point(538, 34);
-            this.labelMenu.Name = "labelMenu";
-            this.labelMenu.Size = new System.Drawing.Size(241, 36);
-            this.labelMenu.TabIndex = 0;
-            this.labelMenu.Text = "Selections Menu";
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(538, 34);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(241, 36);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Selections Menu";
             // 
             // menuStrip1
             // 
@@ -98,49 +98,48 @@ namespace csharp_vathmologoumeni_3
             // 
             this.buttonSkakiera.AutoSize = true;
             this.buttonSkakiera.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonSkakiera.Location = new System.Drawing.Point(497, 338);
+            this.buttonSkakiera.Location = new System.Drawing.Point(502, 297);
             this.buttonSkakiera.Name = "buttonSkakiera";
             this.buttonSkakiera.Size = new System.Drawing.Size(307, 73);
             this.buttonSkakiera.TabIndex = 5;
-            this.buttonSkakiera.Text = "ΣΚΑΚΙΕΡΑ";
+            this.buttonSkakiera.Text = "Chess Game";
             this.buttonSkakiera.UseVisualStyleBackColor = true;
-            this.buttonSkakiera.Click += new System.EventHandler(this.buttonSkakiera_Click);
+            this.buttonSkakiera.Click += new System.EventHandler(this.AnyButtonClicked);
             // 
             // buttonMemoryGame
             // 
             this.buttonMemoryGame.AutoSize = true;
             this.buttonMemoryGame.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonMemoryGame.Location = new System.Drawing.Point(497, 244);
+            this.buttonMemoryGame.Location = new System.Drawing.Point(12, 297);
             this.buttonMemoryGame.Name = "buttonMemoryGame";
             this.buttonMemoryGame.Size = new System.Drawing.Size(307, 73);
             this.buttonMemoryGame.TabIndex = 6;
-            this.buttonMemoryGame.Text = "ΠΑΙΧΝΙΔΙ ΜΝΗΜΗΣ";
+            this.buttonMemoryGame.Text = "Memory Game ";
             this.buttonMemoryGame.UseVisualStyleBackColor = true;
-            this.buttonMemoryGame.Click += new System.EventHandler(this.buttonMemoryGame_Click);
+            this.buttonMemoryGame.Click += new System.EventHandler(this.AnyButtonClicked);
             // 
-            // button1
+            // buttonCovid
             // 
-            this.button1.AutoSize = true;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(497, 435);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(307, 73);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ΚΟΒΙΝΤ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCovid.AutoSize = true;
+            this.buttonCovid.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonCovid.Location = new System.Drawing.Point(1014, 297);
+            this.buttonCovid.Name = "buttonCovid";
+            this.buttonCovid.Size = new System.Drawing.Size(307, 73);
+            this.buttonCovid.TabIndex = 7;
+            this.buttonCovid.Text = "COVID-19 Website";
+            this.buttonCovid.UseVisualStyleBackColor = true;
+            this.buttonCovid.Click += new System.EventHandler(this.AnyButtonClicked);
             // 
-            // label1
+            // labelSubtitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(585, 50);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Αυτά τα κουμπιά θα τροποποιηθούν αργότερα. Για την ώρα\r\nθα καθοδηγούμαστε με αυτά" +
-    ".\r\n";
+            this.labelSubtitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelSubtitle.AutoSize = true;
+            this.labelSubtitle.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubtitle.Location = new System.Drawing.Point(538, 164);
+            this.labelSubtitle.Name = "labelSubtitle";
+            this.labelSubtitle.Size = new System.Drawing.Size(704, 26);
+            this.labelSubtitle.TabIndex = 8;
+            this.labelSubtitle.Text = "You will be lead to a different app by clicking any of the buttons below.";
             // 
             // FormMainMenu
             // 
@@ -148,14 +147,14 @@ namespace csharp_vathmologoumeni_3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1333, 613);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelSubtitle);
+            this.Controls.Add(this.buttonCovid);
             this.Controls.Add(this.buttonMemoryGame);
             this.Controls.Add(this.buttonSkakiera);
             this.Controls.Add(this.labelStudents);
             this.Controls.Add(this.pictureBoxUnipi);
             this.Controls.Add(this.labelHorizontalLine);
-            this.Controls.Add(this.labelMenu);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
@@ -163,6 +162,7 @@ namespace csharp_vathmologoumeni_3
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Κύριο Μενού";
+            this.Load += new System.EventHandler(this.FormMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,15 +171,15 @@ namespace csharp_vathmologoumeni_3
 
         #endregion
 
-        private System.Windows.Forms.Label labelMenu;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label labelHorizontalLine;
         private System.Windows.Forms.PictureBox pictureBoxUnipi;
         private System.Windows.Forms.Label labelStudents;
         private System.Windows.Forms.Button buttonSkakiera;
         private System.Windows.Forms.Button buttonMemoryGame;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonCovid;
+        private System.Windows.Forms.Label labelSubtitle;
     }
 }
 

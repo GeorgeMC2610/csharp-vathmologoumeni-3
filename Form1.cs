@@ -17,22 +17,32 @@ namespace csharp_vathmologoumeni_3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            Hide();
-            new Choose_covid_db_option().Show();
+            labelTitle.Location    = new Point(Width / 2 - labelTitle.Width / 2, labelTitle.Location.Y);
+            labelSubtitle.Location = new Point(Width / 2 - labelSubtitle.Width / 2, labelSubtitle.Location.Y);
         }
 
-        private void buttonSkakiera_Click(object sender, EventArgs e)
+        private void AnyButtonClicked(object sender, EventArgs e)
         {
-            Hide();
-            new FormChess().Show();
-        }
+            Button ButtonClicked = (Button)sender;
 
-        private void buttonMemoryGame_Click(object sender, EventArgs e)
-        {
             Hide();
-            new FormMemoryGame().Show();
+
+            switch (ButtonClicked.Name)
+            {
+                case "buttonMemoryGame":
+                    new FormMemoryGame().Show();
+                    break;
+
+                case "buttonSkakiera":
+                    new FormChess().Show();
+                    break;
+
+                case "buttonCovid":
+                    new Choose_covid_db_option().Show();
+                    break;
+            }
         }
     }
 }
