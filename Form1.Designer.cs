@@ -29,8 +29,13 @@ namespace csharp_vathmologoumeni_3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.labelTitle = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MemoryGameItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChessGameItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.COVID19WebsiteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelHorizontalLine = new System.Windows.Forms.Label();
             this.pictureBoxUnipi = new System.Windows.Forms.PictureBox();
             this.labelStudents = new System.Windows.Forms.Label();
@@ -38,10 +43,6 @@ namespace csharp_vathmologoumeni_3
             this.buttonMemoryGame = new System.Windows.Forms.Button();
             this.buttonCovid = new System.Windows.Forms.Button();
             this.labelSubtitle = new System.Windows.Forms.Label();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MemoryGameItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChessGameItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.COVID19WebsiteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,37 @@ namespace csharp_vathmologoumeni_3
             this.menuStrip1.Size = new System.Drawing.Size(1333, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MemoryGameItem,
+            this.ChessGameItem,
+            this.COVID19WebsiteItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // MemoryGameItem
+            // 
+            this.MemoryGameItem.Name = "MemoryGameItem";
+            this.MemoryGameItem.Size = new System.Drawing.Size(171, 22);
+            this.MemoryGameItem.Text = "Memory Game";
+            this.MemoryGameItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // ChessGameItem
+            // 
+            this.ChessGameItem.Name = "ChessGameItem";
+            this.ChessGameItem.Size = new System.Drawing.Size(171, 22);
+            this.ChessGameItem.Text = "Chess Game";
+            this.ChessGameItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // COVID19WebsiteItem
+            // 
+            this.COVID19WebsiteItem.Name = "COVID19WebsiteItem";
+            this.COVID19WebsiteItem.Size = new System.Drawing.Size(171, 22);
+            this.COVID19WebsiteItem.Text = "COVID-19 Website";
+            this.COVID19WebsiteItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
             // 
             // labelHorizontalLine
             // 
@@ -150,37 +182,6 @@ namespace csharp_vathmologoumeni_3
             this.labelSubtitle.TabIndex = 8;
             this.labelSubtitle.Text = "You will be lead to a different app by clicking any of the buttons below.";
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MemoryGameItem,
-            this.ChessGameItem,
-            this.COVID19WebsiteItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // MemoryGameItem
-            // 
-            this.MemoryGameItem.Name = "MemoryGameItem";
-            this.MemoryGameItem.Size = new System.Drawing.Size(180, 22);
-            this.MemoryGameItem.Text = "Memory Game";
-            this.MemoryGameItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
-            // 
-            // ChessGameItem
-            // 
-            this.ChessGameItem.Name = "ChessGameItem";
-            this.ChessGameItem.Size = new System.Drawing.Size(180, 22);
-            this.ChessGameItem.Text = "Chess Game";
-            this.ChessGameItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
-            // 
-            // COVID19WebsiteItem
-            // 
-            this.COVID19WebsiteItem.Name = "COVID19WebsiteItem";
-            this.COVID19WebsiteItem.Size = new System.Drawing.Size(180, 22);
-            this.COVID19WebsiteItem.Text = "COVID-19 Website";
-            this.COVID19WebsiteItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
-            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -197,6 +198,7 @@ namespace csharp_vathmologoumeni_3
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMainMenu";

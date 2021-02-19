@@ -30,6 +30,7 @@ namespace csharp_vathmologoumeni_3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChess));
             this.buttonExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -164,7 +165,7 @@ namespace csharp_vathmologoumeni_3
             // manageDatabaseToolStripMenuItem
             // 
             this.manageDatabaseToolStripMenuItem.Name = "manageDatabaseToolStripMenuItem";
-            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageDatabaseToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.manageDatabaseToolStripMenuItem.Text = "Manage Database";
             this.manageDatabaseToolStripMenuItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
             // 
@@ -921,6 +922,7 @@ namespace csharp_vathmologoumeni_3
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormChess";
