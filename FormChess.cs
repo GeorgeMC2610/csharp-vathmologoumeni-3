@@ -21,7 +21,6 @@ namespace csharp_vathmologoumeni_3
         bool Player1Turn = true;
         bool GameStarted = false;
         bool PawnClicked = false;
-        bool ControlledExit = false;
         Pawn PawnSelected;
         int time_PLAYER1;
         int time_PLAYER2;
@@ -48,7 +47,6 @@ namespace csharp_vathmologoumeni_3
                     if (continueGame == DialogResult.Cancel)
                         return;
 
-                    ControlledExit = true;
                     Close();
                     new FormChess().Show();
                     break;
