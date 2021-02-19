@@ -44,5 +44,28 @@ namespace csharp_vathmologoumeni_3
                     break;
             }
         }
+
+        private void AnyToolStripItemClicked(object sender, EventArgs e)
+        {
+            ToolStripMenuItem ToolStripClicked = (ToolStripMenuItem)sender;
+
+            switch (ToolStripClicked.Name)
+            {
+                case "MemoryGameItem":
+                    
+                    break;
+                case "ChessGameItem":
+                    MessageBox.Show("In the chess game, after you type your nickname, you will be able to play chess in a board with a friend. Players can choose their time per turn, if they wish so." +
+                                    "\n\nAlso, players move their pawns by clicking to select them and then clicking the block they want the pawn to move to (there are no rules). One can win, if they attack the " +
+                                    "enemy king, or if their opponent's time runs out.\n\nHave fun playing!", "Chess Game Intro", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    break;
+                case "COVID19WebsiteItem":
+                    MessageBox.Show("After you add COVID-19 cases, you'll be able to see them in the website. To add a COVID-19 case, you can click on the database menu strip item and then click Add a COVID case. You can, also, " +
+                                    "modify COVID-19 cases, by entering one field to search in the database.\n\n" +
+                                    "Every case is being recorded to a database. This database can be seen in the COVID-19 website, in which you can see in great detail, every COVID-19 case reported. Additional features, which include" +
+                                    " sorting and percentage statistics, are also supported.", "COVID-19 Reporting Intro", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    break;
+            }
+        }
     }
 }

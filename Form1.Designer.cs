@@ -38,6 +38,11 @@ namespace csharp_vathmologoumeni_3
             this.buttonMemoryGame = new System.Windows.Forms.Button();
             this.buttonCovid = new System.Windows.Forms.Button();
             this.labelSubtitle = new System.Windows.Forms.Label();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MemoryGameItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChessGameItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.COVID19WebsiteItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +60,8 @@ namespace csharp_vathmologoumeni_3
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1333, 24);
@@ -96,6 +103,7 @@ namespace csharp_vathmologoumeni_3
             // 
             // buttonSkakiera
             // 
+            this.buttonSkakiera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonSkakiera.AutoSize = true;
             this.buttonSkakiera.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonSkakiera.Location = new System.Drawing.Point(502, 297);
@@ -120,6 +128,7 @@ namespace csharp_vathmologoumeni_3
             // 
             // buttonCovid
             // 
+            this.buttonCovid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCovid.AutoSize = true;
             this.buttonCovid.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonCovid.Location = new System.Drawing.Point(1014, 297);
@@ -140,6 +149,37 @@ namespace csharp_vathmologoumeni_3
             this.labelSubtitle.Size = new System.Drawing.Size(704, 26);
             this.labelSubtitle.TabIndex = 8;
             this.labelSubtitle.Text = "You will be lead to a different app by clicking any of the buttons below.";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MemoryGameItem,
+            this.ChessGameItem,
+            this.COVID19WebsiteItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // MemoryGameItem
+            // 
+            this.MemoryGameItem.Name = "MemoryGameItem";
+            this.MemoryGameItem.Size = new System.Drawing.Size(180, 22);
+            this.MemoryGameItem.Text = "Memory Game";
+            this.MemoryGameItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // ChessGameItem
+            // 
+            this.ChessGameItem.Name = "ChessGameItem";
+            this.ChessGameItem.Size = new System.Drawing.Size(180, 22);
+            this.ChessGameItem.Text = "Chess Game";
+            this.ChessGameItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
+            // 
+            // COVID19WebsiteItem
+            // 
+            this.COVID19WebsiteItem.Name = "COVID19WebsiteItem";
+            this.COVID19WebsiteItem.Size = new System.Drawing.Size(180, 22);
+            this.COVID19WebsiteItem.Text = "COVID-19 Website";
+            this.COVID19WebsiteItem.Click += new System.EventHandler(this.AnyToolStripItemClicked);
             // 
             // FormMainMenu
             // 
@@ -163,6 +203,8 @@ namespace csharp_vathmologoumeni_3
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Κύριο Μενού";
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnipi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,6 +222,10 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.Button buttonMemoryGame;
         private System.Windows.Forms.Button buttonCovid;
         private System.Windows.Forms.Label labelSubtitle;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MemoryGameItem;
+        private System.Windows.Forms.ToolStripMenuItem ChessGameItem;
+        private System.Windows.Forms.ToolStripMenuItem COVID19WebsiteItem;
     }
 }
 
