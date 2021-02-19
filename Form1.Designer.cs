@@ -203,7 +203,7 @@ namespace csharp_vathmologoumeni_3
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Κύριο Μενού";
+            this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
