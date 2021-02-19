@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Choose_covid_db_option));
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCovidCaseReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,18 +55,18 @@
             this.label1.Text = "Welcome employee!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button3
+            // button
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(278, 467);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(388, 66);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Visit covid case reports website";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button.Location = new System.Drawing.Point(278, 467);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(388, 66);
+            this.button.TabIndex = 5;
+            this.button.Text = "Visit covid case reports website";
+            this.button.UseVisualStyleBackColor = false;
+            this.button.Click += new System.EventHandler(this.button_Click);
             // 
             // menuStrip1
             // 
@@ -138,7 +138,7 @@
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(923, 545);
             this.Controls.Add(this.axWindowsMediaPlayer1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,7 +161,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCovidCaseReportToolStripMenuItem;
