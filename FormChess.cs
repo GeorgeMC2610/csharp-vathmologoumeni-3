@@ -35,6 +35,11 @@ namespace csharp_vathmologoumeni_3
             {
                 //when the player exits, show the form that was already shown before. NOTE: There will be a popup message if the game has started.
                 case "buttonExit":
+                    DialogResult coninueGame = (GameStarted) ? MessageBox.Show("All progress will be discarded. Are you sure you want to exit?", "Exit Chess", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) : DialogResult.OK;
+
+                    if (coninueGame == DialogResult.Cancel)
+                        return;
+
                     Close();
                     break;
                 //when the player restarts the game, we show a dialog. If the game hasn't started, the game doesn't show the dialog and immideately restarts the game.
@@ -45,6 +50,7 @@ namespace csharp_vathmologoumeni_3
 
                     ControlledExit = true;
                     Close();
+                    new FormChess().Show();
                     break;
                 //when the player starts the game, enable everything.
                 case "buttonStartGame":
@@ -383,19 +389,7 @@ namespace csharp_vathmologoumeni_3
 
         private void FormChess_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (ControlledExit)
-            {
-                new FormChess().Show();
-                return; 
-            }
-
-            //If the game has already begun, warn the players that all progress will be lost if they close the game.
-            DialogResult coninueGame = (GameStarted) ? MessageBox.Show("All progress will be discarded. Are you sure you want to exit?", "Exit Chess", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) : DialogResult.OK;
-
-            if (coninueGame == DialogResult.Cancel)
-                return;
-
-            //then, show the first form that has appeared (the main menu).
+            //show the first form that has appeared (the main menu).
             Application.OpenForms[0].Show();
         }
     }
