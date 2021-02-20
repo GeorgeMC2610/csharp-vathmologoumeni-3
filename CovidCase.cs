@@ -9,8 +9,12 @@ namespace csharp_vathmologoumeni_3
 {
     class CovidCase
     {
-        public String Full_name,Email,Date_of_record,Time_of_record,Phone_number,Home_address,Gender,Age;
+        //User details class variables
+
+        public String Full_name, Email,Date_of_record, Time_of_record, Phone_number, Home_address, Gender,Age;
         String[] Underlying_diseases;
+
+        //static string for database connection
 
         static OleDbConnection connection = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = Covid_cases.mdb;");
 
@@ -18,6 +22,8 @@ namespace csharp_vathmologoumeni_3
 
         public CovidCase(String Full_name, String Email, String[] Underlying_diseases, String Date_of_record, String Time_of_record, String Phone_number, String Home_address, String Gender, String Age)
         {
+            //set values to class variables from the constructor parameters
+
             this.Full_name = Full_name;
             this.Email = Email;
             this.Underlying_diseases = Underlying_diseases;
@@ -29,23 +35,23 @@ namespace csharp_vathmologoumeni_3
             this.Age = Age;
         }
 
-        public CovidCase(String Email) //constructor for delete
+        public CovidCase(String Email) //constructor for delete(if we want to make a deletion we have to use this constructor.We need only the email to make a deletion)
         {
             this.Email = Email;
         }
 
-        private void databaseFunction(String function,String old_email)
+        private void databaseFunction(String function,String old_email) //function that has the role both of insert and update(depending on the "function" parameter)
         {
             connection.Open();
 
             OleDbCommand comand;
 
-            if (function.Equals("Insert"))
+            if (function.Equals("Insert")) //if this function has the role of insertion
             {
                 comand = new OleDbCommand("Insert into Covid_cases(Full_name,Email,Underlying_diseases,Date_of_record," +
                 "Time_of_record,Phone_number,Home_address,Gender,Age) values(@fn,@email,@ud,@dor,@tor,@pn,@ha,@gender,@age)", connection);
             }
-            else
+            else //if this function has the role of modification(here we use the old_email variable also)
             {
                 comand = new OleDbCommand("Update Covid_cases set Full_name = @fn, Email = @email, Underlying_diseases=@ud, Date_of_record=@dor, " +
                 "Time_of_record=@tor, Phone_number=@pn, Home_address=@ha, Gender=@gender, Age=@age where Email = @oldemail", connection);
@@ -53,6 +59,8 @@ namespace csharp_vathmologoumeni_3
 
             comand.Parameters.AddWithValue("@fn", Full_name);
             comand.Parameters.AddWithValue("@email", Email);
+
+            //We store in a stringbuilder object the values of "Underlying_diseases" array splitted by a ','
 
             StringBuilder diseases = new StringBuilder("");
 
@@ -66,7 +74,7 @@ namespace csharp_vathmologoumeni_3
                 diseases.Remove(diseases.Length - 2, 2);
             }
             else
-                diseases.Append("none");
+                diseases.Append("none"); //if "Underlying_diseases" array is empty, we store "none"
 
             comand.Parameters.AddWithValue("@ud", diseases.ToString());
             comand.Parameters.AddWithValue("@dor", Date_of_record);
@@ -76,7 +84,7 @@ namespace csharp_vathmologoumeni_3
             comand.Parameters.AddWithValue("@gender", Gender);
             comand.Parameters.AddWithValue("@age",Age);
 
-            if (function.Equals("Update"))           
+            if (function.Equals("Update"))  //in update function, we have to declare the "@oldemail" variable         
                 comand.Parameters.AddWithValue("@oldemail", old_email);
 
             comand.ExecuteNonQuery();
@@ -84,7 +92,7 @@ namespace csharp_vathmologoumeni_3
             connection.Close();
         }
 
-        public void deleteCase()
+        public void deleteCase() //delete report function
         {
             connection.Open();
 
@@ -95,12 +103,12 @@ namespace csharp_vathmologoumeni_3
             connection.Close();
         }
 
-        public void insertCase()
+        public void insertCase() //insert report function
         {
             this.databaseFunction("Insert", "");          
         }
 
-        public void updateCase(String old_email)
+        public void updateCase(String old_email) //update report function
         {
             this.databaseFunction("Update",old_email);        
         }

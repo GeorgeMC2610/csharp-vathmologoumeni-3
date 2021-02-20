@@ -33,7 +33,7 @@ namespace csharp_vathmologoumeni_3
         private void Choose_covid_db_option_Resize(object sender, EventArgs e) //on resize
         {
             //1//Increase or reduce the width/height of the media player depend on the form resize.
-            //2//Change the location of button3.
+            //2//Change the location of button.
 
             button.Location = new Point((this.Width - button.Width) / 2, this.Height - button.Height - 50);
 
