@@ -73,7 +73,37 @@ namespace csharp_vathmologoumeni_3
 
         private void AnyIconClicked(object sender, EventArgs e)
         {
+            PictureBox clickedPictureBox = (PictureBox)sender;
 
+            MemoryGameIcon.ShowAllIcons();
+
+            var SelectedIcon         = (from icon in MemoryGameIcon.AllIcons where icon.DefaultIcon.Image.Equals(clickedPictureBox.Image) select icon).ToList()[0];
+            var PreviousSlectedIcons = (from icon in MemoryGameIcon.AllIcons where icon.Selected select icon).ToList();
+            var RevealedIcons        = (from icon in MemoryGameIcon.AllIcons where icon.Revealed select icon).ToList();
+            var PreviousSelectedIcon = PreviousSlectedIcons.Count == 0 ? null : PreviousSlectedIcons[0];
+            
+            if (PreviousSelectedIcon != null && PreviousSelectedIcon.DefaultIcon.Image.Equals(SelectedIcon.DefaultIcon.Image))
+            {
+                PreviousSelectedIcon.Revealed = true;
+                SelectedIcon.Revealed         = true;
+                MemoryGameIcon.HideAllIcons();
+                PreviousSelectedIcon.VisibleIcon.Image = PreviousSelectedIcon.DefaultIcon.Image;
+                SelectedIcon.VisibleIcon.Image         = SelectedIcon.DefaultIcon.Image;
+
+                PreviousSelectedIcon.Selected = false;
+                SelectedIcon.Selected = false;
+            }
+            else
+            {
+                MemoryGameIcon.HideAllIcons();
+                //PreviousSelectedIcon.Selected = false;
+                SelectedIcon.Selected = false;
+            }
+
+            SelectedIcon.VisibleIcon.Image = SelectedIcon.DefaultIcon.Image;
+            SelectedIcon.Selected = true;
+
+            RevealedIcons.ForEach(i => i.ShowIcon());
         }
     }
 }

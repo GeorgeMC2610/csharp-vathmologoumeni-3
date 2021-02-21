@@ -11,8 +11,9 @@ namespace csharp_vathmologoumeni_3
     class MemoryGameIcon
     {
         public PictureBox VisibleIcon { get; set; }
-        private PictureBox DefaultIcon { get; }
-        private PictureBox QuestionMark { get; }
+        public PictureBox DefaultIcon { get; }
+        public PictureBox QuestionMark { get; }
+        public bool Revealed { get; set; }
         public bool Selected { get; set; }
         public static List<MemoryGameIcon> AllIcons = new List<MemoryGameIcon>();
         
@@ -23,6 +24,7 @@ namespace csharp_vathmologoumeni_3
             DefaultIcon.Image  = Icon.Image;
             QuestionMark       = new PictureBox();
             QuestionMark.Image = Properties.Resources.questionmark;
+            Revealed = Selected = false;
             AllIcons.Add(this);
         }
 
