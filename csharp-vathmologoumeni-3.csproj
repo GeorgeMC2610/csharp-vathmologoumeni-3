@@ -247,5 +247,44 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\autumn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\bridge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\feta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\kareta_kareta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\metewra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\purgos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\questionmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\santorinh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\spring.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\summer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\sunset.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\village.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\memory game\winter.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

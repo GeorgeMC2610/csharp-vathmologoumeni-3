@@ -11,11 +11,17 @@ namespace csharp_vathmologoumeni_3
     {
         public PictureBox Icon { get; }
         public bool Selected { get; set; }
+        public static List<MemoryGameIcon> AllIcons = new List<MemoryGameIcon>();
         
         public MemoryGameIcon(PictureBox Icon)
         {
             this.Icon = Icon;
+            AllIcons.Add(this);
         }
 
+        public void HideIcon()
+        {
+            this.Icon.ImageLocation = "questionmark.png";
+        }
     }
 }

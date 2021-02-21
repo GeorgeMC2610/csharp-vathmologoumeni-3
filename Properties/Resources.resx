@@ -139,14 +139,14 @@
   <data name="chess_board" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Chess\chess_board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rook_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Chess\rook_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="unipi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\unipi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="king_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Chess\king_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="knight_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Chess\knight_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bishop_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Chess\bishop_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,16 +154,55 @@
   <data name="king_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Chess\king_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="white_pawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Chess\white_pawn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="queen_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Chess\queen_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="queen_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Chess\queen_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="knight_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Chess\knight_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rook_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Chess\rook_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white_pawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Chess\white_pawn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="autumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\autumn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\bridge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="feta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\feta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kareta_kareta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\kareta_kareta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="metewra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\metewra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="purgos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\purgos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="questionmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\questionmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="santorinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\santorinh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\spring.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="summer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\summer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sunset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\sunset.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="village" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\village.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="winter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\memory game\winter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
