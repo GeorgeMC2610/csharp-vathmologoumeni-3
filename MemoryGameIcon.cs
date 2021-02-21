@@ -13,18 +13,19 @@ namespace csharp_vathmologoumeni_3
         public PictureBox VisibleIcon { get; set; }
         public PictureBox DefaultIcon { get; }
         public PictureBox QuestionMark { get; }
+        public string Name { get; set; }
         public bool Revealed { get; set; }
-        public bool Selected { get; set; }
         public static List<MemoryGameIcon> AllIcons = new List<MemoryGameIcon>();
         
-        public MemoryGameIcon(PictureBox Icon)
+        public MemoryGameIcon(PictureBox Icon, string Name)
         {
             VisibleIcon        = Icon;
             DefaultIcon        = new PictureBox();
             DefaultIcon.Image  = Icon.Image;
             QuestionMark       = new PictureBox();
+            this.Name          = Name;
             QuestionMark.Image = Properties.Resources.questionmark;
-            Revealed = Selected = false;
+            Revealed = false;
             AllIcons.Add(this);
         }
 

@@ -33,35 +33,36 @@ namespace csharp_vathmologoumeni_3
             labelPlayer.Text += Username;
             labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
 
-            MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1);
-            MemoryGameIcon icon2  = new MemoryGameIcon(pictureBox2);
-            MemoryGameIcon icon3  = new MemoryGameIcon(pictureBox3);
-            MemoryGameIcon icon4  = new MemoryGameIcon(pictureBox4);
-            MemoryGameIcon icon5  = new MemoryGameIcon(pictureBox5);
-            MemoryGameIcon icon6  = new MemoryGameIcon(pictureBox6);
-            MemoryGameIcon icon7  = new MemoryGameIcon(pictureBox7);
-            MemoryGameIcon icon8  = new MemoryGameIcon(pictureBox8);
-            MemoryGameIcon icon9  = new MemoryGameIcon(pictureBox9);
-            MemoryGameIcon icon10 = new MemoryGameIcon(pictureBox10);
-            MemoryGameIcon icon11 = new MemoryGameIcon(pictureBox11);
-            MemoryGameIcon icon12 = new MemoryGameIcon(pictureBox12);
-            MemoryGameIcon icon13 = new MemoryGameIcon(pictureBox13);
-            MemoryGameIcon icon14 = new MemoryGameIcon(pictureBox14);
-            MemoryGameIcon icon15 = new MemoryGameIcon(pictureBox15);
-            MemoryGameIcon icon16 = new MemoryGameIcon(pictureBox16);
-            MemoryGameIcon icon17 = new MemoryGameIcon(pictureBox17);
-            MemoryGameIcon icon18 = new MemoryGameIcon(pictureBox18);
-            MemoryGameIcon icon19 = new MemoryGameIcon(pictureBox19);
-            MemoryGameIcon icon20 = new MemoryGameIcon(pictureBox20);
-            MemoryGameIcon icon21 = new MemoryGameIcon(pictureBox21);
-            MemoryGameIcon icon22 = new MemoryGameIcon(pictureBox22);
-            MemoryGameIcon icon23 = new MemoryGameIcon(pictureBox23);
-            MemoryGameIcon icon24 = new MemoryGameIcon(pictureBox24);
+            MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1, "Autumn");
+            MemoryGameIcon icon2  = new MemoryGameIcon(pictureBox2, "Autumn");
+            MemoryGameIcon icon3  = new MemoryGameIcon(pictureBox3, "Bridge");
+            MemoryGameIcon icon4  = new MemoryGameIcon(pictureBox4, "Bridge");
+            MemoryGameIcon icon5  = new MemoryGameIcon(pictureBox5, "Feta");
+            MemoryGameIcon icon6  = new MemoryGameIcon(pictureBox6, "Feta");
+            MemoryGameIcon icon7  = new MemoryGameIcon(pictureBox7, "Kareta Kareta");
+            MemoryGameIcon icon8  = new MemoryGameIcon(pictureBox8, "Kareta Kareta");
+            MemoryGameIcon icon9  = new MemoryGameIcon(pictureBox9, "Meteora");
+            MemoryGameIcon icon10 = new MemoryGameIcon(pictureBox10, "Meteora");
+            MemoryGameIcon icon11 = new MemoryGameIcon(pictureBox11, "Pyrgos");
+            MemoryGameIcon icon12 = new MemoryGameIcon(pictureBox12, "Pyrgos");
+            MemoryGameIcon icon13 = new MemoryGameIcon(pictureBox13, "Santorini");
+            MemoryGameIcon icon14 = new MemoryGameIcon(pictureBox14, "Santorini");
+            MemoryGameIcon icon15 = new MemoryGameIcon(pictureBox15, "Spring");
+            MemoryGameIcon icon16 = new MemoryGameIcon(pictureBox16, "Spring");
+            MemoryGameIcon icon17 = new MemoryGameIcon(pictureBox17, "Summer");
+            MemoryGameIcon icon18 = new MemoryGameIcon(pictureBox18, "Summer");
+            MemoryGameIcon icon19 = new MemoryGameIcon(pictureBox19, "Sunset");
+            MemoryGameIcon icon20 = new MemoryGameIcon(pictureBox20, "Sunset");
+            MemoryGameIcon icon21 = new MemoryGameIcon(pictureBox21, "Village");
+            MemoryGameIcon icon22 = new MemoryGameIcon(pictureBox22, "Village");
+            MemoryGameIcon icon23 = new MemoryGameIcon(pictureBox23, "Winter");
+            MemoryGameIcon icon24 = new MemoryGameIcon(pictureBox24, "Winter");
 
             //randomization
             MemoryGameIcon.RandomizeLocationImages();
             MemoryGameIcon.RandomizeLocationImages();
 
+            //hide the icons from the player in the start.
             MemoryGameIcon.HideAllIcons();
         }
 
@@ -73,37 +74,9 @@ namespace csharp_vathmologoumeni_3
 
         private void AnyIconClicked(object sender, EventArgs e)
         {
-            PictureBox clickedPictureBox = (PictureBox)sender;
+            PictureBox picbox = (PictureBox)sender;
 
-            MemoryGameIcon.ShowAllIcons();
-
-            var SelectedIcon         = (from icon in MemoryGameIcon.AllIcons where icon.DefaultIcon.Image.Equals(clickedPictureBox.Image) select icon).ToList()[0];
-            var PreviousSlectedIcons = (from icon in MemoryGameIcon.AllIcons where icon.Selected select icon).ToList();
-            var RevealedIcons        = (from icon in MemoryGameIcon.AllIcons where icon.Revealed select icon).ToList();
-            var PreviousSelectedIcon = PreviousSlectedIcons.Count == 0 ? null : PreviousSlectedIcons[0];
-            
-            if (PreviousSelectedIcon != null && PreviousSelectedIcon.DefaultIcon.Image.Equals(SelectedIcon.DefaultIcon.Image))
-            {
-                PreviousSelectedIcon.Revealed = true;
-                SelectedIcon.Revealed         = true;
-                MemoryGameIcon.HideAllIcons();
-                PreviousSelectedIcon.VisibleIcon.Image = PreviousSelectedIcon.DefaultIcon.Image;
-                SelectedIcon.VisibleIcon.Image         = SelectedIcon.DefaultIcon.Image;
-
-                PreviousSelectedIcon.Selected = false;
-                SelectedIcon.Selected = false;
-            }
-            else
-            {
-                MemoryGameIcon.HideAllIcons();
-                //PreviousSelectedIcon.Selected = false;
-                SelectedIcon.Selected = false;
-            }
-
-            SelectedIcon.VisibleIcon.Image = SelectedIcon.DefaultIcon.Image;
-            SelectedIcon.Selected = true;
-
-            RevealedIcons.ForEach(i => i.ShowIcon());
+            MemoryGameIcon Clicked = 
         }
     }
 }
