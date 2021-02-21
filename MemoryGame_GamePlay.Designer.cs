@@ -432,7 +432,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MemoryGame_GamePlay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MemoryGame_GamePlay";
+            this.Text = "Memory Game";
             this.Load += new System.EventHandler(this.MemoryGame_GamePlay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

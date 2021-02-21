@@ -61,6 +61,8 @@ namespace csharp_vathmologoumeni_3
             //randomization
             MemoryGameIcon.RandomizeLocationImages();
             MemoryGameIcon.RandomizeLocationImages();
+
+            MemoryGameIcon.HideAllIcons();
         }
 
         private void timerSeconds_Tick(object sender, EventArgs e)
