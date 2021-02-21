@@ -34,7 +34,7 @@ namespace csharp_vathmologoumeni_3
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             //όταν πατάμε το κουμπί να παίξουμε, κλείνουμε τη φόρμα, απλά με τρόπο τέτοιον ώστε να μην πάμε στο κύριο μενού
-            new MemoryGame_GamePlay(checkBox1.Checked? (int)numericUpDownMinutes.Value : 0).Show();
+            new MemoryGame_GamePlay(checkBox1.Checked? (int)numericUpDownMinutes.Value : 0, textBoxUsername.Text).Show();
             TransitionExit = true;
             Close();
         }
