@@ -20,13 +20,17 @@ namespace csharp_vathmologoumeni_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Close();
         }
 
         private void Lets_Play_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void FormMemoryGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
             Application.OpenForms[0].Show();
-            Close();
         }
     }
 }
