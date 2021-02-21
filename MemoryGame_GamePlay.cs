@@ -36,7 +36,9 @@ namespace csharp_vathmologoumeni_3
             labelPlayer.Text += Username;
             labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
             labelWinOrLose.Visible = false;
+            labelPairsFound.Text = "Pairs Found: " + MemoryGameIcon.FoundImages.ToString();
 
+            //clear all cache variables 
             MemoryGameIcon.AllIcons.Clear();
             MemoryGameIcon.FoundImages = 0;
 
@@ -67,7 +69,6 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon icon24 = new MemoryGameIcon(pictureBox24, "Winter");
 
             //randomization
-            MemoryGameIcon.RandomizeLocationImages();
             MemoryGameIcon.RandomizeLocationImages();
 
             //hide the icons from the player in the start.
@@ -118,6 +119,7 @@ namespace csharp_vathmologoumeni_3
                     Clicked.Revealed = PreviousImage.Revealed = true;
                     //Increment the found images.
                     MemoryGameIcon.FoundImages++;
+                    labelPairsFound.Text = "Pairs Found: " + MemoryGameIcon.FoundImages.ToString();
 
                     if (MemoryGameIcon.FoundImages == 12)
                     {
@@ -149,6 +151,9 @@ namespace csharp_vathmologoumeni_3
                     c.Enabled = false;
                 }
             }
+
+            //reveal all the cards.
+            MemoryGameIcon.ShowAllIcons();
 
             //and give a small countdown before the form closes
             timerEndgame.Enabled = true;            

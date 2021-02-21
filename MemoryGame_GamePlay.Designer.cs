@@ -59,6 +59,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelWinOrLose = new System.Windows.Forms.Label();
             this.timerEndgame = new System.Windows.Forms.Timer(this.components);
+            this.labelPairsFound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -414,11 +415,22 @@
             this.timerEndgame.Interval = 1000;
             this.timerEndgame.Tick += new System.EventHandler(this.timerEndgame_Tick);
             // 
+            // labelPairsFound
+            // 
+            this.labelPairsFound.AutoSize = true;
+            this.labelPairsFound.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPairsFound.Location = new System.Drawing.Point(12, 580);
+            this.labelPairsFound.Name = "labelPairsFound";
+            this.labelPairsFound.Size = new System.Drawing.Size(75, 15);
+            this.labelPairsFound.TabIndex = 52;
+            this.labelPairsFound.Text = "Pairs Found: ";
+            // 
             // MemoryGame_GamePlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 604);
+            this.Controls.Add(this.labelPairsFound);
             this.Controls.Add(this.labelWinOrLose);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox20);
@@ -448,6 +460,7 @@
             this.Controls.Add(this.labelPlayer);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MemoryGame_GamePlay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -512,5 +525,6 @@
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.Label labelWinOrLose;
         private System.Windows.Forms.Timer timerEndgame;
+        private System.Windows.Forms.Label labelPairsFound;
     }
 }
