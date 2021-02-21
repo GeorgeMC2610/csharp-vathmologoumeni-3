@@ -57,7 +57,7 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon icon23 = new MemoryGameIcon(pictureBox23);
             MemoryGameIcon icon24 = new MemoryGameIcon(pictureBox24);
 
-            
+            icon1.HideIcon();
         }
 
         private void timerSeconds_Tick(object sender, EventArgs e)
