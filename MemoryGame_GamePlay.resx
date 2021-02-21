@@ -12191,6 +12191,9 @@
         n/KI6OiSpwsu0/LTNJv5xoMLb7/aEdHQ3U8CT6bvGM5NkeB+MHR0dGU/M0Z//9k=
 </value>
   </data>
+  <metadata name="timerEndgame.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>104, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>60</value>
   </metadata>

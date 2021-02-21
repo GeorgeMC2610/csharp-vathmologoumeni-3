@@ -43,12 +43,12 @@ namespace csharp_vathmologoumeni_3
 
         public static void HideAllIcons()
         {
-            AllIcons.Where(i => !i.Revealed && !i.Selected).ToList().ForEach(i => i.VisibleIcon.Image = i.QuestionMark.Image);
+            AllIcons.Where(i => !(i.Revealed || i.Selected)).ToList().ForEach(i => i.HideIcon());
         }
 
         public static void ShowAllIcons()
         {
-            AllIcons.ForEach(i => i.VisibleIcon.Image = i.DefaultIcon.Image);
+            AllIcons.ForEach(i => i.ShowIcon());
         }
         
         public static void RandomizeLocationImages()

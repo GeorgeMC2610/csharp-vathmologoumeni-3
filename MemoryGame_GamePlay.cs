@@ -13,6 +13,7 @@ namespace csharp_vathmologoumeni_3
     public partial class MemoryGame_GamePlay : Form
     {
         int Timers;
+        int Endgame = 2;
         string Username;
 
         public MemoryGame_GamePlay(int Timers, string Username)
@@ -32,6 +33,7 @@ namespace csharp_vathmologoumeni_3
             Timers *= 60;
             labelPlayer.Text += Username;
             labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
+            labelWinOrLose.Visible = false;
 
             MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1, "Autumn");
             MemoryGameIcon icon2  = new MemoryGameIcon(pictureBox2, "Autumn");
@@ -70,6 +72,9 @@ namespace csharp_vathmologoumeni_3
         {
             Timers--;
             labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
+
+            if (Timers == 0)
+                FinishGame(false);
         }
 
         private void AnyIconClicked(object sender, EventArgs e)
@@ -88,6 +93,8 @@ namespace csharp_vathmologoumeni_3
                 //select the clicked icon
                 MemoryGameIcon Clicked = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) select Icon).First();
                 Clicked.Selected = true;
+                //and hide everything else.
+                MemoryGameIcon.HideAllIcons();
             }
             //otherwise we test to see if we have the same icon clicked.
             else
@@ -100,14 +107,51 @@ namespace csharp_vathmologoumeni_3
 
                 //test to see if the icons have the same name (but not the same picture box, which means that the player hasn't clicked the same picture twice)
                 if (PreviousImage.Name.Equals(Clicked.Name) && PreviousImage.DefaultIcon != Clicked.DefaultIcon)
-                    Clicked.Revealed = PreviousImage.Revealed = true;   //and if there is, reveal them.
-                
+                {
+                    //and if they do, reveal them.
+                    Clicked.Revealed = PreviousImage.Revealed = true;
+                    //Increment the found images.
+                    MemoryGameIcon.FoundImages++;
+
+                    if (MemoryGameIcon.FoundImages == 12)
+                    {
+                        FinishGame(true);
+                    }
+                }
+
                 //then deselect the images
                 Clicked.Selected = PreviousImage.Selected = false;
+                MemoryGameIcon.HideAllIcons();
             }
-                   
-            //and hide them.
-            MemoryGameIcon.HideAllIcons();
+        }
+
+        private void FinishGame(bool WinOrLose)
+        {
+            labelWinOrLose.Visible   = true;
+            timerSeconds.Enabled     = false;
+            labelWinOrLose.Text      = WinOrLose ? "YOU WON!" : "YOU LOST!";
+            labelWinOrLose.ForeColor = WinOrLose ? Color.Green : Color.Red;
+
+            foreach (Control c in Controls)
+            {
+                if (!c.Name.Equals("labelWinOrLose"))
+                {
+                    c.Enabled = false;
+                }
+            }
+
+            timerEndgame.Enabled = true;            
+        }
+
+        private void timerEndgame_Tick(object sender, EventArgs e)
+        {
+            Endgame--;
+
+            if (Endgame == 0)
+            {
+                new FormMemoryGame().Show();
+                Close();
+            }
         }
     }
 }

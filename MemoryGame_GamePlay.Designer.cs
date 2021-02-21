@@ -57,6 +57,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelWinOrLose = new System.Windows.Forms.Label();
+            this.timerEndgame = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -396,11 +398,28 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.AnyIconClicked);
             // 
+            // labelWinOrLose
+            // 
+            this.labelWinOrLose.AutoSize = true;
+            this.labelWinOrLose.BackColor = System.Drawing.Color.Transparent;
+            this.labelWinOrLose.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWinOrLose.Location = new System.Drawing.Point(288, 250);
+            this.labelWinOrLose.Name = "labelWinOrLose";
+            this.labelWinOrLose.Size = new System.Drawing.Size(365, 65);
+            this.labelWinOrLose.TabIndex = 51;
+            this.labelWinOrLose.Text = "WIN CONTROL";
+            // 
+            // timerEndgame
+            // 
+            this.timerEndgame.Interval = 1000;
+            this.timerEndgame.Tick += new System.EventHandler(this.timerEndgame_Tick);
+            // 
             // MemoryGame_GamePlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 604);
+            this.Controls.Add(this.labelWinOrLose);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox21);
@@ -491,5 +510,7 @@
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.Label labelWinOrLose;
+        private System.Windows.Forms.Timer timerEndgame;
     }
 }
