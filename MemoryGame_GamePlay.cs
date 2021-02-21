@@ -25,16 +25,22 @@ namespace csharp_vathmologoumeni_3
 
         private void MemoryGame_GamePlay_Load(object sender, EventArgs e)
         {
+            //if the timers variable is zero 
             if (Timers == 0)
-                labelPlayer.Visible = false;
+                labelTime.Visible = timerSeconds.Enabled = false;
             else
-                timerSeconds.Enabled = true;
+                labelTime.Visible = timerSeconds.Enabled = true;
 
+            //initialize the labels
             Timers *= 60;
             labelPlayer.Text += Username;
             labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
             labelWinOrLose.Visible = false;
 
+            MemoryGameIcon.AllIcons.Clear();
+            MemoryGameIcon.FoundImages = 0;
+
+            //initializing variables
             MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1, "Autumn");
             MemoryGameIcon icon2  = new MemoryGameIcon(pictureBox2, "Autumn");
             MemoryGameIcon icon3  = new MemoryGameIcon(pictureBox3, "Bridge");
@@ -127,11 +133,15 @@ namespace csharp_vathmologoumeni_3
 
         private void FinishGame(bool WinOrLose)
         {
+            //first make the label that indicates losing or winning to be visible and disable the timer that counts down the time.
             labelWinOrLose.Visible   = true;
             timerSeconds.Enabled     = false;
+
+            //then  determine what the label should output
             labelWinOrLose.Text      = WinOrLose ? "YOU WON!" : "YOU LOST!";
             labelWinOrLose.ForeColor = WinOrLose ? Color.Green : Color.Red;
 
+            //disable every other control
             foreach (Control c in Controls)
             {
                 if (!c.Name.Equals("labelWinOrLose"))
@@ -140,6 +150,7 @@ namespace csharp_vathmologoumeni_3
                 }
             }
 
+            //and give a small countdown before the form closes
             timerEndgame.Enabled = true;            
         }
 
@@ -149,6 +160,7 @@ namespace csharp_vathmologoumeni_3
 
             if (Endgame == 0)
             {
+                timerEndgame.Enabled = false;
                 new FormMemoryGame().Show();
                 Close();
             }

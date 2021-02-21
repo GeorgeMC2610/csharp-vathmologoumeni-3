@@ -403,7 +403,7 @@
             this.labelWinOrLose.AutoSize = true;
             this.labelWinOrLose.BackColor = System.Drawing.Color.Transparent;
             this.labelWinOrLose.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWinOrLose.Location = new System.Drawing.Point(288, 250);
+            this.labelWinOrLose.Location = new System.Drawing.Point(302, 228);
             this.labelWinOrLose.Name = "labelWinOrLose";
             this.labelWinOrLose.Size = new System.Drawing.Size(365, 65);
             this.labelWinOrLose.TabIndex = 51;
