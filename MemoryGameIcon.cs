@@ -15,17 +15,19 @@ namespace csharp_vathmologoumeni_3
         public PictureBox QuestionMark { get; }
         public string Name { get; set; }
         public bool Revealed { get; set; }
+        public bool Selected { get; set; }
         public static List<MemoryGameIcon> AllIcons = new List<MemoryGameIcon>();
+        public static int FoundImages = 0;
         
         public MemoryGameIcon(PictureBox Icon, string Name)
         {
-            VisibleIcon        = Icon;
-            DefaultIcon        = new PictureBox();
-            DefaultIcon.Image  = Icon.Image;
-            QuestionMark       = new PictureBox();
-            this.Name          = Name;
-            QuestionMark.Image = Properties.Resources.questionmark;
-            Revealed = false;
+            VisibleIcon         = Icon;
+            DefaultIcon         = new PictureBox();
+            DefaultIcon.Image   = Icon.Image;
+            QuestionMark        = new PictureBox();
+            this.Name           = Name;
+            QuestionMark.Image  = Properties.Resources.questionmark;
+            Revealed = Selected = false;
             AllIcons.Add(this);
         }
 
@@ -41,7 +43,7 @@ namespace csharp_vathmologoumeni_3
 
         public static void HideAllIcons()
         {
-            AllIcons.ForEach(i => i.VisibleIcon.Image = i.QuestionMark.Image);
+            AllIcons.Where(i => !i.Revealed && !i.Selected).ToList().ForEach(i => i.VisibleIcon.Image = i.QuestionMark.Image);
         }
 
         public static void ShowAllIcons()

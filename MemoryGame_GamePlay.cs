@@ -76,7 +76,38 @@ namespace csharp_vathmologoumeni_3
         {
             PictureBox picbox = (PictureBox)sender;
 
-            MemoryGameIcon Clicked = 
+            //we show all icons at first, so that we can do easier tests.
+            MemoryGameIcon.ShowAllIcons();
+
+            //get all selected images
+            var SelectedImages = (from Icon in MemoryGameIcon.AllIcons where Icon.Selected select Icon).ToList();
+
+            //if there is no other icon selected
+            if (SelectedImages.Count == 0)
+            {
+                //select the clicked icon
+                MemoryGameIcon Clicked = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) select Icon).First();
+                Clicked.Selected = true;
+            }
+            //otherwise we test to see if we have the same icon clicked.
+            else
+            {
+                //get the first image found from the LINQ command.
+                MemoryGameIcon PreviousImage = SelectedImages[0];
+
+                //then get the icon the user clicked
+                MemoryGameIcon Clicked       = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) select Icon).First();
+
+                //test to see if the icons have the same name (but not the same picture box, which means that the player hasn't clicked the same picture twice)
+                if (PreviousImage.Name.Equals(Clicked.Name) && PreviousImage.DefaultIcon != Clicked.DefaultIcon)
+                    Clicked.Revealed = PreviousImage.Revealed = true;   //and if there is, reveal them.
+                
+                //then deselect the images
+                Clicked.Selected = PreviousImage.Selected = false;
+            }
+                   
+            //and hide them.
+            MemoryGameIcon.HideAllIcons();
         }
     }
 }
