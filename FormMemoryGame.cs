@@ -61,5 +61,9 @@ namespace csharp_vathmologoumeni_3
                 buttonPlay.Enabled = true;
         }
 
+        private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is a Classic Memory Game using cards to test your memory! \n\nThe rules are simple: \nYou will be given 24 cards \nEach one has its pairs \nBy taping on top of a card,the card will turn \nIf you find two cards with the same image,they will remain turned \nYour goal is to find all the pairs to win before the clock runs out! \n\nThe clock is optional,you may choose to have it or not and for how long");
+        }
     }
 }
