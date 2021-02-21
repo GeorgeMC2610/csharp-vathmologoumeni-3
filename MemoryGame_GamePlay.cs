@@ -32,15 +32,15 @@ namespace csharp_vathmologoumeni_3
             Timers *= 60;
             labelPlayer.Text += Username;
 
-            MemoryGameIcon icon1 = new MemoryGameIcon(pictureBox1);
-            MemoryGameIcon icon2 = new MemoryGameIcon(pictureBox2);
-            MemoryGameIcon icon3 = new MemoryGameIcon(pictureBox3);
-            MemoryGameIcon icon4 = new MemoryGameIcon(pictureBox4);
-            MemoryGameIcon icon5 = new MemoryGameIcon(pictureBox5);
-            MemoryGameIcon icon6 = new MemoryGameIcon(pictureBox6);
-            MemoryGameIcon icon7 = new MemoryGameIcon(pictureBox7);
-            MemoryGameIcon icon8 = new MemoryGameIcon(pictureBox8);
-            MemoryGameIcon icon9 = new MemoryGameIcon(pictureBox9);
+            MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1);
+            MemoryGameIcon icon2  = new MemoryGameIcon(pictureBox2);
+            MemoryGameIcon icon3  = new MemoryGameIcon(pictureBox3);
+            MemoryGameIcon icon4  = new MemoryGameIcon(pictureBox4);
+            MemoryGameIcon icon5  = new MemoryGameIcon(pictureBox5);
+            MemoryGameIcon icon6  = new MemoryGameIcon(pictureBox6);
+            MemoryGameIcon icon7  = new MemoryGameIcon(pictureBox7);
+            MemoryGameIcon icon8  = new MemoryGameIcon(pictureBox8);
+            MemoryGameIcon icon9  = new MemoryGameIcon(pictureBox9);
             MemoryGameIcon icon10 = new MemoryGameIcon(pictureBox10);
             MemoryGameIcon icon11 = new MemoryGameIcon(pictureBox11);
             MemoryGameIcon icon12 = new MemoryGameIcon(pictureBox12);
@@ -57,7 +57,16 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon icon23 = new MemoryGameIcon(pictureBox23);
             MemoryGameIcon icon24 = new MemoryGameIcon(pictureBox24);
 
-            icon1.HideIcon();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
+            MemoryGameIcon.RandomizeLocationImages();
         }
 
         private void timerSeconds_Tick(object sender, EventArgs e)

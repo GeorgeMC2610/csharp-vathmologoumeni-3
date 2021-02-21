@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,22 +18,22 @@ namespace csharp_vathmologoumeni_3
         
         public MemoryGameIcon(PictureBox Icon)
         {
-            VisibleIcon  = Icon;
-            DefaultIcon       = new PictureBox();
-            DefaultIcon.Image = Icon.Image;
-            QuestionMark = new PictureBox();
+            VisibleIcon        = Icon;
+            DefaultIcon        = new PictureBox();
+            DefaultIcon.Image  = Icon.Image;
+            QuestionMark       = new PictureBox();
             QuestionMark.Image = Properties.Resources.questionmark;
             AllIcons.Add(this);
         }
 
         public void HideIcon()
         {
-            this.VisibleIcon = QuestionMark;
+            this.VisibleIcon.Image = QuestionMark.Image;
         }
 
         public void ShowIcon()
         {
-            this.VisibleIcon = DefaultIcon;
+            this.VisibleIcon.Image = DefaultIcon.Image;
         }
 
         public static void HideAllIcons()
@@ -43,6 +44,22 @@ namespace csharp_vathmologoumeni_3
         public static void ShowAllIcons()
         {
             AllIcons.ForEach(i => i.VisibleIcon = i.DefaultIcon);
+        }
+        
+        public static void RandomizeLocationImages()
+        {
+            Random random = new Random();
+
+            for (int i = 1; i < AllIcons.Count; i++)
+            {
+                int rand = random.Next(2);
+                if (rand == 1)
+                {
+                    Point temp = AllIcons[i].VisibleIcon.Location;
+                    AllIcons[i].VisibleIcon.Location = AllIcons[0].VisibleIcon.Location;
+                    AllIcons[0].VisibleIcon.Location = temp;
+                }
+            }
         }
     }
 }
