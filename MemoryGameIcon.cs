@@ -60,6 +60,17 @@ namespace csharp_vathmologoumeni_3
                     AllIcons[0].VisibleIcon.Location = temp;
                 }
             }
+
+            for (int i = 0; i < AllIcons.Count - 1; i++)
+            {
+                int rand = random.Next(2);
+                if (rand == 1)
+                {
+                    Point temp                                        = AllIcons[i].VisibleIcon.Location;
+                    AllIcons[i].VisibleIcon.Location                  = AllIcons[AllIcons.Count - 1].VisibleIcon.Location;
+                    AllIcons[AllIcons.Count - 1].VisibleIcon.Location = temp;
+                }
+            }
         }
     }
 }

@@ -31,6 +31,7 @@ namespace csharp_vathmologoumeni_3
 
             Timers *= 60;
             labelPlayer.Text += Username;
+            labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
 
             MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1);
             MemoryGameIcon icon2  = new MemoryGameIcon(pictureBox2);
@@ -57,14 +58,7 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon icon23 = new MemoryGameIcon(pictureBox23);
             MemoryGameIcon icon24 = new MemoryGameIcon(pictureBox24);
 
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
-            MemoryGameIcon.RandomizeLocationImages();
+            //randomization
             MemoryGameIcon.RandomizeLocationImages();
             MemoryGameIcon.RandomizeLocationImages();
         }
