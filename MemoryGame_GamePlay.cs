@@ -87,7 +87,7 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon.ShowAllIcons();
 
             //get all selected images
-            var SelectedImages = (from Icon in MemoryGameIcon.AllIcons where Icon.Selected && !Icon.Revealed select Icon).ToList();
+            var SelectedImages = (from Icon in MemoryGameIcon.AllIcons where Icon.Selected select Icon).ToList();
 
             //if there is no other icon selected
             if (SelectedImages.Count == 0)
