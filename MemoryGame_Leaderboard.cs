@@ -33,9 +33,13 @@ namespace csharp_vathmologoumeni_3
                 string[] attributes = stat.Split('|');
 
                 if (attributes.Length != 5)
-                    return;
+                    continue;
 
+                if (attributes[3].Equals("0"))
+                    continue;
 
+                string statistic_text = "- " + attributes[0] + " made " + attributes[1] + " pairs in " + attributes[2] + " tries, with " + TimeSpan.FromSeconds(int.Parse(attributes[3])).ToString().Substring(3) + " left. (Started with " + attributes[4] + " minute(s))\n\n";
+                richTextBoxLeaderboards.AppendText(statistic_text);
             }
         }
 

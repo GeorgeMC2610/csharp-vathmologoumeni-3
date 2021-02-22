@@ -39,7 +39,7 @@
             this.buttonReturnToMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.buttonReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.buttonReturnToMenu.ForeColor = System.Drawing.Color.Red;
-            this.buttonReturnToMenu.Location = new System.Drawing.Point(943, 21);
+            this.buttonReturnToMenu.Location = new System.Drawing.Point(943, 19);
             this.buttonReturnToMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonReturnToMenu.Name = "buttonReturnToMenu";
             this.buttonReturnToMenu.Size = new System.Drawing.Size(111, 45);
