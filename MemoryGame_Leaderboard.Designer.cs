@@ -79,6 +79,7 @@
             this.Controls.Add(this.richTextBoxLeaderboards);
             this.Controls.Add(this.buttonReturnToMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MemoryGame_Leaderboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

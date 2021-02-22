@@ -55,26 +55,14 @@ namespace csharp_vathmologoumeni_3
         {
             Random random = new Random();
 
-            for (int i = 1; i < AllIcons.Count; i++)
+            int i = AllIcons.Count;
+            while (i > 1)
             {
-                int rand = random.Next(2);
-                if (rand == 1)
-                {
-                    Point temp = AllIcons[i].VisibleIcon.Location;
-                    AllIcons[i].VisibleIcon.Location = AllIcons[0].VisibleIcon.Location;
-                    AllIcons[0].VisibleIcon.Location = temp;
-                }
-            }
-
-            for (int i = 0; i < AllIcons.Count - 1; i++)
-            {
-                int rand = random.Next(2);
-                if (rand == 1)
-                {
-                    Point temp                                        = AllIcons[i].VisibleIcon.Location;
-                    AllIcons[i].VisibleIcon.Location                  = AllIcons[AllIcons.Count - 1].VisibleIcon.Location;
-                    AllIcons[AllIcons.Count - 1].VisibleIcon.Location = temp;
-                }
+                i--;
+                int n = random.Next(i + 1);
+                Point temp                       = AllIcons[n].VisibleIcon.Location;
+                AllIcons[n].VisibleIcon.Location = AllIcons[i].VisibleIcon.Location;
+                AllIcons[i].VisibleIcon.Location = temp;
             }
         }
     }
