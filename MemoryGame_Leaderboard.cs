@@ -17,10 +17,31 @@ namespace csharp_vathmologoumeni_3
             InitializeComponent();
         }
 
+        private void MemoryGame_Leaderboard_Load(object sender, EventArgs e)
+        {
+            string stats = MemoryGameIO.LoadStats();
+
+            if (stats.Equals("empty"))
+            {
+                richTextBoxLeaderboards.Text = "Something went wrong while trying to load stats. Check if the leaderboards.txt file is present in bin/Debug.";
+                return;
+            }
+
+            string[] leaderboards = stats.Split('\n');
+            foreach (string stat in leaderboards)
+            {
+                string[] attributes = stat.Split('|');
+
+                if (attributes.Length != 5)
+                    return;
+
+
+            }
+        }
+
         private void buttonReturnToMenu_Click(object sender, EventArgs e)
         {
             new FormMemoryGame().Show();
-            
             Close(); 
         }
     }

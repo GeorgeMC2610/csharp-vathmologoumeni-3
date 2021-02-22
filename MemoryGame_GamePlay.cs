@@ -78,14 +78,6 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon.HideAllIcons();
         }
 
-        private void timerSeconds_Tick(object sender, EventArgs e)
-        {
-            Timers--;
-            labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
-
-            if (Timers == 0)
-                FinishGame(false);
-        }
 
         private void AnyIconClicked(object sender, EventArgs e)
         {
@@ -145,6 +137,7 @@ namespace csharp_vathmologoumeni_3
                     //then deselect the images
                     Clicked.Selected = PreviousImage.Selected = false;
 
+                    //increment the number of tries the user did
                     Tries++;
                     labelTries.Text = "Tries: " + Tries.ToString();
                 }
@@ -190,10 +183,25 @@ namespace csharp_vathmologoumeni_3
             timerEndgame.Enabled = true;            
         }
 
+        private void timerSeconds_Tick(object sender, EventArgs e)
+        {
+            //decrement the time
+            Timers--;
+
+            //update the label
+            labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
+
+            //and if the time ends, finish the game with a loss.
+            if (Timers == 0)
+                FinishGame(false);
+        }
+
         private void timerEndgame_Tick(object sender, EventArgs e)
         {
+            //show the message for just a bit to the player
             Endgame--;
 
+            //and once the player sees the message, return back to the form.
             if (Endgame == 0)
             {
                 timerEndgame.Enabled = false;
