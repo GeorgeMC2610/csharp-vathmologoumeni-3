@@ -205,9 +205,13 @@ namespace csharp_vathmologoumeni_3
             if (Endgame == 0)
             {
                 timerEndgame.Enabled = false;
-                new FormMemoryGame().Show();
+                
                 Close();
             }
+        }
+        private void MemoryGame_GamePlay_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new FormMemoryGame().Show();
         }
     }
 }

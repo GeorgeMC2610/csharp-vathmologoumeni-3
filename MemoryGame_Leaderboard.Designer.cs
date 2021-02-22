@@ -84,6 +84,7 @@
             this.Name = "MemoryGame_Leaderboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemoryGame_Leaderboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MemoryGame_Leaderboard_FormClosed);
             this.Load += new System.EventHandler(this.MemoryGame_Leaderboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

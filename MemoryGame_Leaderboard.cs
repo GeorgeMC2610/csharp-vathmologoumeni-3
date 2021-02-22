@@ -45,8 +45,12 @@ namespace csharp_vathmologoumeni_3
 
         private void buttonReturnToMenu_Click(object sender, EventArgs e)
         {
-            new FormMemoryGame().Show();
             Close(); 
+        }
+
+        private void MemoryGame_Leaderboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new FormMemoryGame().Show();
         }
     }
 }

@@ -477,6 +477,7 @@
             this.Name = "MemoryGame_GamePlay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory Game";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MemoryGame_GamePlay_FormClosed);
             this.Load += new System.EventHandler(this.MemoryGame_GamePlay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();

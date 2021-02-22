@@ -68,8 +68,8 @@ namespace csharp_vathmologoumeni_3
 
         private void leaderboardsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new MemoryGame_Leaderboard().Show();
             TransitionExit = true;
+            new MemoryGame_Leaderboard().Show();
             Close();
         }
     }
