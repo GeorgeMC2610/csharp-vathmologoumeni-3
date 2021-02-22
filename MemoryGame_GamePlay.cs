@@ -33,6 +33,10 @@ namespace csharp_vathmologoumeni_3
             else
                 labelTime.Visible = timerSeconds.Enabled = true;
 
+            //clear all cache variables 
+            MemoryGameIcon.AllIcons.Clear();
+            MemoryGameIcon.FoundImages = 0;
+
             //initialize the labels
             Timers *= 60;
             labelPlayer.Text += Username;
@@ -40,10 +44,6 @@ namespace csharp_vathmologoumeni_3
             labelWinOrLose.Visible = false;
             labelPairsFound.Text = "Pairs Found: " + MemoryGameIcon.FoundImages.ToString();
             labelTries.Text = "Tries: " + Tries.ToString();
-
-            //clear all cache variables 
-            MemoryGameIcon.AllIcons.Clear();
-            MemoryGameIcon.FoundImages = 0;
 
             //initializing variables
             MemoryGameIcon icon1  = new MemoryGameIcon(pictureBox1, "Autumn");
