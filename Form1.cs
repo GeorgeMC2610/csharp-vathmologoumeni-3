@@ -52,7 +52,11 @@ namespace csharp_vathmologoumeni_3
             switch (ToolStripClicked.Name)
             {
                 case "MemoryGameItem":
-                    
+                    MessageBox.Show("In the memory game, you can test your memory skills by clicking icons that are flipped. There is a countdown timer support, so you can test" +
+                                    "your skills in a tight timespan!\n\nBy clicking an image you will be able to see it. Clicking another image will either make it disappear if it's" +
+                                    " not the same with the previous one, or both will remain open if they're the same. One can win if they find all icons, and lose if their time runs out." +
+                                    "\n\nHave fun playing!", "Memory Game Intro", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
                     break;
                 case "ChessGameItem":
                     MessageBox.Show("In the chess game, after you type your nickname, you will be able to play chess in a board with a friend. Players can choose their time per turn, if they wish so." +
