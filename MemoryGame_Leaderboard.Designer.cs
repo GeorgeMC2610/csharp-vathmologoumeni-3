@@ -40,7 +40,7 @@
             this.buttonReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.buttonReturnToMenu.ForeColor = System.Drawing.Color.Red;
             this.buttonReturnToMenu.Location = new System.Drawing.Point(943, 19);
-            this.buttonReturnToMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonReturnToMenu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReturnToMenu.Name = "buttonReturnToMenu";
             this.buttonReturnToMenu.Size = new System.Drawing.Size(111, 45);
             this.buttonReturnToMenu.TabIndex = 7;
@@ -53,6 +53,7 @@
             this.richTextBoxLeaderboards.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxLeaderboards.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxLeaderboards.Location = new System.Drawing.Point(12, 69);
             this.richTextBoxLeaderboards.Name = "richTextBoxLeaderboards";
             this.richTextBoxLeaderboards.ReadOnly = true;
@@ -80,7 +81,7 @@
             this.Controls.Add(this.buttonReturnToMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MemoryGame_Leaderboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemoryGame_Leaderboard";
