@@ -63,7 +63,14 @@ namespace csharp_vathmologoumeni_3
 
         private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This is a Classic Memory Game using cards to test your memory! \n\nThe rules are simple: \nYou will be given 24 cards \nEach one has its pairs \nBy taping on top of a card,the card will turn \nIf you find two cards with the same image,they will remain turned \nYour goal is to find all the pairs to win before the clock runs out! \n\nThe clock is optional,you may choose to have it or not and for how long");
+            MessageBox.Show("THIS IS A CARD MEMORY GAME TO HAVE FUN AND TEST YOUR MEMORY SKILLS!!! \n\nHOW TO PLAY: \nYou will be given 24 cards \nEach one has its pairs \nBy taping on top of a card,the card will turn \nIf you find two cards with the same image,they will remain turned \nYour goal is to find all the pairs to win before the clock runs out! \n\nThe clock is optional,you may choose to have it or not and for how long");
+        }
+
+        private void leaderboardsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new MemoryGame_Leaderboard().Show();
+            TransitionExit = true;
+            Close();
         }
     }
 }

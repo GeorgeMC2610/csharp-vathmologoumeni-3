@@ -103,6 +103,12 @@
     <Compile Include="MemoryGame_GamePlay.Designer.cs">
       <DependentUpon>MemoryGame_GamePlay.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemoryGame_Leaderboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoryGame_Leaderboard.Designer.cs">
+      <DependentUpon>MemoryGame_Leaderboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modify covid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemoryGame_GamePlay.resx">
       <DependentUpon>MemoryGame_GamePlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoryGame_Leaderboard.resx">
+      <DependentUpon>MemoryGame_Leaderboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modify covid.resx">
       <DependentUpon>Modify covid.cs</DependentUpon>
