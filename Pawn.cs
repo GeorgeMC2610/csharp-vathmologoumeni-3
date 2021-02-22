@@ -35,21 +35,6 @@ namespace csharp_vathmologoumeni_3
             Chessboard.ActivePawns.Add(this);
         }
 
-        public void Move(int blockXCount, int blockYCount)
-        {
-            if (blockXCount > 7)
-                blockXCount -= 7;
-            else if (blockXCount < -7)
-                blockXCount += 7;
-
-            if (blockYCount > 7)
-                blockYCount -= 7;
-            else if (blockYCount < -7)
-                blockYCount += 7;
-
-            this.Location = new Point(this.Location.X + 94 * blockXCount, this.Location.Y + 94 * blockYCount);
-        }
-        
         /// <summary>
         /// Gets two numbers (both have to be in the set [0,7]) and moves the Pawn to the corresponding valid location.
         /// </summary>

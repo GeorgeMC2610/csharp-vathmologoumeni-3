@@ -297,10 +297,11 @@ namespace csharp_vathmologoumeni_3
             this.Controls.Add(this.gamesDataGridView);
             this.Controls.Add(this.gamesBindingNavigator);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormChessDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormChessDB";
+            this.Text = "Chess Database Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormChessDB_FormClosed);
             this.Load += new System.EventHandler(this.FormChessDB_Load);
