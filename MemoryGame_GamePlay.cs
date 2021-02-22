@@ -12,7 +12,7 @@ namespace csharp_vathmologoumeni_3
 {
     public partial class MemoryGame_GamePlay : Form
     {
-        int Timers;
+        int Timers, TimeInitial;
         int Endgame = 2;
         int Tries = 0;
         string Username;
@@ -20,8 +20,9 @@ namespace csharp_vathmologoumeni_3
         public MemoryGame_GamePlay(int Timers, string Username)
         {
             InitializeComponent();
-            this.Timers   = Timers;
-            this.Username = Username;
+            this.Timers      = Timers;
+            this.TimeInitial = Timers;
+            this.Username    = Username;
         }
 
         private void MemoryGame_GamePlay_Load(object sender, EventArgs e)
@@ -94,16 +95,26 @@ namespace csharp_vathmologoumeni_3
             MemoryGameIcon.ShowAllIcons();
 
             //get all selected images
-            var SelectedImages = (from Icon in MemoryGameIcon.AllIcons where Icon.Selected select Icon).ToList();
+            var SelectedImages = (from Icon in MemoryGameIcon.AllIcons where Icon.Selected && !Icon.Revealed select Icon).ToList();
 
             //if there is no other icon selected
             if (SelectedImages.Count == 0)
             {
                 //select the clicked icon
-                MemoryGameIcon Clicked = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) select Icon).First();
-                Clicked.Selected = true;
-                //and hide everything else.
-                MemoryGameIcon.HideAllIcons();
+                try
+                {
+                    MemoryGameIcon Clicked = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) && !Icon.Revealed select Icon).First();
+                    Clicked.Selected = true;
+                }
+                catch (Exception)
+                {
+                    
+                }
+                finally
+                {
+                    //and hide everything else.
+                    MemoryGameIcon.HideAllIcons();
+                }
             }
             //otherwise we test to see if we have the same icon clicked.
             else
@@ -111,36 +122,50 @@ namespace csharp_vathmologoumeni_3
                 //get the first image found from the LINQ command.
                 MemoryGameIcon PreviousImage = SelectedImages[0];
 
-                //then get the icon the user clicked
-                MemoryGameIcon Clicked       = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) select Icon).First();
-
-                //test to see if the icons have the same name (but not the same picture box, which means that the player hasn't clicked the same picture twice)
-                if (PreviousImage.Name.Equals(Clicked.Name) && PreviousImage.DefaultIcon != Clicked.DefaultIcon)
+                try
                 {
-                    //and if they do, reveal them.
-                    Clicked.Revealed = PreviousImage.Revealed = true;
-                    //Increment the found images.
-                    MemoryGameIcon.FoundImages++;
-                    labelPairsFound.Text = "Pairs Found: " + MemoryGameIcon.FoundImages.ToString();
+                    //then get the icon the user clicked
+                    MemoryGameIcon Clicked = (from Icon in MemoryGameIcon.AllIcons where Icon.DefaultIcon.Image.Equals(picbox.Image) && !Icon.Revealed select Icon).First();
 
-                    if (MemoryGameIcon.FoundImages == 12)
+                    //test to see if the icons have the same name (but not the same picture box, which means that the player hasn't clicked the same picture twice)
+                    if (PreviousImage.Name.Equals(Clicked.Name) && PreviousImage.DefaultIcon != Clicked.DefaultIcon)
                     {
-                        FinishGame(true);
+                        //and if they do, reveal them.
+                        Clicked.Revealed = PreviousImage.Revealed = true;
+                        //Increment the found images.
+                        MemoryGameIcon.FoundImages++;
+                        labelPairsFound.Text = "Pairs Found: " + MemoryGameIcon.FoundImages.ToString();
+
+                        //if the player found all 12 pairs, finish the game with a win.
+                        if (MemoryGameIcon.FoundImages == 12)
+                            FinishGame(true);
+
                     }
+
+                    //then deselect the images
+                    Clicked.Selected = PreviousImage.Selected = false;
+
+                    Tries++;
+                    labelTries.Text = "Tries: " + Tries.ToString();
                 }
+                catch (Exception)
+                {
 
-                //then deselect the images
-                Clicked.Selected = PreviousImage.Selected = false;
-                MemoryGameIcon.HideAllIcons();
-
-                //increment the number of tries and update its label.
-                Tries++;
-                labelTries.Text = "Tries: " + Tries.ToString();
+                }
+                finally
+                {
+                    //if something goes wrong, just deselect the images.
+                    PreviousImage.Selected = false;
+                    MemoryGameIcon.HideAllIcons();
+                }
             }
         }
 
         private void FinishGame(bool WinOrLose)
         {
+            //save the game stats
+            MemoryGameIO.SaveGame(Username, MemoryGameIcon.FoundImages, Tries, Timers, TimeInitial);
+
             //first make the label that indicates losing or winning to be visible and disable the timer that counts down the time.
             labelWinOrLose.Visible   = true;
             timerSeconds.Enabled     = false;

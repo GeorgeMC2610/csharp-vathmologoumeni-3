@@ -11,9 +11,10 @@ namespace csharp_vathmologoumeni_3
     {
         public static void SaveGame(string name, int pairs, int tries, int timeInitial, int timeRemaining)
         {
-            StreamWriter sr = new StreamWriter("leaderboards.txt", true);
-
-
+            StreamWriter sw = new StreamWriter("leaderboards.txt", true);
+            string textToWrite = name + "|" + pairs.ToString() + "|" + tries.ToString() + "|" + timeInitial.ToString() + "|" + timeRemaining.ToString();
+            sw.WriteLine(textToWrite);
+            sw.Close();
         }
     }
 }
