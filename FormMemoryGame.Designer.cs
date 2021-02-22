@@ -39,7 +39,6 @@ namespace csharp_vathmologoumeni_3
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leaderboardsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.Memory_Game_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutes)).BeginInit();
@@ -66,7 +65,7 @@ namespace csharp_vathmologoumeni_3
             this.textBoxUsername.Location = new System.Drawing.Point(13, 64);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(135, 27);
+            this.textBoxUsername.Size = new System.Drawing.Size(135, 23);
             this.textBoxUsername.TabIndex = 1;
             this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
@@ -76,7 +75,7 @@ namespace csharp_vathmologoumeni_3
             this.Player_Name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Player_Name.Location = new System.Drawing.Point(13, 45);
             this.Player_Name.Name = "Player_Name";
-            this.Player_Name.Size = new System.Drawing.Size(75, 20);
+            this.Player_Name.Size = new System.Drawing.Size(60, 15);
             this.Player_Name.TabIndex = 99;
             this.Player_Name.Text = "Username";
             // 
@@ -126,7 +125,7 @@ namespace csharp_vathmologoumeni_3
             0,
             0});
             this.numericUpDownMinutes.Name = "numericUpDownMinutes";
-            this.numericUpDownMinutes.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownMinutes.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownMinutes.TabIndex = 3;
             this.numericUpDownMinutes.Value = new decimal(new int[] {
             1,
@@ -139,7 +138,7 @@ namespace csharp_vathmologoumeni_3
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(187, 44);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(149, 24);
+            this.checkBox1.Size = new System.Drawing.Size(122, 19);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Countdown Timer";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -151,37 +150,30 @@ namespace csharp_vathmologoumeni_3
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.howToPlayToolStripMenuItem,
-            this.changeIconsToolStripMenuItem,
             this.leaderboardsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1012, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1012, 24);
             this.menuStrip1.TabIndex = 100;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // howToPlayToolStripMenuItem
             // 
             this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.howToPlayToolStripMenuItem.Text = "How To Play";
             this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
-            // 
-            // changeIconsToolStripMenuItem
-            // 
-            this.changeIconsToolStripMenuItem.Name = "changeIconsToolStripMenuItem";
-            this.changeIconsToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.changeIconsToolStripMenuItem.Text = "Change Icons";
             // 
             // leaderboardsToolStripMenuItem
             // 
             this.leaderboardsToolStripMenuItem.Name = "leaderboardsToolStripMenuItem";
-            this.leaderboardsToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.leaderboardsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.leaderboardsToolStripMenuItem.Text = "Leaderboards";
             this.leaderboardsToolStripMenuItem.Click += new System.EventHandler(this.leaderboardsToolStripMenuItem_Click);
             // 
             // FormMemoryGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 541);
             this.Controls.Add(this.checkBox1);
@@ -221,7 +213,6 @@ namespace csharp_vathmologoumeni_3
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem howToPlayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changeIconsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem leaderboardsToolStripMenuItem;
     }
 }
