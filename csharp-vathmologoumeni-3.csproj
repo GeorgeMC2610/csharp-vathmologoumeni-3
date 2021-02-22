@@ -96,6 +96,7 @@
       <DependentUpon>FormMemoryGame.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoryGameIcon.cs" />
+    <Compile Include="MemoryGameIO.cs" />
     <Compile Include="MemoryGame_GamePlay.cs">
       <SubType>Form</SubType>
     </Compile>

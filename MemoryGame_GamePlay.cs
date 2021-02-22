@@ -14,6 +14,7 @@ namespace csharp_vathmologoumeni_3
     {
         int Timers;
         int Endgame = 2;
+        int Tries = 0;
         string Username;
 
         public MemoryGame_GamePlay(int Timers, string Username)
@@ -37,6 +38,7 @@ namespace csharp_vathmologoumeni_3
             labelTime.Text = "Time: " + (Timers < 60 ? Timers.ToString() : TimeSpan.FromSeconds(Timers).ToString().Substring(3));
             labelWinOrLose.Visible = false;
             labelPairsFound.Text = "Pairs Found: " + MemoryGameIcon.FoundImages.ToString();
+            labelTries.Text = "Tries: " + Tries.ToString();
 
             //clear all cache variables 
             MemoryGameIcon.AllIcons.Clear();
@@ -130,6 +132,10 @@ namespace csharp_vathmologoumeni_3
                 //then deselect the images
                 Clicked.Selected = PreviousImage.Selected = false;
                 MemoryGameIcon.HideAllIcons();
+
+                //increment the number of tries and update its label.
+                Tries++;
+                labelTries.Text = "Tries: " + Tries.ToString();
             }
         }
 

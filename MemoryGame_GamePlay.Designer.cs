@@ -60,6 +60,7 @@
             this.labelWinOrLose = new System.Windows.Forms.Label();
             this.timerEndgame = new System.Windows.Forms.Timer(this.components);
             this.labelPairsFound = new System.Windows.Forms.Label();
+            this.labelTries = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -425,11 +426,22 @@
             this.labelPairsFound.TabIndex = 52;
             this.labelPairsFound.Text = "Pairs Found: ";
             // 
+            // labelTries
+            // 
+            this.labelTries.AutoSize = true;
+            this.labelTries.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTries.Location = new System.Drawing.Point(12, 565);
+            this.labelTries.Name = "labelTries";
+            this.labelTries.Size = new System.Drawing.Size(36, 15);
+            this.labelTries.TabIndex = 53;
+            this.labelTries.Text = "Tries: ";
+            // 
             // MemoryGame_GamePlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 604);
+            this.Controls.Add(this.labelTries);
             this.Controls.Add(this.labelPairsFound);
             this.Controls.Add(this.labelWinOrLose);
             this.Controls.Add(this.pictureBox19);
@@ -526,5 +538,6 @@
         private System.Windows.Forms.Label labelWinOrLose;
         private System.Windows.Forms.Timer timerEndgame;
         private System.Windows.Forms.Label labelPairsFound;
+        private System.Windows.Forms.Label labelTries;
     }
 }
