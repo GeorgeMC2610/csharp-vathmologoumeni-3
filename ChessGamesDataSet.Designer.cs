@@ -281,17 +281,17 @@ namespace csharp_vathmologoumeni_3 {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnPlayer_1;
+            private global::System.Data.DataColumn columnPlayer1;
             
-            private global::System.Data.DataColumn columnPlayer_2;
+            private global::System.Data.DataColumn columnPlayer2;
             
             private global::System.Data.DataColumn columnWinner;
             
             private global::System.Data.DataColumn columnTimer;
             
-            private global::System.Data.DataColumn columnDate_Ended;
+            private global::System.Data.DataColumn columnDateEnded;
             
-            private global::System.Data.DataColumn columnTime_Ended;
+            private global::System.Data.DataColumn columnTimeEnded;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -336,17 +336,17 @@ namespace csharp_vathmologoumeni_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Player_1Column {
+            public global::System.Data.DataColumn Player1Column {
                 get {
-                    return this.columnPlayer_1;
+                    return this.columnPlayer1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Player_2Column {
+            public global::System.Data.DataColumn Player2Column {
                 get {
-                    return this.columnPlayer_2;
+                    return this.columnPlayer2;
                 }
             }
             
@@ -368,17 +368,17 @@ namespace csharp_vathmologoumeni_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Date_EndedColumn {
+            public global::System.Data.DataColumn DateEndedColumn {
                 get {
-                    return this.columnDate_Ended;
+                    return this.columnDateEnded;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Time_EndedColumn {
+            public global::System.Data.DataColumn TimeEndedColumn {
                 get {
-                    return this.columnTime_Ended;
+                    return this.columnTimeEnded;
                 }
             }
             
@@ -419,16 +419,16 @@ namespace csharp_vathmologoumeni_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GamesRow AddGamesRow(string Player_1, string Player_2, string Winner, string Timer, System.DateTime Date_Ended, System.DateTime Time_Ended) {
+            public GamesRow AddGamesRow(string Player1, string Player2, string Winner, string Timer, System.DateTime DateEnded, string TimeEnded) {
                 GamesRow rowGamesRow = ((GamesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Player_1,
-                        Player_2,
+                        Player1,
+                        Player2,
                         Winner,
                         Timer,
-                        Date_Ended,
-                        Time_Ended};
+                        DateEnded,
+                        TimeEnded};
                 rowGamesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGamesRow);
                 return rowGamesRow;
@@ -459,12 +459,12 @@ namespace csharp_vathmologoumeni_3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnPlayer_1 = base.Columns["Player 1"];
-                this.columnPlayer_2 = base.Columns["Player 2"];
+                this.columnPlayer1 = base.Columns["Player1"];
+                this.columnPlayer2 = base.Columns["Player2"];
                 this.columnWinner = base.Columns["Winner"];
                 this.columnTimer = base.Columns["Timer"];
-                this.columnDate_Ended = base.Columns["Date Ended"];
-                this.columnTime_Ended = base.Columns["Time Ended"];
+                this.columnDateEnded = base.Columns["DateEnded"];
+                this.columnTimeEnded = base.Columns["TimeEnded"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -472,18 +472,18 @@ namespace csharp_vathmologoumeni_3 {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnPlayer_1 = new global::System.Data.DataColumn("Player 1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlayer_1);
-                this.columnPlayer_2 = new global::System.Data.DataColumn("Player 2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlayer_2);
+                this.columnPlayer1 = new global::System.Data.DataColumn("Player1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlayer1);
+                this.columnPlayer2 = new global::System.Data.DataColumn("Player2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlayer2);
                 this.columnWinner = new global::System.Data.DataColumn("Winner", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWinner);
                 this.columnTimer = new global::System.Data.DataColumn("Timer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTimer);
-                this.columnDate_Ended = new global::System.Data.DataColumn("Date Ended", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate_Ended);
-                this.columnTime_Ended = new global::System.Data.DataColumn("Time Ended", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTime_Ended);
+                this.columnDateEnded = new global::System.Data.DataColumn("DateEnded", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateEnded);
+                this.columnTimeEnded = new global::System.Data.DataColumn("TimeEnded", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeEnded);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -491,10 +491,11 @@ namespace csharp_vathmologoumeni_3 {
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnPlayer_1.MaxLength = 255;
-                this.columnPlayer_2.MaxLength = 255;
+                this.columnPlayer1.MaxLength = 255;
+                this.columnPlayer2.MaxLength = 255;
                 this.columnWinner.MaxLength = 255;
                 this.columnTimer.MaxLength = 255;
+                this.columnTimeEnded.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -648,33 +649,33 @@ namespace csharp_vathmologoumeni_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Player_1 {
+            public string Player1 {
                 get {
                     try {
-                        return ((string)(this[this.tableGames.Player_1Column]));
+                        return ((string)(this[this.tableGames.Player1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Player 1\' in table \'Games\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Player1\' in table \'Games\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGames.Player_1Column] = value;
+                    this[this.tableGames.Player1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Player_2 {
+            public string Player2 {
                 get {
                     try {
-                        return ((string)(this[this.tableGames.Player_2Column]));
+                        return ((string)(this[this.tableGames.Player2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Player 2\' in table \'Games\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Player2\' in table \'Games\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGames.Player_2Column] = value;
+                    this[this.tableGames.Player2Column] = value;
                 }
             }
             
@@ -712,58 +713,58 @@ namespace csharp_vathmologoumeni_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Date_Ended {
+            public System.DateTime DateEnded {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableGames.Date_EndedColumn]));
+                        return ((global::System.DateTime)(this[this.tableGames.DateEndedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Date Ended\' in table \'Games\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateEnded\' in table \'Games\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGames.Date_EndedColumn] = value;
+                    this[this.tableGames.DateEndedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Time_Ended {
+            public string TimeEnded {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableGames.Time_EndedColumn]));
+                        return ((string)(this[this.tableGames.TimeEndedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Time Ended\' in table \'Games\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeEnded\' in table \'Games\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableGames.Time_EndedColumn] = value;
+                    this[this.tableGames.TimeEndedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlayer_1Null() {
-                return this.IsNull(this.tableGames.Player_1Column);
+            public bool IsPlayer1Null() {
+                return this.IsNull(this.tableGames.Player1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlayer_1Null() {
-                this[this.tableGames.Player_1Column] = global::System.Convert.DBNull;
+            public void SetPlayer1Null() {
+                this[this.tableGames.Player1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlayer_2Null() {
-                return this.IsNull(this.tableGames.Player_2Column);
+            public bool IsPlayer2Null() {
+                return this.IsNull(this.tableGames.Player2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlayer_2Null() {
-                this[this.tableGames.Player_2Column] = global::System.Convert.DBNull;
+            public void SetPlayer2Null() {
+                this[this.tableGames.Player2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -792,26 +793,26 @@ namespace csharp_vathmologoumeni_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDate_EndedNull() {
-                return this.IsNull(this.tableGames.Date_EndedColumn);
+            public bool IsDateEndedNull() {
+                return this.IsNull(this.tableGames.DateEndedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDate_EndedNull() {
-                this[this.tableGames.Date_EndedColumn] = global::System.Convert.DBNull;
+            public void SetDateEndedNull() {
+                this[this.tableGames.DateEndedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTime_EndedNull() {
-                return this.IsNull(this.tableGames.Time_EndedColumn);
+            public bool IsTimeEndedNull() {
+                return this.IsNull(this.tableGames.TimeEndedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTime_EndedNull() {
-                this[this.tableGames.Time_EndedColumn] = global::System.Convert.DBNull;
+            public void SetTimeEndedNull() {
+                this[this.tableGames.TimeEndedColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -975,71 +976,71 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Games";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("Player 1", "Player 1");
-            tableMapping.ColumnMappings.Add("Player 2", "Player 2");
+            tableMapping.ColumnMappings.Add("Player1", "Player1");
+            tableMapping.ColumnMappings.Add("Player2", "Player2");
             tableMapping.ColumnMappings.Add("Winner", "Winner");
             tableMapping.ColumnMappings.Add("Timer", "Timer");
-            tableMapping.ColumnMappings.Add("Date Ended", "Date Ended");
-            tableMapping.ColumnMappings.Add("Time Ended", "Time Ended");
+            tableMapping.ColumnMappings.Add("DateEnded", "DateEnded");
+            tableMapping.ColumnMappings.Add("TimeEnded", "TimeEnded");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Games` WHERE ((`ID` = ?) AND ((? = 1 AND `Player 1` IS NULL) OR (`Player 1` = ?)) AND ((? = 1 AND `Player 2` IS NULL) OR (`Player 2` = ?)) AND ((? = 1 AND `Winner` IS NULL) OR (`Winner` = ?)) AND ((? = 1 AND `Timer` IS NULL) OR (`Timer` = ?)) AND ((? = 1 AND `Date Ended` IS NULL) OR (`Date Ended` = ?)) AND ((? = 1 AND `Time Ended` IS NULL) OR (`Time Ended` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Games` WHERE ((`ID` = ?) AND ((? = 1 AND `Player1` IS NULL) OR (`Player1` = ?)) AND ((? = 1 AND `Player2` IS NULL) OR (`Player2` = ?)) AND ((? = 1 AND `Winner` IS NULL) OR (`Winner` = ?)) AND ((? = 1 AND `Timer` IS NULL) OR (`Timer` = ?)) AND ((? = 1 AND `DateEnded` IS NULL) OR (`DateEnded` = ?)) AND ((? = 1 AND `TimeEnded` IS NULL) OR (`TimeEnded` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 1", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player_1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 2", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player_2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 2", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player1", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player1", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player2", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player2", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Winner", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Winner", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Winner", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Winner", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Timer", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Timer", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Timer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Timer", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Date_Ended", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date Ended", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Date_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date Ended", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Time_Ended", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Time Ended", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Time_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Time Ended", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateEnded", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnded", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateEnded", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnded", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TimeEnded", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TimeEnded", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TimeEnded", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TimeEnded", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Games` (`Player 1`, `Player 2`, `Winner`, `Timer`, `Date Ended`, `Ti" +
-                "me Ended`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Games` (`Player1`, `Player2`, `Winner`, `Timer`, `DateEnded`, `TimeE" +
+                "nded`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player_1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player_2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Winner", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Winner", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Timer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Timer", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Date_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date Ended", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Time_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Time Ended", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateEnded", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnded", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TimeEnded", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TimeEnded", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Games` SET `Player 1` = ?, `Player 2` = ?, `Winner` = ?, `Timer` = ?, `Date Ended` = ?, `Time Ended` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Player 1` IS NULL) OR (`Player 1` = ?)) AND ((? = 1 AND `Player 2` IS NULL) OR (`Player 2` = ?)) AND ((? = 1 AND `Winner` IS NULL) OR (`Winner` = ?)) AND ((? = 1 AND `Timer` IS NULL) OR (`Timer` = ?)) AND ((? = 1 AND `Date Ended` IS NULL) OR (`Date Ended` = ?)) AND ((? = 1 AND `Time Ended` IS NULL) OR (`Time Ended` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Games` SET `Player1` = ?, `Player2` = ?, `Winner` = ?, `Timer` = ?, `DateEnded` = ?, `TimeEnded` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Player1` IS NULL) OR (`Player1` = ?)) AND ((? = 1 AND `Player2` IS NULL) OR (`Player2` = ?)) AND ((? = 1 AND `Winner` IS NULL) OR (`Winner` = ?)) AND ((? = 1 AND `Timer` IS NULL) OR (`Timer` = ?)) AND ((? = 1 AND `DateEnded` IS NULL) OR (`DateEnded` = ?)) AND ((? = 1 AND `TimeEnded` IS NULL) OR (`TimeEnded` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player_1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player_2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Player2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Winner", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Winner", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Timer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Timer", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Date_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date Ended", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Time_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Time Ended", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateEnded", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnded", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TimeEnded", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TimeEnded", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 1", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player_1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 2", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player_2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player 2", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player1", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player1", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player1", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Player2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player2", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Player2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Player2", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Winner", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Winner", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Winner", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Winner", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Timer", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Timer", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Timer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Timer", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Date_Ended", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date Ended", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Date_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date Ended", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Time_Ended", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Time Ended", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Time_Ended", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Time Ended", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateEnded", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnded", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateEnded", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnded", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TimeEnded", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TimeEnded", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TimeEnded", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TimeEnded", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::csharp_vathmologoumeni_3.Properties.Settings.Default.ChessGamesConnectionString;
+            this._connection.ConnectionString = global::csharp_vathmologoumeni_3.Properties.Settings.Default.ChessGamesConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1048,8 +1049,7 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, [Player 1], [Player 2], Winner, Timer, [Date Ended], [Time Ended] FROM" +
-                " Games";
+            this._commandCollection[0].CommandText = "SELECT ID, Player1, Player2, Winner, Timer, DateEnded, TimeEnded FROM Games";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1110,23 +1110,23 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_Player_1, string Original_Player_2, string Original_Winner, string Original_Timer, global::System.Nullable<global::System.DateTime> Original_Date_Ended, global::System.Nullable<global::System.DateTime> Original_Time_Ended) {
+        public virtual int Delete(int Original_ID, string Original_Player1, string Original_Player2, string Original_Winner, string Original_Timer, global::System.Nullable<global::System.DateTime> Original_DateEnded, string Original_TimeEnded) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_Player_1 == null)) {
+            if ((Original_Player1 == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Player_1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Player1));
             }
-            if ((Original_Player_2 == null)) {
+            if ((Original_Player2 == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Player_2));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Player2));
             }
             if ((Original_Winner == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -1144,21 +1144,21 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Timer));
             }
-            if ((Original_Date_Ended.HasValue == true)) {
+            if ((Original_DateEnded.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_Date_Ended.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_DateEnded.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Time_Ended.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_Time_Ended.Value));
-            }
-            else {
+            if ((Original_TimeEnded == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_TimeEnded));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1180,18 +1180,18 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Player_1, string Player_2, string Winner, string Timer, global::System.Nullable<global::System.DateTime> Date_Ended, global::System.Nullable<global::System.DateTime> Time_Ended) {
-            if ((Player_1 == null)) {
+        public virtual int Insert(string Player1, string Player2, string Winner, string Timer, global::System.Nullable<global::System.DateTime> DateEnded, string TimeEnded) {
+            if ((Player1 == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Player_1));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Player1));
             }
-            if ((Player_2 == null)) {
+            if ((Player2 == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Player_2));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Player2));
             }
             if ((Winner == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1205,17 +1205,17 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Timer));
             }
-            if ((Date_Ended.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(Date_Ended.Value));
+            if ((DateEnded.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DateEnded.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Time_Ended.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Time_Ended.Value));
+            if ((TimeEnded == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TimeEnded));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1237,18 +1237,18 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Player_1, string Player_2, string Winner, string Timer, global::System.Nullable<global::System.DateTime> Date_Ended, global::System.Nullable<global::System.DateTime> Time_Ended, int Original_ID, string Original_Player_1, string Original_Player_2, string Original_Winner, string Original_Timer, global::System.Nullable<global::System.DateTime> Original_Date_Ended, global::System.Nullable<global::System.DateTime> Original_Time_Ended) {
-            if ((Player_1 == null)) {
+        public virtual int Update(string Player1, string Player2, string Winner, string Timer, global::System.Nullable<global::System.DateTime> DateEnded, string TimeEnded, int Original_ID, string Original_Player1, string Original_Player2, string Original_Winner, string Original_Timer, global::System.Nullable<global::System.DateTime> Original_DateEnded, string Original_TimeEnded) {
+            if ((Player1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Player_1));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Player1));
             }
-            if ((Player_2 == null)) {
+            if ((Player2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Player_2));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Player2));
             }
             if ((Winner == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1262,34 +1262,34 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Timer));
             }
-            if ((Date_Ended.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Date_Ended.Value));
+            if ((DateEnded.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DateEnded.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Time_Ended.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Time_Ended.Value));
-            }
-            else {
+            if ((TimeEnded == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(TimeEnded));
+            }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID));
-            if ((Original_Player_1 == null)) {
+            if ((Original_Player1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Player_1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Player1));
             }
-            if ((Original_Player_2 == null)) {
+            if ((Original_Player2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Player_2));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Player2));
             }
             if ((Original_Winner == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
@@ -1307,21 +1307,21 @@ namespace csharp_vathmologoumeni_3.ChessGamesDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Timer));
             }
-            if ((Original_Date_Ended.HasValue == true)) {
+            if ((Original_DateEnded.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_Date_Ended.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_DateEnded.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Time_Ended.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_Time_Ended.Value));
-            }
-            else {
+            if ((Original_TimeEnded == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_TimeEnded));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

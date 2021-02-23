@@ -21,14 +21,14 @@ namespace csharp_vathmologoumeni_3
         {
             this.Validate();
             this.gamesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.chessGamesDataSet1);
+            this.tableAdapterManager1.UpdateAll(this.chessGamesDataSet);
 
         }
 
         private void FormChessDB_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'chessGamesDataSet1.Games' table. You can move, or remove it, as needed.
-            this.gamesTableAdapter.Fill(this.chessGamesDataSet1.Games);
+            // TODO: This line of code loads data into the 'chessGamesDataSet.Games' table. You can move, or remove it, as needed.
+            this.gamesTableAdapter.Fill(this.chessGamesDataSet.Games);
 
         }
 

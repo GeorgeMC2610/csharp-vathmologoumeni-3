@@ -49,7 +49,7 @@ namespace Covid_Website
             //Print which gender has more reports 
 
             output.Text = "Total of Man covid case reports: " + man_count.ToString() + "\nTotal of Woman covid case reports: " + woman_count.ToString() + "\n\n" +
-            "Most case reports are " + (man_count > woman_count ? "men." : "womans.") + "They form a " + max_percentage.ToString("0.0") + "% of total reports.";
+            "Most case reports are " + (man_count > woman_count ? "men." : "women.") + "They form a " + max_percentage.ToString("0.0") + "% of total reports.";
         }
 
         
