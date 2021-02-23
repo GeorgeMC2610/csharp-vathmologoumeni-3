@@ -35,33 +35,7 @@ namespace csharp_vathmologoumeni_3
                 for (int j = 0; j < 8; j++)
                     ValidClickPoints.Add(new Point(58 + 94 * i, 58 + 94 * j));
         }
-
-        public static Pawn GetPawnByLocation(Point location)
-        {
-            var PawnLocations = (from pawn in ActivePawns select pawn.Location).ToList();
-
-            int i = 0;
-            int pos = -1;
-            double LowestDistance = int.MaxValue;
-            foreach (Point p in PawnLocations)
-            {
-                double Difference = Math.Pow(location.X - p.X, 2) + Math.Pow(location.Y - p.Y, 2); 
-
-                if (Difference < LowestDistance)
-                {
-                    LowestDistance = Difference;
-                    pos = i;
-                }
-                    
-                i++;
-            }
-
-            if (i == -1)
-                return null;
-
-            return ActivePawns[pos];
-        }
-        
+   
         /// <summary>
         /// Gets the coordinates of any point in the <see cref="Chessboard"/> (most likely the mouse's coordinates).
         /// </summary>
