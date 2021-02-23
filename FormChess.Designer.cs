@@ -132,7 +132,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonExit.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.White;
             this.buttonExit.Location = new System.Drawing.Point(1740, 36);
             this.buttonExit.Name = "buttonExit";
@@ -216,10 +216,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelFirstNickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelFirstNickname.AutoSize = true;
-            this.labelFirstNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFirstNickname.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFirstNickname.Location = new System.Drawing.Point(260, 168);
             this.labelFirstNickname.Name = "labelFirstNickname";
-            this.labelFirstNickname.Size = new System.Drawing.Size(167, 19);
+            this.labelFirstNickname.Size = new System.Drawing.Size(163, 19);
             this.labelFirstNickname.TabIndex = 3;
             this.labelFirstNickname.Tag = "PreLogin";
             this.labelFirstNickname.Text = "Player 1\'s Nickname";
@@ -228,7 +228,7 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(260, 30);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(519, 32);
@@ -240,10 +240,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelSubtitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSubtitle.AutoSize = true;
-            this.labelSubtitle.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubtitle.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubtitle.Location = new System.Drawing.Point(263, 73);
             this.labelSubtitle.Name = "labelSubtitle";
-            this.labelSubtitle.Size = new System.Drawing.Size(422, 28);
+            this.labelSubtitle.Size = new System.Drawing.Size(431, 27);
             this.labelSubtitle.TabIndex = 5;
             this.labelSubtitle.Tag = "PreLogin";
             this.labelSubtitle.Text = "Type your nicknames in order to begin!";
@@ -252,10 +252,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelSecondNickname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSecondNickname.AutoSize = true;
-            this.labelSecondNickname.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSecondNickname.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSecondNickname.Location = new System.Drawing.Point(265, 280);
             this.labelSecondNickname.Name = "labelSecondNickname";
-            this.labelSecondNickname.Size = new System.Drawing.Size(167, 19);
+            this.labelSecondNickname.Size = new System.Drawing.Size(163, 19);
             this.labelSecondNickname.TabIndex = 7;
             this.labelSecondNickname.Tag = "PreLogin";
             this.labelSecondNickname.Text = "Player 2\'s Nickname";
@@ -278,7 +278,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonStartGame.BackColor = System.Drawing.Color.Green;
             this.buttonStartGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStartGame.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStartGame.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartGame.ForeColor = System.Drawing.Color.White;
             this.buttonStartGame.Location = new System.Drawing.Point(260, 976);
             this.buttonStartGame.Name = "buttonStartGame";
@@ -295,10 +295,10 @@ namespace csharp_vathmologoumeni_3
             this.checkBoxTimers.AutoSize = true;
             this.checkBoxTimers.Checked = true;
             this.checkBoxTimers.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTimers.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTimers.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTimers.Location = new System.Drawing.Point(276, 195);
             this.checkBoxTimers.Name = "checkBoxTimers";
-            this.checkBoxTimers.Size = new System.Drawing.Size(133, 21);
+            this.checkBoxTimers.Size = new System.Drawing.Size(132, 22);
             this.checkBoxTimers.TabIndex = 9;
             this.checkBoxTimers.Tag = "PreLogin";
             this.checkBoxTimers.Text = "Include Timers";
@@ -339,10 +339,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelTimers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTimers.AutoSize = true;
-            this.labelTimers.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimers.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTimers.Location = new System.Drawing.Point(267, 283);
             this.labelTimers.Name = "labelTimers";
-            this.labelTimers.Size = new System.Drawing.Size(262, 19);
+            this.labelTimers.Size = new System.Drawing.Size(256, 19);
             this.labelTimers.TabIndex = 11;
             this.labelTimers.Tag = "PreLogin";
             this.labelTimers.Text = "Time for each player (in minutes)";
@@ -846,10 +846,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelPlayer1Timer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPlayer1Timer.AutoSize = true;
-            this.labelPlayer1Timer.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer1Timer.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPlayer1Timer.Location = new System.Drawing.Point(1340, 696);
             this.labelPlayer1Timer.Name = "labelPlayer1Timer";
-            this.labelPlayer1Timer.Size = new System.Drawing.Size(0, 35);
+            this.labelPlayer1Timer.Size = new System.Drawing.Size(0, 33);
             this.labelPlayer1Timer.TabIndex = 13;
             this.labelPlayer1Timer.Tag = "PostLogin";
             // 
@@ -857,10 +857,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelPlayer2Timer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPlayer2Timer.AutoSize = true;
-            this.labelPlayer2Timer.Font = new System.Drawing.Font("Helvetica", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer2Timer.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPlayer2Timer.Location = new System.Drawing.Point(335, 226);
             this.labelPlayer2Timer.Name = "labelPlayer2Timer";
-            this.labelPlayer2Timer.Size = new System.Drawing.Size(0, 35);
+            this.labelPlayer2Timer.Size = new System.Drawing.Size(0, 33);
             this.labelPlayer2Timer.TabIndex = 14;
             this.labelPlayer2Timer.Tag = "PostLogin";
             this.labelPlayer2Timer.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -869,10 +869,10 @@ namespace csharp_vathmologoumeni_3
             // 
             this.labelTurn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTurn.AutoSize = true;
-            this.labelTurn.Font = new System.Drawing.Font("Helvetica", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTurn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTurn.Location = new System.Drawing.Point(858, 85);
             this.labelTurn.Name = "labelTurn";
-            this.labelTurn.Size = new System.Drawing.Size(166, 29);
+            this.labelTurn.Size = new System.Drawing.Size(164, 29);
             this.labelTurn.TabIndex = 15;
             this.labelTurn.Tag = "";
             this.labelTurn.Text = "Player\'s turn.";
@@ -888,7 +888,7 @@ namespace csharp_vathmologoumeni_3
             this.buttonStartOver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonStartOver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.buttonStartOver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonStartOver.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStartOver.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonStartOver.Location = new System.Drawing.Point(1740, 99);
             this.buttonStartOver.Name = "buttonStartOver";
@@ -900,7 +900,7 @@ namespace csharp_vathmologoumeni_3
             // 
             // FormChess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
@@ -921,7 +921,7 @@ namespace csharp_vathmologoumeni_3
             this.Controls.Add(this.textBoxPlayer1Nickname);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);

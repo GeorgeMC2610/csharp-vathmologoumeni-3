@@ -80,11 +80,13 @@ namespace csharp_vathmologoumeni_3
                 if (datetime[1].Equals(':'))
                     datetime = datetime.Insert(0, "0"); //if it has one digit at hours add a "0" at the beginning
 
-                if (datetime.EndsWith("μμ") || datetime.EndsWith("pm")) //if it is not at 24 hour format at 12 to hours
+                if ((datetime.EndsWith("μμ") || datetime.EndsWith("pm")) && !datetime.Substring(0, 2).Equals("12")) //if it is not at 24 hour format add 12 to hours
                 {
                     String modified_time = (Int32.Parse(datetime.Substring(0, 2)) + 12).ToString();
                     datetime = datetime.Replace(datetime.Substring(0, 2), modified_time);
-                }
+
+                }else if((datetime.EndsWith("πμ") || datetime.EndsWith("am")) && datetime.Substring(0, 2).Equals("12"))
+                    datetime = datetime.Replace(datetime.Substring(0, 2), "00");
 
                 datetime = datetime.Substring(0, 5); //get the hours and minutes substring
 
@@ -209,6 +211,9 @@ namespace csharp_vathmologoumeni_3
 
         private void button1_Click(object sender, EventArgs e) //on insert/modify button click
         {
+            if (numericUpDown1.Value > 100)
+                numericUpDown1.Value = 100;
+
             player.Play();
 
             //check for email duplicate if we are doing insertion or modification but the old mail is different than the new one

@@ -12,7 +12,7 @@ namespace Covid_Website
     {
         protected void Page_Load(object sender, EventArgs e) //on page load
         {
-            //path(relative) for database file must be: C:\Program Files (x86)\IIS Express\Covid_cases.mdb
+            TextBox1.Text = TextBox2.Text = TextBox3.Text = "";
 
             Label2.Text = "Covid case reports until today: " + GridView1.Rows.Count.ToString(); //mention the sum of the reports(number of table rows)
 
