@@ -12,7 +12,7 @@ namespace csharp_vathmologoumeni_3
         public static int[] ValidXLocations  = new int[8];
         public static int[] ValidYLocations  = new int[8];
         public static List<Point> ValidPoints = new List<Point>();
-        public static List<Point> ValidClickPoints = new List<Point>();
+        //public static List<Point> ValidClickPoints = new List<Point>();
 
         public static List<Pawn> ActivePawns = new List<Pawn>();
 
@@ -31,9 +31,9 @@ namespace csharp_vathmologoumeni_3
                 for (int j = 0; j < 8; j++)
                     ValidPoints.Add(new Point(ValidXLocations[i], ValidYLocations[j]));
 
-            for (int i = 0; i < 8; i++)
+            /*for (int i = 0; i < 8; i++)
                 for (int j = 0; j < 8; j++)
-                    ValidClickPoints.Add(new Point(58 + 94 * i, 58 + 94 * j));
+                    ValidClickPoints.Add(new Point(58 + 94 * i, 58 + 94 * j));*/
         }
    
         /// <summary>
@@ -41,7 +41,7 @@ namespace csharp_vathmologoumeni_3
         /// </summary>
         /// <param name="clicked"></param>
         /// <returns>The closest valid point of the <see cref="Chessboard.ValidClickPoints"/>.</returns>
-        public static Point GetLocationByClick(Point clicked)
+        /*public static Point GetLocationByClick(Point clicked)
         {
             int i = 0;
             int pos = -1;
@@ -60,6 +60,6 @@ namespace csharp_vathmologoumeni_3
             }
 
             return ValidPoints[pos];
-        }
+        }*/
     }
 }
