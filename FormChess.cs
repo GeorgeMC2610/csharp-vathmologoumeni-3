@@ -18,10 +18,6 @@ namespace csharp_vathmologoumeni_3
             InitializeComponent();
         }
 
-        public delegate void panelpress(object sender, MouseEventArgs e);
-        private static bool firstturn;
-        private static bool exit;
-
         bool Player1Turn = true;
         bool GameStarted = false;
         bool PawnClicked = false;
@@ -51,7 +47,6 @@ namespace csharp_vathmologoumeni_3
                     if (continueGame == DialogResult.Cancel)
                         return;
 
-                    exit = false;
                     Close();
                     new FormChess().Show();
                     break;
@@ -83,9 +78,6 @@ namespace csharp_vathmologoumeni_3
 
         private void FormChess_Load(object sender, EventArgs e)
         {
-            firstturn = true;
-            exit = true;
-
             //as soon as the form loads, disable the play button.
             EnableOrDisablePlayButton(false);
             checkBoxTimers.CheckState = CheckState.Checked;
@@ -108,8 +100,6 @@ namespace csharp_vathmologoumeni_3
             
             labelPlayer1Timer.Visible = labelPlayer2Timer.Visible = panelChessBoard.Visible = false;
             buttonStartOver.Enabled = false;
-
-            Chessboard.ActivePawns.Clear();
 
             //then initialize all pawns in the board.
             Pawn BlackRook1   = new Pawn("Rook",   false, pictureBoxBlackRook1);
@@ -181,10 +171,6 @@ namespace csharp_vathmologoumeni_3
             WhitePawn6.SetLocation(5, 6);
             WhitePawn7.SetLocation(6, 6);
             WhitePawn8.SetLocation(7, 6);
-
-            panelpress panpress = PanelPress;
-
-            ExtendedGame.makeBackgrounds(panelChessBoard,panpress);
         }
 
         private void EnableOrDisablePlayButton(bool handling)
@@ -272,20 +258,13 @@ namespace csharp_vathmologoumeni_3
 
         private void PanelPress(object sender, MouseEventArgs e)
         {
-            //if (!PawnClicked)
-            //    return;
+            if (!PawnClicked)
+                return;
 
-            //when any player presses a blue picturebox in the panel with a selected pawn, move that pawn to the selected location.
-
-            //PawnSelected.SetLocation(Chessboard.GetLocationByClick(((PictureBox)sender).Location));
-            PawnSelected.SetLocation(((PictureBox)sender).Location);
-
+            //when any player presses the panel with a selected pawn, move that pawn to the selected location.
+            PawnSelected.SetLocation(Chessboard.GetLocationByClick(e.Location));
             PawnSelected.Texture.BackColor = Color.Transparent;
             PawnClicked = false;
-
-            ExtendedGame.hideAll(Player1Turn,panelChessBoard);
-            firstturn = false;
-
             InverseTurns();
         }
 
@@ -300,20 +279,16 @@ namespace csharp_vathmologoumeni_3
             //if no pawns are selected the pawn pressed is the same as the players turn...
             if (!PawnClicked && PawnPressed.IsWhite == Player1Turn)
             {
-                ExtendedGame.showValidmoves(Player1Turn, firstturn, panelChessBoard, pressed);
-
                 //select the pawn
                 PawnClicked = true;
                 PawnPressed.Texture.BackColor = Color.Green;
                 PawnSelected = PawnPressed;
             }
             //if the pawn selected is about to "eat" another pawn of a different colour
-            else if (PawnPressed.IsWhite != PawnSelected.IsWhite && PawnPressed.Texture.BackColor == Color.PaleTurquoise)
+            else if (PawnPressed.IsWhite != PawnSelected.IsWhite)
             {
                 //Dispose the pawn that was selected.
                 PawnSelected.DisposePawn(PawnPressed);
-
-                ExtendedGame.hideAll(Player1Turn, panelChessBoard);
 
                 //Deselect the pawn
                 PawnSelected.Texture.BackColor = Color.Transparent;
@@ -330,8 +305,6 @@ namespace csharp_vathmologoumeni_3
             //if the player selects two pawns of the same colour.
             else
             {
-                ExtendedGame.hideAll(Player1Turn, panelChessBoard);
-
                 //just deselect the pawn.
                 PawnSelected.Texture.BackColor = Color.Transparent;
                 PawnClicked = false;
@@ -415,8 +388,7 @@ namespace csharp_vathmologoumeni_3
         private void FormChess_FormClosed(object sender, FormClosedEventArgs e)
         {
             //show the first form that has appeared (the main menu).
-            if (exit)
-                Application.OpenForms[0].Show();
+            Application.OpenForms[0].Show();
         }
     }
 }

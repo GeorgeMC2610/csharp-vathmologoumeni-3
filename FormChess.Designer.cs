@@ -393,6 +393,7 @@ namespace csharp_vathmologoumeni_3
             this.panelChessBoard.Name = "panelChessBoard";
             this.panelChessBoard.Size = new System.Drawing.Size(780, 780);
             this.panelChessBoard.TabIndex = 12;
+            this.panelChessBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelPress);
             // 
             // labelWinner
             // 
